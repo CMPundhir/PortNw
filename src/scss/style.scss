@@ -1,0 +1,342 @@
+// If you want to override variables do it here
+@import "variables";
+
+// $font-family-sans-serif: "Lato", system-ui, -apple-system, "Segoe UI", Roboto,
+//   "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+//   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+$enable-ltr: true;
+$enable-rtl: true;
+
+// Import CoreUI for React components library
+@import "@coreui/coreui/scss/coreui";
+
+// Import Chart.js custom tooltips styles
+@import "@coreui/chartjs/scss/coreui-chartjs";
+
+@import "layout";
+@import "example";
+
+// If you want to add custom CSS you can put it here.
+@import "custom";
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgb(202, 202, 202);
+  box-shadow: inset 0 0 6px rgb(202, 202, 202);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px #4093f7;
+  box-shadow: inset 0 0 6px #4093f7;
+}
+
+.vh {
+  float: left;
+  width: 20px;
+  height: 100px;
+  background-color: $primary-base;
+}
+
+.dashboard-stats {
+  margin-left: 16px;
+  padding: 16px;
+  background-color: $primary-bg;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: #bbb;
+  border-radius: 25%;
+  display: inline-block;
+}
+
+.round-corner {
+  font-size: 10px;
+  padding: 12px 4px 12px 4px;
+  background-color: #bbb;
+  border-radius: 8%;
+  display: inline-block;
+  text-align: center;
+}
+
+.modal_wid {
+  // width: 100%;
+  // max-width: 100%;
+  border-color: $primary-bg;
+  border-width: 20px;
+  border: solid;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: local("Lato"), url(../fonts/Lato-Regular.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 900;
+  src: local("Lato"), url(../fonts/Lato-Bold.ttf) format("opentype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 900;
+  src: local("Lato"), url(../fonts/Lato-Black.ttf) format("opentype");
+}
+
+body {
+  font-family: Lato;
+}
+
+.lato {
+  font-family: Lato;
+  font: 500;
+}
+
+// .menu_style {
+//   margin-right: 40px;
+//   margin-left: 40px;
+//   margin-top: 5px;
+//   margin-bottom: 25px;
+//   width: 59px;
+//   height: 19px;
+//   text-align: left;
+//   font: normal normal bold 14px/17px Lato;
+//   font-size: 14px;
+//   letter-spacing: 3.52px;
+//   color: #262626;
+//   opacity: 1;
+// }
+
+.cm_active {
+  border-left-color: 4px solid #4093f7;
+}
+
+.input-inside {
+  border-left: 0px;
+  border-color: rgb(168, 168, 168);
+  border-style: solid;
+}
+
+.input-inside:hover {
+  border-left: 0px;
+  border-color: rgb(168, 168, 168);
+  border-style: solid;
+}
+
+.check_btn {
+  display: block;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 2px;
+  border-bottom-color: #4093f7;
+  color: #4093f7;
+  background-color: #ffffff;
+}
+
+.my_btn {
+  display: block;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 0px;
+  border-bottom-color: transparent;
+  border-bottom-width: 2px;
+  background-color: #4093f7;
+}
+
+.my_btn:hover {
+  display: block;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 0px;
+  border-bottom-color: #ffffff;
+  border-bottom-width: 2px;
+  background-color: #4093f7;
+}
+
+.my_btn_unchecked {
+  display: block;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 0px;
+  border-bottom-color: transparent;
+  border-bottom-width: 3px;
+}
+
+.my_btn_checked {
+  display: block;
+  border-style: solid;
+  border-color: #4093f7;
+  border-width: 0px;
+  border-bottom-color: #4093f7;
+  border-bottom-width: 3px;
+}
+
+.my_btn_2 {
+  display: block;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 0px;
+  border-bottom-color: transparent;
+  border-bottom-width: 2px;
+  background-color: transparent;
+}
+
+.my_btn_2 :hover {
+  display: block;
+  border-style: solid;
+  padding: 4px;
+  border-color: transparent;
+  border-width: 0px;
+  border-bottom-color: #4093f7;
+  border-bottom-width: 2px;
+  background-color: transparent;
+  width: 32px;
+  height: 32px;
+}
+
+.my_btn_unchecked :focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.my_btn_checked :focus {
+  outline: none;
+  box-shadow: none;
+}
+
+// .my_btn_unchecked :hover {
+//   display: block;
+//   border-style: solid;
+//   border-color: #4093f7;
+//   border-width: 0px;
+//   border-bottom-color: #4093f7;
+//   border-bottom-width: 3px;
+// }
+
+// .my_btn_checked :hover {
+//   display: block;
+//   border-style: solid;
+//   border-color: #4093f7;
+//   border-width: 0px;
+//   border-bottom-color: #4093f7;
+//   border-bottom-width: 3px;
+// }
+
+.side_item {
+  display: block;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 0px;
+  border-bottom-color: transparent;
+  border-bottom-width: 2px;
+  background-color: transparent;
+}
+
+.side_item :hover {
+  display: block;
+  border-style: solid;
+  background: #a3e6ff77;
+  padding: 8px;
+  border-color: transparent;
+  border-width: 0px;
+  border-left-color: #4093f7;
+  border-left-width: 2px;
+}
+
+#menu ul {
+  list-style: none;
+}
+
+#menu li {
+  padding: 10px;
+}
+
+#menu li:hover {
+  opacity: 0.7;
+  background-color: #a3e6ff;
+}
+.sideNav-logo-bg {
+  background-color: #1692ff7c;
+  backdrop-filter: blur(40px);
+  border-radius: 16px;
+}
+@media only screen and(max-width: 767.98px) {
+  .sidebar {
+    height: 80vh !important;
+  }
+}
+.daysbtnCard-bg {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 6px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  // box-shadow: rgba(50, 50, 93, 0.25) 0px 3px 5px -2px,
+  // rgba(0, 0, 0, 0.3) 0px 3px 5px -3px;
+}
+.borderBottom-blue {
+  border-color: #a2caec;
+  color: #1692ff;
+  background-image: linear-gradient(45deg, #1692ff 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: background 500ms ease-in-out;
+  border-bottom: 2px solid #1692ff;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.borderBottom-blue-hover:hover {
+  background-position: 0;
+  color: #fff;
+  // border-bottom: 2px solid #1692ff;
+}
+
+.inactiveDefault-border {
+  border-color: #a2caec;
+  color: #000;
+  background-image: linear-gradient(45deg, #1692ff 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  transition: background 500ms ease-in-out;
+  border-radius: 4px;
+  padding: 16px;
+}
+.inactiveDefault-border:hover {
+  background-position: 0;
+  color: #fff;
+}
+.transaction-style {
+  color: #1692ff;
+  letter-spacing: 1px;
+}
+.status-card-bg {
+  background-image: linear-gradient(120deg, #538ffb, #1692ff);
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 6px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.transparent-card {
+  background-color: #ffffffc5;
+  border-radius: 8px;
+  backdrop-filter: blur(20px);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 6px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.sidebar-apex {
+  font-weight: 600;
+}
+
+.common-card {
+  border: 2px solid black;
+  box-shadow: 0px 0px 10px 2px #d3d3d3; /*#4093f7;*/
+  border-radius: 8px;
+  // text-decoration: underline wavy #8000ff;
+}
