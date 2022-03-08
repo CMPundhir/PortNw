@@ -46,7 +46,6 @@ export const nav_admin = [
     component: CNavItem,
     name: "Dashboard",
     to: CM_Nav.DASHBOARD,
-    // icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
     icon: (
       <FontAwesomeIcon
         size="sm"
@@ -54,10 +53,18 @@ export const nav_admin = [
         style={{ marginRight: 22, marginLeft: 5 }}
       />
     ),
-    // badge: {
-    //   color: 'info',
-    //   text: 'NEW',
-    // },
+  },
+  {
+    component: CNavItem,
+    name: "Dashboard New",
+    to: CM_Nav.DASHBOARDNEW,
+    icon: (
+      <FontAwesomeIcon
+        size="sm"
+        icon={faChartLine}
+        style={{ marginRight: 22, marginLeft: 5 }}
+      />
+    ),
   },
   {
     component: CNavGroup,

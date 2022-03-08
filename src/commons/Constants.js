@@ -32,6 +32,7 @@ export const UPDATE_ACTION = {
 export const CM_Nav = {
   DASHBOARD: "/dashboard",
   DASHBOARDOLD: "/dashboard-old",
+  DASHBOARDNEW: "/dashboard-new",
   USERS: "/users",
   SUB_ADMIN: "/sub-admins",
   ACCOUNTS: "/accounts",

@@ -324,7 +324,7 @@ body {
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 .transparent-card {
-  background-color: #ffffffc5;
+  background-color: #ffffffa2;
   border-radius: 8px;
   backdrop-filter: blur(20px);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 6px -3px,
@@ -339,4 +339,14 @@ body {
   box-shadow: 0px 0px 10px 2px #d3d3d3; /*#4093f7;*/
   border-radius: 8px;
   // text-decoration: underline wavy #8000ff;
+}
+.content-icon {
+  display: flex;
+  padding: 20px;
+}
+.transparent {
+  background-color: #ffffffaf;
+  border-radius: 16px;
+  box-shadow: 0 0 10px 1px #d3d3d3;
+  backdrop-filter: blur(30px);
 }
