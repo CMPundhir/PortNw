@@ -15,6 +15,8 @@ import {
 import React from "react";
 import CategoryButton from "src/commons/buttons/CategoryButton";
 import TransparentCard from "src/commons/cards/TransparentCard";
+import RechargeForm from "./components/RechargeForm";
+import RecentRecharges from "./components/RecentRecharges";
 
 const DashboardNew = ({ user }) => {
   return (
@@ -34,6 +36,9 @@ const DashboardNew = ({ user }) => {
                 <CategoryButton icon={faMobile} text="Piped Gass" />
                 <CategoryButton icon={faHandHoldingWater} text="Water" />
               </CRow>,
+
+              <RechargeForm />,
+              <RecentRecharges />,
             ]}
           ></TransparentCard>
         </CCol>
