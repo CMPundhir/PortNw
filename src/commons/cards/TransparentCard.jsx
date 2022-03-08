@@ -47,7 +47,7 @@ const TransparentCard = ({ user, title, img, actions, children }) => {
               </div>
             </CRow>
           </div>
-          <CCard className="mt-4" style={{ border: "none", overflow: "auto" }}>
+          <CCard className="mt-4" style={{ border: "none", overflow: "none" }}>
             <div>{children}</div>
           </CCard>
         </CCol>
