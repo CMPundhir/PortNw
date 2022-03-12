@@ -1,6 +1,7 @@
 // If you want to override variables do it here
 @import "variables";
 
+
 // $font-family-sans-serif: "Lato", system-ui, -apple-system, "Segoe UI", Roboto,
 //   "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
 //   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
@@ -398,4 +399,7 @@ body {
 }
 .btn-container:hover {
   cursor: pointer;
+  border-bottom: 2px solid blue;
+
+
 }

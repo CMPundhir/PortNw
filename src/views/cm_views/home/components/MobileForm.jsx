@@ -1,8 +1,10 @@
 import { CButton, CCol, CFormInput, CFormLabel, CRow } from "@coreui/react";
 import React from "react";
+import { ACTION } from "src/commons/Constants";
+import CustomInput from "src/commons/inputs/CustomInput";
 import Custom_dropDown from "src/commons/inputs/Custom_dropDown";
 
-const MobileForm = () => {
+const MobileForm = ({ action }) => {
   return (
     <>
       <CRow>
@@ -15,36 +17,44 @@ const MobileForm = () => {
           <div lg={12}>
             <CRow lg={6}>
               <CCol>
-                <div className="text_css">Mobile Number</div>
-                <CFormInput
-                  lg={6}
-                  type="text"
-                  size="sm"
-                  placeholder="Small input"
-                  aria-label="sm input example"
+                <CustomInput
+                  label={
+                    action == ACTION.MOBILE_RECHARGE
+                      ? "Mobile Number"
+                      : "Customer ID"
+                  }
+                  name="mobile"
                   className="inputCss bordernew"
+                  id="mobile"
+                  placeholder={
+                    action == ACTION.MOBILE_RECHARGE
+                      ? "Mobile Number"
+                      : "Customer ID"
+                  }
+                  type="simple input"
                 />
               </CCol>
-              <CCol style={{ fontSize: "14px" }}>
+              <CCol>
                 <Custom_dropDown
-                  lable="Select Operator"
+                  lg={6}
                   className="inputCss bordernew"
-                  option1="TATASky"
-                  option2="Airtel"
+                  lable="Operator"
+                  id="operator"
+                  name="operator"
+                  option1="Airtel"
+                  option2="JIO"
                 />
               </CCol>
             </CRow>
             <CRow lg={6}>
               <CCol>
-                <CFormLabel htmlFor="mobile" style={{ fontSize: "14px" }}>
-                  Amount
-                </CFormLabel>
-                <CFormInput
-                  className="mobile-recharge bordernew inputCss"
-                  type="number"
-                  size="sm"
-                  id="mobile"
-                  placeholder="Enter Mobile Number"
+                <CustomInput
+                  label="Amount"
+                  name="amount"
+                  className="inputCss bordernew"
+                  id="amount"
+                  placeholder="amount"
+                  type="simple input"
                 />
               </CCol>
             </CRow>

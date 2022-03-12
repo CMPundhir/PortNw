@@ -2,7 +2,6 @@ import React from "react";
 import { ACTION } from "src/commons/Constants";
 import DthForm from "./DthForm";
 import ElectricityForm from "./ElectricityForm";
-import MobileForm from "./MobileForm";
 
 const FormContainer = ({ action }) => {
   return (
@@ -13,7 +12,6 @@ const FormContainer = ({ action }) => {
       >
         <DthForm action={action} />
       </div>
-
       <div hidden={action != ACTION.ELECTRICITY} className="ElectricityForm">
         <ElectricityForm />
       </div>
