@@ -1,5 +1,7 @@
 import { CButton, CCol, CFormInput, CFormLabel, CRow } from "@coreui/react";
 import React from "react";
+import CustomInput from "src/commons/inputs/CustomInput";
+import Custom_dropDown from "src/commons/inputs/Custom_dropDown";
 
 const MobileForm = () => {
   return (
@@ -14,39 +16,36 @@ const MobileForm = () => {
           <div lg={12}>
             <CRow lg={6}>
               <CCol>
-                <div className="text_css">Mobile Number</div>
-                <CFormInput
-                  lg={6}
-                  type="text"
-                  size="sm"
-                  placeholder="Small input"
-                  aria-label="sm input example"
+                <CustomInput
+                  label="Mobile Number"
+                  name="mobile"
                   className="inputCss bordernew"
+                  id="mobile"
+                  placeholder="mobile number"
+                  type="simple input"
                 />
               </CCol>
               <CCol>
-                Operator
-                <CFormInput
+                <Custom_dropDown
                   lg={6}
-                  type="text"
-                  size="sm"
-                  placeholder="Small input"
-                  aria-label="sm input example"
                   className="inputCss bordernew"
+                  lable="Operator"
+                  id="operator"
+                  name="operator"
+                  option1="Airtel"
+                  option2="JIO"
                 />
               </CCol>
             </CRow>
             <CRow lg={6}>
               <CCol>
-                <CFormLabel htmlFor="mobile" style={{ fontSize: "14px" }}>
-                  Amount
-                </CFormLabel>
-                <CFormInput
-                  className="mobile-recharge bordernew inputCss"
-                  type="number"
-                  size="sm"
-                  id="mobile"
-                  placeholder="Enter Mobile Number"
+                <CustomInput
+                  label="Amount"
+                  name="amount"
+                  className="inputCss bordernew"
+                  id="amount"
+                  placeholder="amount"
+                  type="simple input"
                 />
               </CCol>
             </CRow>
