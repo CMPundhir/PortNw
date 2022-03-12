@@ -8,10 +8,11 @@ import {
   CRow,
 } from "@coreui/react";
 import React from "react";
+import { ACTION } from "src/commons/Constants";
 import CustomInput from "src/commons/inputs/CustomInput";
 import Custom_dropDown from "src/commons/inputs/Custom_dropDown";
 
-const DthForm = () => {
+const DthForm = ({ action }) => {
   return (
     <>
       <CRow>
@@ -26,11 +27,21 @@ const DthForm = () => {
               <CCol>
                 <CustomInput
                   className="inputCss bordernew"
-                  label="Customer ID"
+                  label={
+                    action == ACTION.MOBILE_RECHARGE
+                      ? "Mobile Number"
+                      : "Customer ID"
+                  }
                   type="number"
-                  id="customer_id"
-                  placeholder="Enter Customer ID"
-                  name="customer_id"
+                  id={action == ACTION.MOBILE_RECHARGE ? "Mobile" : "Customer"}
+                  placeholder={
+                    action == ACTION.MOBILE_RECHARGE
+                      ? "Mobile Number"
+                      : "Customer ID"
+                  }
+                  name={
+                    action == ACTION.MOBILE_RECHARGE ? "Mobile" : "CustomerID"
+                  }
                 />
               </CCol>
               <CCol style={{ fontSize: "14px" }}>

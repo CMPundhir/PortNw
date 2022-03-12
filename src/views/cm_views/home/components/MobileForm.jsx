@@ -1,9 +1,10 @@
 import { CButton, CCol, CFormInput, CFormLabel, CRow } from "@coreui/react";
 import React from "react";
+import { ACTION } from "src/commons/Constants";
 import CustomInput from "src/commons/inputs/CustomInput";
 import Custom_dropDown from "src/commons/inputs/Custom_dropDown";
 
-const MobileForm = () => {
+const MobileForm = ({ action }) => {
   return (
     <>
       <CRow>
@@ -17,11 +18,19 @@ const MobileForm = () => {
             <CRow lg={6}>
               <CCol>
                 <CustomInput
-                  label="Mobile Number"
+                  label={
+                    action == ACTION.MOBILE_RECHARGE
+                      ? "Mobile Number"
+                      : "Customer ID"
+                  }
                   name="mobile"
                   className="inputCss bordernew"
                   id="mobile"
-                  placeholder="mobile number"
+                  placeholder={
+                    action == ACTION.MOBILE_RECHARGE
+                      ? "Mobile Number"
+                      : "Customer ID"
+                  }
                   type="simple input"
                 />
               </CCol>
