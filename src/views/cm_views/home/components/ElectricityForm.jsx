@@ -11,7 +11,7 @@ import React from "react";
 import CustomInput from "src/commons/inputs/CustomInput";
 import Custom_dropDown from "src/commons/inputs/Custom_dropDown";
 
-const DthForm = () => {
+const ElectricityForm = () => {
   return (
     <>
       <CRow>
@@ -71,4 +71,4 @@ const DthForm = () => {
   );
 };
 
-export default DthForm;
+export default ElectricityForm;
