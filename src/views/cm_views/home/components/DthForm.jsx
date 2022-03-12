@@ -8,18 +8,20 @@ import {
   CRow,
 } from "@coreui/react";
 import React from "react";
+import CustomInput from "src/commons/inputs/CustomInput";
 
 const DthForm = () => {
   return (
     <CForm>
       <CRow className="d-flex justify-content-center mt-4">
         <CCol md={4} className="mb-3">
-          <CFormLabel htmlFor="dth">Customer ID</CFormLabel>
-          <CFormInput
-            className="Dthform"
+          <CustomInput
+            className="inputCss bordernew"
+            label="Customer ID"
             type="number"
-            id="dth"
+            id="customer_id"
             placeholder="Enter Customer ID"
+            name="customer_id"
           />
         </CCol>
         <CCol md={4} className="mb-3">

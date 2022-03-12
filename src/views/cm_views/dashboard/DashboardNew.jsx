@@ -30,7 +30,7 @@ const DashboardNew = ({ user }) => {
             title="Mobile Recharge"
             children={[
               <CRow className="d-flex align-items-center justify-content-center">
-                <CategoryButton icon={faMobile} text="Recharge"/>
+                <CategoryButton icon={faMobile} text="Recharge" />
                 <CategoryButton icon={faSatelliteDish} text="DTH" />
                 <CategoryButton icon={faSatellite} text="Electricity" />
                 <CategoryButton icon={faCreditCard} text="Credit bill" />
