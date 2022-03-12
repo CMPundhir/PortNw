@@ -14,17 +14,14 @@ const TransparentCard = ({ user, title, img, actions, children }) => {
 
   return (
     <>
-      <CRow key={title}>
+      <CRow>
         <CCol className="transparent">
           <div>
             <CRow
               xs={{ cols: "auto" }}
               className="justify-content-between align-items-center"
             >
-              <CRow
-                xs={{ cols: "auto" }}
-                className="align-items-center text-center me-4 mt-4 mb-4"
-              >
+              <div className="align-items-center text-center me-4 mt-4 mb-4">
                 <div className="pt-2">
                   <h4
                     className="fw-bold"
@@ -35,19 +32,19 @@ const TransparentCard = ({ user, title, img, actions, children }) => {
                     {title}
                   </h4>
                 </div>
-              </CRow>
+              </div>
 
               <div>
-                <CRow
+                <div
                   xs={{ cols: "auto" }}
                   className="justify-content-sm-end align-items-center"
                 >
                   {col_buttons}
-                </CRow>
+                </div>
               </div>
             </CRow>
           </div>
-          <CCard className="mt-4" style={{ border: "none", overflow: "auto" }}>
+          <CCard className="mt-4" style={{ border: "none", overflow: "none" }}>
             <div>{children}</div>
           </CCard>
         </CCol>
