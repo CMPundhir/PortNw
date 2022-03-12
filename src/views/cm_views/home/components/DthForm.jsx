@@ -8,32 +8,39 @@ import {
   CRow,
 } from "@coreui/react";
 import React from "react";
+import { ACTION } from "src/commons/Constants";
 import CustomInput from "src/commons/inputs/CustomInput";
 import Custom_dropDown from "src/commons/inputs/Custom_dropDown";
 
-const DthForm = () => {
+const DthForm = ({ action }) => {
   return (
     <>
       <CRow>
         <CCol
           lg={12}
           md={12}
-          className="d-flex flex-column align-items-center justify-content-between"
+          className="d-flex flex-column align-items-center justify-content-center"
         >
           <br />
-          <div lg={12}>
-            <CRow lg={6}>
-              <CCol>
+          <div>
+            <CRow>
+              <CCol xs={6}>
                 <CustomInput
                   className="inputCss bordernew"
-                  label="Customer ID"
+                  label={
+                    action == ACTION.MOBILE_RECHARGE
+                      ? "Mobile Number"
+                      : "Customer ID"
+                  }
                   type="number"
-                  id="customer_id"
+                  id={action == ACTION.MOBILE_RECHARGE ? "Mobile" : "Customer"}
                   placeholder="Enter Customer ID"
-                  name="customer_id"
+                  name={
+                    action == ACTION.MOBILE_RECHARGE ? "Mobile" : "Customer"
+                  }
                 />
               </CCol>
-              <CCol style={{ fontSize: "14px" }}>
+              <CCol xs={6}>
                 <Custom_dropDown
                   lable="Select Operator"
                   className="inputCss bordernew"
@@ -42,8 +49,8 @@ const DthForm = () => {
                 />
               </CCol>
             </CRow>
-            <CRow lg={6}>
-              <CCol>
+            <CRow>
+              <CCol xs={12}>
                 <CustomInput
                   className="inputCss bordernew"
                   label="Amount"

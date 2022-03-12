@@ -1,5 +1,6 @@
 import { CButton, CCol, CFormInput, CFormLabel, CRow } from "@coreui/react";
 import React from "react";
+import Custom_dropDown from "src/commons/inputs/Custom_dropDown";
 
 const MobileForm = () => {
   return (
@@ -24,15 +25,12 @@ const MobileForm = () => {
                   className="inputCss bordernew"
                 />
               </CCol>
-              <CCol>
-                Operator
-                <CFormInput
-                  lg={6}
-                  type="text"
-                  size="sm"
-                  placeholder="Small input"
-                  aria-label="sm input example"
+              <CCol style={{ fontSize: "14px" }}>
+                <Custom_dropDown
+                  lable="Select Operator"
                   className="inputCss bordernew"
+                  option1="TATASky"
+                  option2="Airtel"
                 />
               </CCol>
             </CRow>
