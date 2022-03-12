@@ -24,8 +24,8 @@ import FormContainer from "./components/FormContainer";
 
 const HomeView = ({ user }) => {
   const [action, setAction] = useState(ACTION.MOBILE_RECHARGE);
-  const [isactive, setIsactive] = useState(false);
-  const [title, setTitle] = useState("Mobile");
+  const [isactive, setIsactive] = useState();
+  const [title, setTitle] = useState("Mobile Recharge");
 
   return (
     <>
@@ -37,8 +37,8 @@ const HomeView = ({ user }) => {
                 isActive={action == ACTION.MOBILE_RECHARGE}
                 onClick={() => {
                   setAction(ACTION.MOBILE_RECHARGE);
-                  setIsactive(!isactive);
-                  setTitle("Mobile");
+                  setIsactive(true);
+                  setTitle("Mobile Recharge");
                 }}
                 icon={faMobile}
                 text="Recharge"
@@ -47,7 +47,7 @@ const HomeView = ({ user }) => {
                 isActive={action == ACTION.DTH}
                 onClick={() => {
                   setAction(ACTION.DTH);
-                  setIsactive(!isactive);
+                  setIsactive(true);
                   setTitle("DTH");
                 }}
                 icon={faSatelliteDish}
@@ -57,7 +57,7 @@ const HomeView = ({ user }) => {
                 isActive={action == ACTION.ELECTRICITY}
                 onClick={() => {
                   setAction(ACTION.ELECTRICITY);
-                  setIsactive(!isactive);
+                  setIsactive(true);
                   setTitle("Electricity");
                 }}
                 icon={faSatellite}
@@ -67,7 +67,7 @@ const HomeView = ({ user }) => {
                 isActive={action == ACTION.CREDIT_CARD}
                 onClick={() => {
                   setAction(ACTION.CREDIT_CARD);
-                  setIsactive(!isactive);
+                  setIsactive(true);
                   setTitle("Credit Card");
                 }}
                 icon={faCreditCard}
@@ -77,7 +77,7 @@ const HomeView = ({ user }) => {
                 isActive={action == ACTION.BROADBAND}
                 onClick={() => {
                   setAction(ACTION.BROADBAND);
-                  setIsactive(!isactive);
+                  setIsactive(true);
                   setTitle("Broad Band");
                 }}
                 icon={faBroadcastTower}
