@@ -360,3 +360,22 @@ body {
   text-align: center;
   text-decoration-color: #fff;
 }
+.nonTransparent {
+  box-shadow: 0 0 2px 1px #f1f0f0;
+  border: none;
+  background-color: #fff;
+  border-radius: 25px;
+  width: 93%;
+}
+.btns {
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+}
+
+.btns:hover {
+  border-bottom: 2px solid rgb(9, 12, 143);
+}
+.Dthform {
+  border: 2px solid rgb(116, 115, 115);
+  border-radius: 25px;
+}

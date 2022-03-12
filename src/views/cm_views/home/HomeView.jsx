@@ -13,15 +13,9 @@ import {
   faWater,
 } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
-import CategoryButton from "src/commons/buttons/CategoryButton";
-import NonTransparentCard from "src/commons/cards/NonTransparentCard";
-import TransparentCard from "src/commons/cards/TransparentCard";
-import RechargeForm from "./components/RechargeForm";
-import RecentRecharges from "./components/RecentRecharges";
-import UserDataCard from "src/commons/cards/UserDataCard";
-import DthForm from "../home/components/DthForm";
+import dthForm from "./components/dthForm";
 
-const DashboardNew = ({ user }) => {
+const HomeView = ({ user }) => {
   return (
     <>
       <CRow>
@@ -39,31 +33,15 @@ const DashboardNew = ({ user }) => {
                 <CategoryButton icon={faMobile} text="Piped Gass" />
                 <CategoryButton icon={faHandHoldingWater} text="Water" />
               </CRow>,
-
-              <RechargeForm />,
-              <RecentRecharges />,
-
-              <DthForm />,
             ]}
           ></TransparentCard>
         </CCol>
-
         <CCol lg={4} md={12}>
-          <div className="RightCard ms-4">
-            <CRow lg={4} md={12}>
-              <TransparentCard>duhdiuhdiu</TransparentCard>
-            </CRow>
-            <CRow lg={4} md={12}>
-              <NonTransparentCard></NonTransparentCard>
-            </CRow>
-            <CRow lg={4} md={12}>
-              <NonTransparentCard></NonTransparentCard>
-            </CRow>
-          </div>
+          dfgd
         </CCol>
       </CRow>
     </>
   );
 };
 
-export default DashboardNew;
+export default HomeView;
