@@ -32,7 +32,7 @@ export const UPDATE_ACTION = {
 export const CM_Nav = {
   DASHBOARD: "/dashboard",
   DASHBOARDOLD: "/dashboard-old",
-  DASHBOARDNEW: "/dashboard-new",
+  HOMEVIEW: "/home",
   USERS: "/users",
   SUB_ADMIN: "/sub-admins",
   ACCOUNTS: "/accounts",
@@ -81,4 +81,17 @@ export const ReportType = {
   TODAY: "TODAY",
   THIS_MONTH: "THIS",
   LAST_MONTH: "LAST",
+};
+
+export const ACTION = {
+  RECHARGE: 0,
+  UTILIY: 1,
+  MOBILE_RECHARGE : "m",
+  DTH: "d",
+  ELECTRICITY: "e",
+  CREDIT_CARD: "c",
+  BROADBAND: "b",
+  LANDLINE: "l",
+  GAS: "g",
+  WATER: "w",
 };

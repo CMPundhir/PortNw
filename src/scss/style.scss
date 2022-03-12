@@ -379,3 +379,21 @@ body {
   border: 2px solid rgb(116, 115, 115);
   border-radius: 25px;
 }
+.parent-div{
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  box-shadow: 0 0 5px 1px #d3d3d3;
+  padding: 10px;
+  background-color: #fff;
+}
+.parent-div-active{
+  background-color: $theme_blue;
+}
+.btn-container:hover > .parent-div-hover{
+  background-color: $theme_blue;
+  cursor: pointer;
+}
+.btn-container:hover{
+  cursor: pointer;
+}

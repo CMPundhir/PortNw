@@ -1,7 +1,7 @@
-import { CButton, CCol, CFormInput, CRow } from "@coreui/react";
+import { CButton, CCol, CFormInput, CFormLabel, CRow } from "@coreui/react";
 import React from "react";
 
-const RechargeForm = () => {
+const MobileForm = () => {
   return (
     <>
       <CRow>
@@ -38,14 +38,15 @@ const RechargeForm = () => {
             </CRow>
             <CRow lg={6}>
               <CCol>
-                Amount
+                <CFormLabel htmlFor="mobile" style={{ fontSize: "14px" }}>
+                  Amount
+                </CFormLabel>
                 <CFormInput
-                  lg={6}
-                  type="text"
+                  className="mobile-recharge bordernew inputCss"
+                  type="number"
                   size="sm"
-                  placeholder="Small input"
-                  aria-label="sm input example"
-                  className="inputCss bordernew"
+                  id="mobile"
+                  placeholder="Enter Mobile Number"
                 />
               </CCol>
             </CRow>
@@ -66,4 +67,4 @@ const RechargeForm = () => {
   );
 };
 
-export default RechargeForm;
+export default MobileForm;

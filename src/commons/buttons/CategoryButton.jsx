@@ -4,32 +4,37 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { blue } from "@material-ui/core/colors";
 import React, { useState } from "react";
 
-const CategoryButton = ({ icon = faMobile, text = "Default" }) => {
+const CategoryButton = ({
+  isActive = false,
+  icon = faMobile,
+  text = "Default",
+  onClick,
+}) => {
   const [hover, setHover] = useState(false);
+  const [content, setContent] = useState(false);
+  const [active, setActive] = useState(false);
+
   return (
     <CCol btn-focus xs={4} sm={3} md={3} lg="auto">
-      <div className="btns">
+      <div className="">
         <div
-          className=" d-flex flex-column align-items-center justify-content-between"
+          className="d-flex flex-column align-items-center justify-content-between btn-container"
           onMouseOver={() => setHover(true)}
           onMouseOut={() => {
             setHover(false);
           }}
+          onClick={onClick}
         >
           <div
-            className="d-flex flex-column align-items-center justify-content-center"
-            style={{
-              backgroundColor: hover ? "purple" : "white",
-              height: "40px",
-              width: "40px",
-              borderRadius: "50px",
-              boxShadow: "0 0 5px 1px #d3d3d3",
-              padding: "10px",
-            }}
+            className={
+              isActive
+                ? "d-flex flex-column align-items-center justify-content-center parent-div parent-div-active"
+                : "d-flex flex-column align-items-center justify-content-center parent-div parent-div-hover"
+            }
           >
             <div className="d-flex justify-content-center align-items-center">
               <FontAwesomeIcon
-                color={hover ? "white" : "purple"}
+                color={hover || isActive ? "white" : "purple"}
                 icon={icon ? icon : faMobile}
                 size="lg"
               />
@@ -39,7 +44,7 @@ const CategoryButton = ({ icon = faMobile, text = "Default" }) => {
             className="pt-2"
             style={{
               fontSize: "12px",
-              color: hover ? "purple" : "black",
+              color: isActive || hover ? "purple" : "black",
             }}
           >
             {text ? text : "Default"}

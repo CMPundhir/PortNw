@@ -16,7 +16,7 @@ import React from "react";
 import CategoryButton from "src/commons/buttons/CategoryButton";
 import NonTransparentCard from "src/commons/cards/NonTransparentCard";
 import TransparentCard from "src/commons/cards/TransparentCard";
-import RechargeForm from "./components/RechargeForm";
+import RechargeForm from "../home/components/MobileForm";
 import RecentRecharges from "./components/RecentRecharges";
 import UserDataCard from "src/commons/cards/UserDataCard";
 import DthForm from "../home/components/DthForm";
@@ -30,7 +30,7 @@ const DashboardNew = ({ user }) => {
             title="Mobile Recharge"
             children={[
               <CRow className="d-flex align-items-center justify-content-center">
-                <CategoryButton icon={faMobile} text="Recharge" />
+                <CategoryButton icon={faMobile} text="Recharge"/>
                 <CategoryButton icon={faSatelliteDish} text="DTH" />
                 <CategoryButton icon={faSatellite} text="Electricity" />
                 <CategoryButton icon={faCreditCard} text="Credit bill" />
@@ -42,7 +42,6 @@ const DashboardNew = ({ user }) => {
 
               <RechargeForm />,
               <RecentRecharges />,
-
               <DthForm />,
             ]}
           ></TransparentCard>
