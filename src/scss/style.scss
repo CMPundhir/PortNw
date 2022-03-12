@@ -1,6 +1,7 @@
 // If you want to override variables do it here
 @import "variables";
 
+
 // $font-family-sans-serif: "Lato", system-ui, -apple-system, "Segoe UI", Roboto,
 //   "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
 //   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
@@ -324,7 +325,7 @@ body {
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 .transparent-card {
-  background-color: #ffffffa2;
+  background-color: #ffffffc5;
   border-radius: 8px;
   backdrop-filter: blur(20px);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 6px -3px,
@@ -340,13 +341,65 @@ body {
   border-radius: 8px;
   // text-decoration: underline wavy #8000ff;
 }
-.content-icon {
-  display: flex;
-  padding: 20px;
+
+.inputCss {
+  border-radius: 20px;
 }
-.transparent {
-  background-color: #ffffffaf;
-  border-radius: 16px;
-  box-shadow: 0 0 10px 1px #d3d3d3;
-  backdrop-filter: blur(30px);
+
+.bordernew {
+  border: 2px solid rgb(138, 137, 137);
+}
+
+.text_css {
+  text-size-adjust: 4px;
+}
+
+.button_css {
+  border-radius: 20px;
+  background-color: #1692ff;
+  text-decoration-color: #000;
+  text-align: center;
+  text-decoration-color: #fff;
+  margin-bottom: 20px;
+  color: white;
+}
+.nonTransparent {
+  box-shadow: 0 0 2px 1px #f1f0f0;
+  border: none;
+  background-color: #fff;
+  border-radius: 25px;
+  width: 93%;
+}
+.btns {
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+}
+
+.btns:hover {
+  border-bottom: 2px solid rgb(9, 12, 143);
+}
+.Dthform {
+  border: 2px solid rgb(116, 115, 115);
+  border-radius: 25px;
+}
+.parent-div {
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  box-shadow: 0 0 5px 1px #d3d3d3;
+  padding: 10px;
+  background-color: #fff;
+}
+.parent-div-active {
+  background-color: $theme_blue;
+}
+.btn-container:hover > .parent-div-hover {
+  background-color: $theme_blue;
+  cursor: pointer;
+}
+.btn-container:hover {
+  cursor: pointer;
+  border-bottom: 2px solid blue;
+
+
 }

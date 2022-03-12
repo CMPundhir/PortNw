@@ -56,8 +56,8 @@ export const nav_admin = [
   },
   {
     component: CNavItem,
-    name: "Dashboard New",
-    to: CM_Nav.DASHBOARDNEW,
+    name: "Home",
+    to: CM_Nav.HOMEVIEW,
     icon: (
       <FontAwesomeIcon
         size="sm"

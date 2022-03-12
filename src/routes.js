@@ -16,8 +16,8 @@ const Dashboard = React.lazy(() =>
 const DashboardOld = React.lazy(() =>
   import("src/views/cm_views/DashboardView")
 );
-const DashboardNew = React.lazy(() =>
-  import("src/views/cm_views/dashboard/DashboardNew")
+const HomeView = React.lazy(() =>
+  import("src/views/cm_views/home/HomeView")
 );
 const Colors = React.lazy(() => import("./views/theme/colors/Colors"));
 const Typography = React.lazy(() =>
@@ -382,9 +382,9 @@ const routes = [
     component: DashboardOld,
   },
   {
-    path: CM_Nav.DASHBOARDNEW,
-    name: "Dashboard New",
-    component: DashboardNew,
+    path: CM_Nav.HOME,
+    name: "Home",
+    component: HomeView,
   },
 ];
 

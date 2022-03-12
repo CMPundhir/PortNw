@@ -1,31 +1,56 @@
 import { CCol } from "@coreui/react";
 import { faMobile } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import { blue } from "@material-ui/core/colors";
+import React, { useState } from "react";
 
-const CategoryButton = ({ icon = faMobile, text = "Default" }) => {
+const CategoryButton = ({
+  isActive = false,
+  icon = faMobile,
+  text = "Default",
+  onClick,
+}) => {
+  const [hover, setHover] = useState(false);
+  const [content, setContent] = useState(false);
+  const [active, setActive] = useState(false);
+
   return (
-    <CCol xs={4} sm={3} md={3} lg="auto">
-      <div
-        className="d-flex flex-column align-items-center justify-content-center text-center"
-        style={{
-          backgroundColor: "#fff",
-          width: "40px",
-          height: "40px",
-          borderRadius: "50px",
-          boxShadow: "0 0 5px 1px #d3d3d3",
-          padding: "10px",
-        }}
-      >
-        <div className="d-flex justify-content-center align-items-center">
-          <FontAwesomeIcon
-            style={{ color: "red" }}
-            icon={icon ? icon : faMobile}
-            size="md"
-          />
+    <CCol btn-focus xs={4} sm={3} md={3} lg="auto">
+      <div className="">
+        <div
+          className="d-flex flex-column align-items-center justify-content-between btn-container"
+          onMouseOver={() => setHover(true)}
+          onMouseOut={() => {
+            setHover(false);
+          }}
+          onClick={onClick}
+        >
+          <div
+            className={
+              isActive
+                ? "d-flex flex-column align-items-center justify-content-center parent-div parent-div-active"
+                : "d-flex flex-column align-items-center justify-content-center parent-div parent-div-hover"
+            }
+          >
+            <div className="d-flex justify-content-center align-items-center">
+              <FontAwesomeIcon
+                color={hover || isActive ? "white" : "purple"}
+                icon={icon ? icon : faMobile}
+                size="lg"
+              />
+            </div>
+          </div>
+          <div
+            className="pt-2"
+            style={{
+              fontSize: "12px",
+              color: isActive || hover ? "blue" : "black",
+            }}
+          >
+            {text ? text : "Default"}
+          </div>
         </div>
       </div>
-      <div className="text-center">{text ? text : "Default"}</div>
     </CCol>
   );
 };
