@@ -34,11 +34,6 @@ const DthForm = ({ action }) => {
                   }
                   type="number"
                   id={action == ACTION.MOBILE_RECHARGE ? "Mobile" : "Customer"}
-<<<<<<< HEAD
-                  placeholder="Enter Customer ID"
-                  name={
-                    action == ACTION.MOBILE_RECHARGE ? "Mobile" : "Customer"
-=======
                   placeholder={
                     action == ACTION.MOBILE_RECHARGE
                       ? "Mobile Number"
@@ -46,7 +41,6 @@ const DthForm = ({ action }) => {
                   }
                   name={
                     action == ACTION.MOBILE_RECHARGE ? "Mobile" : "CustomerID"
->>>>>>> 3aca12d5e69c100b684a673d8d7e6c1c3e3f9150
                   }
                 />
               </CCol>
