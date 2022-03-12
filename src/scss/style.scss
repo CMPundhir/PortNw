@@ -359,6 +359,8 @@ body {
   text-decoration-color: #000;
   text-align: center;
   text-decoration-color: #fff;
+  margin-bottom: 20px;
+  color: white;
 }
 .nonTransparent {
   box-shadow: 0 0 2px 1px #f1f0f0;
@@ -379,7 +381,7 @@ body {
   border: 2px solid rgb(116, 115, 115);
   border-radius: 25px;
 }
-.parent-div{
+.parent-div {
   height: 40px;
   width: 40px;
   border-radius: 50px;
@@ -387,13 +389,13 @@ body {
   padding: 10px;
   background-color: #fff;
 }
-.parent-div-active{
+.parent-div-active {
   background-color: $theme_blue;
 }
-.btn-container:hover > .parent-div-hover{
+.btn-container:hover > .parent-div-hover {
   background-color: $theme_blue;
   cursor: pointer;
 }
-.btn-container:hover{
+.btn-container:hover {
   cursor: pointer;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { ACTION } from "src/commons/Constants";
 import RecentRecharges from "../../dashboard/components/RecentRecharges";
 import DthForm from "./DthForm";
+import ElectricityForm from "./ElectricityForm";
 import MobileForm from "./MobileForm";
 
 const FormContainer = ({ action }) => {
@@ -15,6 +16,9 @@ const FormContainer = ({ action }) => {
       </div>
       <div hidden={action != ACTION.DTH} className="dth-form-container">
         <DthForm />
+      </div>
+      <div hidden={action != ACTION.ELECTRICITY} className="ElectricityForm">
+        <ElectricityForm />
       </div>
     </>
   );

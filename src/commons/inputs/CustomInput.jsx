@@ -20,7 +20,7 @@ const CustomInput = ({
   return (
     <div className="">
       <CFormLabel htmlFor={id} style={{ fontSize: "14px" }}>
-        {label}:
+        {label}
       </CFormLabel>
       <CFormInput
         className={className}
