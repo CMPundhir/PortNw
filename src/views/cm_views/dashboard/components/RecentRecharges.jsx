@@ -5,7 +5,7 @@ const RecentRecharges = () => {
   return (
     <div>
       RecentRecharges
-      <TransparentCard>card</TransparentCard>
+      <TransparentCard></TransparentCard>
     </div>
   );
 };

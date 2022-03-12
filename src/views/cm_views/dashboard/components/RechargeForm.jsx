@@ -1,4 +1,4 @@
-import { CCol, CFormInput, CRow } from "@coreui/react";
+import { CButton, CCol, CFormInput, CRow } from "@coreui/react";
 import React from "react";
 
 const RechargeForm = () => {
@@ -53,13 +53,9 @@ const RechargeForm = () => {
             <CRow>
               <CCol lg={4}></CCol>
               <CCol>
-                <CFormInput
-                  lg={6}
-                  type="button"
-                  size="sm"
-                  aria-label="sm input example"
-                  className="button_css"
-                />
+                <CButton type="submit" className="button_css">
+                  Submit
+                </CButton>
               </CCol>
               <CCol lg={4}></CCol>
             </CRow>
