@@ -87,7 +87,7 @@ const HomeView = ({ user }) => {
                 isActive={action == ACTION.LANDLINE}
                 onClick={() => {
                   setAction(ACTION.LANDLINE);
-                  setIsactive(!isactive);
+                  setIsactive(true);
                   setTitle("Landline");
                 }}
                 icon={faPhoneSquare}
@@ -97,7 +97,7 @@ const HomeView = ({ user }) => {
                 isActive={action == ACTION.GAS}
                 onClick={() => {
                   setAction(ACTION.GAS);
-                  setIsactive(!isactive);
+                  setIsactive(true);
                   setTitle("Piped Gass");
                 }}
                 icon={faMobile}
@@ -107,7 +107,7 @@ const HomeView = ({ user }) => {
                 isActive={action == ACTION.WATER}
                 onClick={() => {
                   setAction(ACTION.WATER);
-                  setIsactive(!isactive);
+                  setIsactive(true);
                   setTitle("Water");
                 }}
                 icon={faHandHoldingWater}
