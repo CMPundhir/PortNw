@@ -1,7 +1,10 @@
 import { CCol, CRow } from "@coreui/react";
+import { faBroadcastTower } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import CommonCard from "src/commons/cards/CommonCard";
 import CircleGrad from "src/commons/components/CircleGrad";
+import { airtel, jio, transaction } from "src/iconsimport";
+import Recent from "./Recent";
 
 const ScrollCards = ({}) => {
   return (
@@ -13,63 +16,15 @@ const ScrollCards = ({}) => {
       }}
     >
       <div className="d-flex">
-        <div
-          class="card card-block text-center"
-          style={{
-            width: "200px",
-            minWidth: "200px",
-            padding: "16px",
-            margin: "16px",
-          }}
-        >
-          <CircleGrad width="150px" height="150px" radius="75px">
-            Thanos
-          </CircleGrad>
-        </div>
-        <div
-          class="card card-block text-center"
-          style={{
-            width: "200px",
-            minWidth: "200px",
-            padding: "16px",
-            margin: "16px",
-          }}
-        >
-          Card
-        </div>
-        <div
-          class="card card-block text-center"
-          style={{
-            width: "200px",
-            minWidth: "200px",
-            padding: "16px",
-            margin: "16px",
-          }}
-        >
-          Card
-        </div>
-        <div
-          class="card card-block text-center"
-          style={{
-            width: "200px",
-            minWidth: "200px",
-            padding: "16px",
-            margin: "16px",
-          }}
-        >
-          Card
-        </div>
-        <div
-          class="card card-block text-center"
-          style={{
-            width: "200px",
-            minWidth: "200px",
-            padding: "16px",
-            margin: "16px",
-          }}
-        >
-          Card
-        </div>
+        <Recent icon={jio} mob="+91-000000000" text="not found" />
+        <Recent icon={jio} mob="+91-000000000" text="not found" />
+        <Recent icon={airtel} mob="+91-000000000" text="not found" />
+        <Recent icon={jio} mob="+91-000000000" text="not found" />
+        <Recent icon={airtel} mob="+91-000000000" text="not found" />
+        <Recent icon={jio} mob="+91-000000000" text="not found" />
+        <Recent icon={airtel} mob="+91-000000000" text="not found" />
+        <Recent icon={airtel} mob="+91-000000000" text="not found" />
+        <Recent icon={airtel} mob="+91-000000000" text="not found" />
       </div>
     </div>
   );
