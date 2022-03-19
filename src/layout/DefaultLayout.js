@@ -15,6 +15,8 @@ import { postJsonData } from "src/networks/ApiController";
 import ApiEndpoints from "src/networks/ApiEndpoints";
 import CircleGrad from "src/commons/components/CircleGrad";
 import CircleGradGreen from "src/commons/components/CircleGradGreen";
+import CircleGradPurple from "src/commons/components/CircleGradPurple";
+import CircleGradRed from "src/commons/components/CircleGradRed";
 
 var isLoginMsgVisible = false;
 const DefaultLayout = () => {
@@ -63,12 +65,21 @@ const DefaultLayout = () => {
 
   return user ? (
     <div className="">
-      <div style={{position : "fixed", zIndex: -2, left: "760px"}}>
-        <CircleGrad  width="700px" height="700px" radius="350px" />
+      <div style={{position : "fixed", zIndex: -2, left: "850px"}}>
+        <CircleGrad  width="600px" height="600px" radius="300px" />
       </div>
-      <div style={{position : "fixed", zIndex: -1, left: "860px", top: "270px"}}>
+      <div style={{position : "fixed", zIndex: -1, left: "900px", top: "200px"}}>
         <CircleGradGreen  width="200px" height="200px" radius="100px" />
       </div>
+
+      <div style={{position : "fixed", zIndex: -1, left: "500px", top: "500px"}}>
+        <CircleGradPurple  width="140px" height="140px" radius="70px" />
+      </div>
+
+      <div style={{position : "fixed", zIndex: -1, left: "450px", top: "350px"}}>
+        <CircleGradRed  width="100px" height="100px" radius="50px" />
+      </div>
+
       <AppSidebar user={user} />
       <div className="wrapper d-flex flex-column min-vh-100 bg-transparent">
         <div className="body site-bg flex-grow-1 mt-4 ms-2 me-2"
