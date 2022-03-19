@@ -4,9 +4,11 @@ import { CContainer, CSpinner } from "@coreui/react";
 
 // routes config
 import routes from "../routes";
+import CircleGrad from "src/commons/components/CircleGrad";
 
 const AppContent = ({ user }) => {
   return (
+    <div >
     <CContainer
       fluid
       style={{
@@ -15,6 +17,7 @@ const AppContent = ({ user }) => {
         marginTop: 0,
       }}
     >
+      
       <Suspense fallback={<CSpinner color="primary" />}>
         <Switch>
           {routes.map((route, idx) => {
@@ -45,6 +48,7 @@ const AppContent = ({ user }) => {
         </Switch>
       </Suspense>
     </CContainer>
+    </div>
   );
 };
 

@@ -60,6 +60,7 @@ const ElectricityForm = () => {
             </CRow>
             <br />
             <CRow>
+              <CCol lg={4}></CCol>
               <CCol>
                 <CButton type="submit" className="button_css">
                   Submit

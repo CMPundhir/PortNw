@@ -1,7 +1,6 @@
 // If you want to override variables do it here
 @import "variables";
 
-
 // $font-family-sans-serif: "Lato", system-ui, -apple-system, "Segoe UI", Roboto,
 //   "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
 //   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
@@ -94,6 +93,7 @@ $enable-rtl: true;
 
 body {
   font-family: Lato;
+  overflow-x: hidden;
 }
 
 .lato {
@@ -328,8 +328,8 @@ body {
   background-color: #ffffffc5;
   border-radius: 8px;
   backdrop-filter: blur(20px);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 6px -3px,
-    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-shadow: rgba(0, 0, 0, 0.1) 3px 8px 8px -3px,
+    rgba(0, 0, 0, 0.05) 5px 6px 7px -2px;
 }
 .sidebar-apex {
   font-weight: 600;
@@ -363,12 +363,12 @@ body {
   margin-bottom: 20px;
   color: white;
 }
-.nonTransparent {
-  box-shadow: 0 0 2px 1px #f1f0f0;
+.commonCard {
+  box-shadow: rgba(0, 0, 0, 0.1) 3px 8px 8px -3px,
+    rgba(0, 0, 0, 0.05) 5px 6px 7px -2px;
   border: none;
   background-color: #fff;
-  border-radius: 25px;
-  width: 93%;
+  border-radius: 8px;
 }
 .btns {
   padding-bottom: 10px;
@@ -389,6 +389,7 @@ body {
   box-shadow: 0 0 5px 1px #d3d3d3;
   padding: 10px;
   background-color: #fff;
+  border-bottom: 2px solid transparent;
 }
 .parent-div-active {
   background-color: $theme_blue;
@@ -397,9 +398,61 @@ body {
   background-color: $theme_blue;
   cursor: pointer;
 }
+.btn-container {
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
 .btn-container:hover {
   cursor: pointer;
   border-bottom: 2px solid blue;
+}
 
+.DetailCard {
+  outline: 2px solid blue;
+}
 
+.progressData {
+  top: 487px;
+  left: 1471px;
+  width: 80px;
+  height: 80px;
+  background: #374eee 0% 0% no-repeat padding-box;
+  opacity: 1;
+  // border-radius: 100%;
+}
+
+.progress {
+  top: 487px;
+  left: 1452px;
+  width: 80px;
+  height: 80px;
+  background: #dcebf5 0% 0% no-repeat padding-box;
+  opacity: 1;
+  border-radius: 50%;
+}
+
+.cm-scroll {
+  overflow: scroll;
+  scroll-behavior: smooth;
+}
+
+.cm-scroll::-webkit-scrollbar {
+  height: 0;
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+.cm-scroll::-webkit-scrollbar-thumb {
+  background: #ff0000;
+}
+
+.cm-circle {
+  width: 100%;
+  height: 100%;
+  background: transparent
+    linear-gradient(328deg, #ffffff 0%, #2d62ed 37%, #7b92cf 80%, #7d93ce 100%)
+    0% 0% no-repeat padding-box;
+  border-radius: 50%;
+  border-width: 1px;
+  opacity: 1;
 }

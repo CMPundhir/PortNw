@@ -14,7 +14,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import CategoryButton from "src/commons/buttons/CategoryButton";
-import NonTransparentCard from "src/commons/cards/NonTransparentCard";
+import CommonCard from "src/commons/cards/CommonCard";
 import TransparentCard from "src/commons/cards/TransparentCard";
 import RechargeForm from "../home/components/MobileForm";
 import RecentRecharges from "./components/RecentRecharges";
@@ -53,10 +53,10 @@ const DashboardNew = ({ user }) => {
               <TransparentCard>duhdiuhdiu</TransparentCard>
             </CRow>
             <CRow lg={4} md={12}>
-              <NonTransparentCard></NonTransparentCard>
+              <CommonCard></CommonCard>
             </CRow>
             <CRow lg={4} md={12}>
-              <NonTransparentCard></NonTransparentCard>
+              <CommonCard></CommonCard>
             </CRow>
           </div>
         </CCol>

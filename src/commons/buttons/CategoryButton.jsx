@@ -13,10 +13,9 @@ const CategoryButton = ({
   const [hover, setHover] = useState(false);
   const [content, setContent] = useState(false);
   const [active, setActive] = useState(false);
-
   return (
     <CCol btn-focus xs={4} sm={3} md={3} lg="auto">
-      <div className="">
+      <div>
         <div
           className="d-flex flex-column align-items-center justify-content-between btn-container"
           onMouseOver={() => setHover(true)}

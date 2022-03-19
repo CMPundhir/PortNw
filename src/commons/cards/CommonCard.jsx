@@ -2,7 +2,7 @@ import { CCard, CCardBody, CCardHeader, CCol, CRow } from "@coreui/react";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-const TransparentCard = ({ user, title, img, actions, children }) => {
+const CommonCard = ({ user, title, img, actions, children }) => {
   const dispatch = useDispatch();
   const sidebarShow = useSelector((state) => state.sidebarShow);
 
@@ -15,7 +15,7 @@ const TransparentCard = ({ user, title, img, actions, children }) => {
   return (
     <>
       <CRow>
-        <CCol className="transparent-card mt-3">
+        <CCol className=" mt-4 p-2 commonCard">
           <div hidden={!title}>
             <CRow
               xs={{ cols: "auto" }}
@@ -53,4 +53,4 @@ const TransparentCard = ({ user, title, img, actions, children }) => {
   );
 };
 
-export default TransparentCard;
+export default CommonCard;

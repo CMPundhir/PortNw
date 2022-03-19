@@ -14,13 +14,17 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
 import CategoryButton from "src/commons/buttons/CategoryButton";
-import NonTransparentCard from "src/commons/cards/NonTransparentCard";
+import CommonCard from "src/commons/cards/CommonCard";
 import TransparentCard from "src/commons/cards/TransparentCard";
 import { ACTION } from "src/commons/Constants";
 import RecentRecharges from "../dashboard/components/RecentRecharges";
 import RechargeForm from "./components/MobileForm";
 import DthForm from "./components/DthForm";
 import FormContainer from "./components/FormContainer";
+import DetailsCard from "./components/DetailsCard";
+import ProgressCard from "./components/ProgressCard";
+import TaskCard from "./components/TaskCard";
+import ScrollCards from "./components/ScrollCards";
 
 const HomeView = ({ user }) => {
   const [action, setAction] = useState(ACTION.MOBILE_RECHARGE);
@@ -115,19 +119,20 @@ const HomeView = ({ user }) => {
               />
             </CRow>
             <FormContainer action={action} />
+            <ScrollCards />
           </TransparentCard>
         </CCol>
 
         <CCol lg={4} md={12}>
           <div className="RightCard ms-4">
             <CRow lg={4} md={12}>
-              <TransparentCard>duhdiuhdiu</TransparentCard>
+              <DetailsCard />
             </CRow>
             <CRow lg={4} md={12}>
-              <NonTransparentCard></NonTransparentCard>
+              <ProgressCard />
             </CRow>
             <CRow lg={4} md={12}>
-              <NonTransparentCard></NonTransparentCard>
+              <TaskCard />
             </CRow>
           </div>
         </CCol>
