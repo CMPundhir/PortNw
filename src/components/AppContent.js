@@ -21,6 +21,7 @@ const AppContent = ({ user }) => {
       <Suspense fallback={<CSpinner color="primary" />}>
         <Switch>
           {routes.map((route, idx) => {
+            console.log(`${route.path} ${route.exact} ${route.name}`)
             return (
               route.component && (
                 <Route

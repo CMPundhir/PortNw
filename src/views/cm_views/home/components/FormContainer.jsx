@@ -1,5 +1,6 @@
 import React from "react";
 import { ACTION } from "src/commons/Constants";
+import CouponForm from "./CouponForm";
 import DthForm from "./DthForm";
 import ElectricityForm from "./ElectricityForm";
 import MobileForm from "./MobileForm";
@@ -30,6 +31,9 @@ const FormContainer = ({ action }) => {
       </div>
       <div hidden={action != ACTION.WATER} className="ElectricityForm">
         <MobileForm />
+      </div>
+      <div hidden={action != ACTION.COUPON} className="Coupon">
+        <CouponForm />
       </div>
     </>
   );

@@ -2,6 +2,7 @@ import { CImage } from "@coreui/react";
 import { faAmbulance } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import ScrollCardBtn from "./ScrollCardBtn";
 
 const Recent = ({ icon, text, mob, btn }) => {
   return (
@@ -25,7 +26,12 @@ const Recent = ({ icon, text, mob, btn }) => {
         />
         <div>{mob ? mob : "+91-1234567890"}</div>
         <div>
-          <small>{text ? text : "Last recharge on :"}</small>
+          <small style={{ color: "#83D89F" }}>
+            {text ? text : "Last recharge on :"}
+          </small>
+        </div>
+        <div>
+          <ScrollCardBtn txt="Repeat"></ScrollCardBtn>
         </div>
       </div>
     </div>

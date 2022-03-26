@@ -1,0 +1,17 @@
+.navHeader {
+  background-color: #0079b6;
+  box-shadow: 0px 8px 10px 0px #acabab;
+}
+.signInBtn {
+  color: #0079b6;
+  background-color: white;
+  border-radius: 20px;
+  outline: 3px solid #026fa5;
+}
+.navLinks {
+  border-bottom: 2px silid #0079b6;
+  color: blue;
+}
+.navLinks:hover {
+  border-bottom: 2px silid white;
+}

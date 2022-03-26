@@ -51,7 +51,7 @@ const AppHeader = ({ user }) => {
   const history = useHistory();
 
   return (
-    <CHeader position="sticky" className="Navbar hvr-shadow-radial mb-4">
+    <CHeader position="sticky" className="Navbar hvr-shadow-radial mb-4" style={{backgroundColor:"#0079b6"}}>
       <span
         className="nav-logo sideNav-toggle"
         onClick={() => dispatch({ type: "set", sidebarShow: !sidebarShow })}

@@ -1,8 +1,4 @@
-import { CCol, CRow } from "@coreui/react";
-import { faBroadcastTower } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
-import CommonCard from "src/commons/cards/CommonCard";
-import CircleGrad from "src/commons/components/CircleGrad";
 import { airtel, jio, transaction } from "src/iconsimport";
 import Recent from "./Recent";
 

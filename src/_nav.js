@@ -57,7 +57,7 @@ export const nav_admin = [
   {
     component: CNavItem,
     name: "Home",
-    to: CM_Nav.HOMEVIEW,
+    to: CM_Nav.HOME,
     icon: (
       <FontAwesomeIcon
         size="sm"
@@ -66,6 +66,44 @@ export const nav_admin = [
       />
     ),
   },
+  {
+    component: CNavItem,
+    name: "Transactions",
+    to: CM_Nav.TRANSACTION,
+    icon: (
+      <FontAwesomeIcon
+        size="sm"
+        icon={faRandom}
+        style={{ marginRight: 23, marginLeft: 8 }}
+      />
+    ),
+  },
+  {
+    component: CNavItem,
+    name: "My QR Code",
+    to: CM_Nav.MY_QR_CODE,
+    icon: (
+      <FontAwesomeIcon
+        size="sm"
+        icon={faRandom}
+        style={{ marginRight: 23, marginLeft: 8 }}
+      />
+    ),
+  },
+  {
+    component: CNavItem,
+    name:"AEPS",
+    to: CM_Nav.MY_AEPS,
+    icon: (
+      <FontAwesomeIcon
+        size="sm"
+        icon={faRandom}
+        style={{ marginRight: 23, marginLeft: 8 }}
+      />
+    ),
+  },
+ 
+  
   {
     component: CNavGroup,
     name: "Users",
@@ -134,18 +172,6 @@ export const nav_admin = [
         to: CM_Nav.ADMIN_CREDITS,
       },
     ],
-  },
-  {
-    component: CNavItem,
-    name: "Transactions",
-    to: CM_Nav.TRANSACTION_HISTORY,
-    icon: (
-      <FontAwesomeIcon
-        size="sm"
-        icon={faRandom}
-        style={{ marginRight: 23, marginLeft: 8 }}
-      />
-    ),
   },
   {
     component: CNavGroup,

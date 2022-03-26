@@ -1,10 +1,12 @@
 import { CCard, CRow, CCol } from "@coreui/react";
 import {
   faBroadcastTower,
+  faCarSide,
   faCreditCard,
   faGasPump,
   faGlobeAsia,
   faHandHoldingWater,
+  faIdCard,
   faLandmark,
   faMobile,
   faPhoneSquare,
@@ -21,10 +23,8 @@ import RecentRecharges from "../dashboard/components/RecentRecharges";
 import RechargeForm from "./components/MobileForm";
 import DthForm from "./components/DthForm";
 import FormContainer from "./components/FormContainer";
-import DetailsCard from "./components/DetailsCard";
-import ProgressCard from "./components/ProgressCard";
-import TaskCard from "./components/TaskCard";
 import ScrollCards from "./components/ScrollCards";
+import RightSideComponent from "../custom/RightSideComponent";
 
 const HomeView = ({ user }) => {
   const [action, setAction] = useState(ACTION.MOBILE_RECHARGE);
@@ -117,25 +117,31 @@ const HomeView = ({ user }) => {
                 icon={faHandHoldingWater}
                 text="Water"
               />
+              <CategoryButton
+                isActive={action == ACTION.COUPON}
+                onClick={() => {
+                  setAction(ACTION.COUPON);
+                  setIsactive(true);
+                  setTitle("Coupon");
+                }}
+                icon={faIdCard}
+                text="Coupon"
+              />
             </CRow>
             <FormContainer action={action} />
+            <div
+              style={{
+                marginBottom: "none",
+                // fontSize: "18px",
+                fontWeight: "bold",
+              }}
+            >
+              Repeat
+            </div>
             <ScrollCards />
           </TransparentCard>
         </CCol>
-
-        <CCol lg={4} md={12}>
-          <div className="RightCard ms-4">
-            <CRow lg={4} md={12}>
-              <DetailsCard />
-            </CRow>
-            <CRow lg={4} md={12}>
-              <ProgressCard />
-            </CRow>
-            <CRow lg={4} md={12}>
-              <TaskCard />
-            </CRow>
-          </div>
-        </CCol>
+        <RightSideComponent />
       </CRow>
     </>
   );

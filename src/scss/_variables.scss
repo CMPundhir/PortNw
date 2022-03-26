@@ -83,13 +83,14 @@ $primary-dark: #063151 !default;
 $primary-base: #4093f7 !default;
 $primary-50: #8cc0ff !default;
 $primary-25: #d9eaff !default;
+$primary-theme: #0079B6 !default;
 
 // $secondary-dark:  #212233 !default;
 // $secondary-base:  #9da5b1 !default;
 // $secondary-50:    #9da5b1 !default;
 // $secondary-25:    #ced2d8 !default;
 
-$success-dark: #1b9e3e !default;
+$success-dark : #1b9e3e !default;
 $success-base: #2eb85c !default;
 $success-50: #96dbad !default;
 $success-25: #cbedd6 !default;
@@ -1621,7 +1622,7 @@ $card-border-color: rgba($primary-base, 0.25) !default;
 // $sidebar-padding-y:                        0 !default;
 // $sidebar-padding-x:                        0 !default;
 $sidebar-color: $white !default; // high-emphasis-inverse
-$sidebar-bg: $primary-dark !default; // gray-base
+$sidebar-bg: $primary-theme !default; // gray-base
 // $sidebar-border-width:                     0 !default;
 // $sidebar-border-color:                     transparent !default;
 // $sidebar-transition:                       margin-left .15s, margin-right .15s, box-shadow .075s, transform .15s, width .15s, z-index 0s ease .15s !default;
@@ -1673,7 +1674,7 @@ $sidebar-nav-link-active-icon-color: $primary !default;
 // $sidebar-nav-icon-font-size:               $sidebar-nav-icon-height !default;
 
 // $sidebar-nav-group-bg:                     rgba(0, 0, 0, .2) !default;
-$sidebar-nav-group-bg: rgba($primary-dark, 1) !default;
+$sidebar-nav-group-bg: rgba(#1f6bad, 1) !default; // dropdown bg color . . . 
 // $sidebar-nav-group-transition:             background .15s ease-in-out !default;
 // $sidebar-nav-group-items-transition:       height .15s ease !default;
 // $sidebar-nav-group-toggle-show-color:      $sidebar-nav-link-color !default;

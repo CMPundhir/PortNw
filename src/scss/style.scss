@@ -403,7 +403,7 @@ body {
 }
 .btn-container:hover {
   cursor: pointer;
-  border-bottom: 2px solid blue;
+  border-bottom: 2px solid #0079b6;
 }
 
 .DetailCard {
@@ -454,4 +454,31 @@ body {
   border-radius: 50%;
   border-width: 1px;
   opacity: 1;
+}
+.buttonCss {
+  background-color: #0079b6;
+  color: white;
+  margin: 10px;
+  border-radius: 16px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 35px;
+}
+.formbtnCss {
+  background-color: #0079b6;
+  color: white;
+  margin: 10px;
+  border-radius: 16px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 93px;
+}
+
+//radio btn css in aeps page
+.input:checked {
+  background-color: #1692ff;
 }

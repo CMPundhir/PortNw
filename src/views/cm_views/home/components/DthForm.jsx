@@ -67,13 +67,13 @@ const DthForm = ({ action }) => {
             </CRow>
             <br />
             <CRow>
-              <CCol lg={4}></CCol>
               <CCol>
-                <CButton type="submit" className="button_css">
-                  Submit
-                </CButton>
+                <div className="justify-content-center">
+                  <CButton type="submit" className="formbtnCss ">
+                    Submit
+                  </CButton>
+                </div>
               </CCol>
-              <CCol lg={4}></CCol>
             </CRow>
           </div>
         </CCol>

@@ -43,7 +43,8 @@ const CategoryButton = ({
             className="pt-2"
             style={{
               fontSize: "12px",
-              color: isActive || hover ? "blue" : "black",
+              fontFamily: "font-family: 'Lato', sans-serif",
+              color: isActive || hover ? "#0079b6" : "black",
             }}
           >
             {text ? text : "Default"}

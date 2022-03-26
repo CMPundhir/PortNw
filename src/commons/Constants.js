@@ -32,7 +32,9 @@ export const UPDATE_ACTION = {
 export const CM_Nav = {
   DASHBOARD: "/dashboard",
   DASHBOARDOLD: "/dashboard-old",
-  HOMEVIEW: "/home",
+  HOME: "/home",
+  TRANSACTION: "/transactions",
+  TRANSACTION2: "/my-transactions",
   USERS: "/users",
   SUB_ADMIN: "/sub-admins",
   ACCOUNTS: "/accounts",
@@ -65,6 +67,10 @@ export const CM_Nav = {
   RISK: "/risk",
   RISK_BLOCK_ACC: "/risk_block_accounts",
   RISK_TRANSACTIONS: "/risk_transactions",
+  MY_QR_CODE: "/my-qr-code",
+  MY_AEPS: "/aeps",
+  INDEX_PAGE: "/index_page",
+
 };
 
 export const StoreKey = {
@@ -89,6 +95,7 @@ export const ACTION = {
   MOBILE_RECHARGE : "m",
   DTH: "d",
   ELECTRICITY: "e",
+  COUPON: "n",
   CREDIT_CARD: "c",
   BROADBAND: "b",
   LANDLINE: "l",

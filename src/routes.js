@@ -19,6 +19,15 @@ const DashboardOld = React.lazy(() =>
 const HomeView = React.lazy(() =>
   import("src/views/cm_views/home/HomeView")
 );
+const MyQrCodeView = React.lazy(() =>
+  import("src/views/cm_views/my_qr_code/MyQrCodeView")
+);
+const MyAeps = React.lazy(() =>
+  import("src/views/cm_views/aeps/MyAeps")
+);
+
+
+
 const Colors = React.lazy(() => import("./views/theme/colors/Colors"));
 const Typography = React.lazy(() =>
   import("./views/theme/typography/Typography")
@@ -161,6 +170,7 @@ const TransactionHis = React.lazy(() =>
 
 // CM Views
 const ProfileView = React.lazy(() => import("./views/cm_views/ProfileView"));
+const TransactionView = React.lazy(() => import("./views/cm_views/transaction/TransactionView"));
 const SettingView = React.lazy(() =>
   import("./views/cm_views/settings/SettingView")
 );
@@ -176,6 +186,8 @@ const SupportView = React.lazy(() =>
 const ReportsView = React.lazy(() => import("./views/cm_views/ReportsView"));
 const LoginView = React.lazy(() => import("./views/pages/auth/LoginView"));
 const ApiDocView = React.lazy(() => import("./views/cm_views/ApiDocView"));
+
+
 
 const routes = [
   { path: "/", exact: true, name: "Home" },
@@ -385,6 +397,21 @@ const routes = [
     path: CM_Nav.HOME,
     name: "Home",
     component: HomeView,
+  },
+  {
+    path: CM_Nav.TRANSACTION,
+    name: "Transactions",
+    component: TransactionView,
+  },
+  {
+    path: CM_Nav.MY_QR_CODE,
+    name: "My QR Code",
+    component: MyQrCodeView,
+  },
+  {
+    path: CM_Nav.MY_AEPS,
+    name: "AEPS",
+    component: MyAeps,
   },
 ];
 

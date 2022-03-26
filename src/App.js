@@ -17,6 +17,7 @@ const Login = React.lazy(() => import("./views/pages/auth/LoginView"));
 const Register = React.lazy(() => import("./views/pages/register/Register"));
 const Page404 = React.lazy(() => import("./views/pages/page404/Page404"));
 const Page500 = React.lazy(() => import("./views/pages/page500/Page500"));
+const IndexPage = React.lazy(() => import("./views/pages/index/IndexPage"));
 
 class App extends Component {
   render() {
@@ -24,6 +25,12 @@ class App extends Component {
       <BrowserRouter>
         <React.Suspense fallback={loading}>
           <Switch>
+            <Route
+              exact
+              path="/"
+              name="Index Page"
+              render={(props) => <IndexPage {...props} />}
+            />
             <Route
               exact
               path="/login"
@@ -49,7 +56,7 @@ class App extends Component {
               render={(props) => <Page500 {...props} />}
             />
             <Route
-              path="/"
+              path=""
               name="Home"
               render={(props) => <DefaultLayout {...props} />}
             />
