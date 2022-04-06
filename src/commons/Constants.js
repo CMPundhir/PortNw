@@ -70,6 +70,8 @@ export const CM_Nav = {
   MY_QR_CODE: "/my-qr-code",
   MY_AEPS: "/aeps",
   INDEX_PAGE: "/index_page",
+  SIGNUP_VIEW: "/signup",
+
 
 };
 

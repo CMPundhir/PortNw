@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter, HashRouter, Route, Switch } from "react-router-dom";
 import "./scss/style.scss";
 import "src/assets/css/hover.css";
+import SignupView from "./views/pages/auth/SignupView";
 
 const loading = (
   <div className="pt-3 text-center">
@@ -36,6 +37,12 @@ class App extends Component {
               path="/login"
               name="Login Page"
               render={(props) => <Login {...props} />}
+            />
+            <Route
+              exact
+              path="/signup"
+              name="Sign Up Page"
+              render={(props) => <SignupView {...props} />}
             />
             <Route
               exact

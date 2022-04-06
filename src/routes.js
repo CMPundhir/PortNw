@@ -185,6 +185,8 @@ const SupportView = React.lazy(() =>
 );
 const ReportsView = React.lazy(() => import("./views/cm_views/ReportsView"));
 const LoginView = React.lazy(() => import("./views/pages/auth/LoginView"));
+const SignUpView = React.lazy(() => import("./views/pages/auth/SignupView"));
+
 const ApiDocView = React.lazy(() => import("./views/cm_views/ApiDocView"));
 
 
@@ -387,7 +389,7 @@ const routes = [
     path: CM_Nav.LOG_OUT,
     name: "LogOut",
     component: LoginView,
-  },
+  },  
   {
     path: CM_Nav.DASHBOARDOLD,
     name: "Dashboard Old",

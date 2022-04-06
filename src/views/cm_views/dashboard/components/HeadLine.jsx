@@ -6,6 +6,7 @@ import { getDataBtn } from "../../custom/cm_views";
 import ApiEndpoints from "src/networks/ApiEndpoints";
 import RefreshButton from "src/commons/buttons/RefreshButton";
 import { get } from "src/networks/ApiController";
+import { apiErrorToast } from "../../custom/cm_toast";
 
 const HeadLine = ({ user, onRefresh, loading = false }) => {
   const [walletBalance, setWalletBalance] = useState("NA");

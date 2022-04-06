@@ -20,13 +20,43 @@ import login_rt_png from "./../../../assets/images/login_rt.png";
 import "./LoginView.css";
 import { loginApi } from "src/networks/ApiController";
 import { useHistory } from "react-router";
-import { CM_Nav } from "src/commons/Constants";
+import { CM_Nav, UserType } from "src/commons/Constants";
 import { store } from "src/utils/CMLocalStorage";
 import { isValidMobile, isValidPass } from "src/utils/ValidationUtil";
 import { okErrorToast } from "src/views/cm_views/custom/cm_toast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { ForgotPasswordModal } from "src/views/cm_views/custom/cm_modals";
+import { login_png } from "src/iconsimport";
+
+const myUser = {
+  id: 9,
+  name: "GYANENDER",
+  establishment: "GYANENDER",
+  username: 7011256694,
+  w1: 95900,
+  w2: 0,
+  hold: 0,
+  email: "gyan.lamba1981@gmail.com",
+  address: "ROHINI",
+  state: "7",
+  district: "NORTH WEST",
+  pincode: "110085",
+  aadhar: "572981560977",
+  pan: "AALCM0181E",
+  gstin: "BSUPK5566Q",
+  role: UserType.ADMIN,
+  status: 1,
+  active: 1,
+  kyc: 0,
+  created_at: "2018-09-01T07:54:50.000000Z",
+  api_token: "MmU2MmFkano1cXplc1VndktsUTFRTXY4TGp1SW9DQmsyaDArQ21BTFQybz0=",
+  instId: "53494",
+  dmt1: 0,
+  dmt2: 1,
+  dmt3: 1,
+  dmt4: 1,
+};
 
 const LoginView = () => {
   const [request, setRequest] = useState(false);
@@ -49,22 +79,28 @@ const LoginView = () => {
     // }
     if (validMob && validPass) {
       //setValidated(false);
-      loginApi(
-        form.eMob.value,
-        form.ePass.value,
-        setRequest,
-        (user) => {
-          setTimeout(() => {
-            history.push({
-              pathname: CM_Nav.DASHBOARD,
-              state: { user: user, isNewLogin: true },
-            });
-          }, 100);
-        },
-        (error) => {
-          okErrorToast("Error: " + error.response.status, error.response.data);
-        }
-      );
+      setTimeout(() => {
+        history.push({
+          pathname: CM_Nav.DASHBOARD,
+          state: { user: myUser, isNewLogin: true },
+        });
+      }, 100);
+      // loginApi(
+      //   form.eMob.value,
+      //   form.ePass.value,
+      //   setRequest,
+      //   (user) => {
+      //     setTimeout(() => {
+      //       history.push({
+      //         pathname: CM_Nav.DASHBOARD,
+      //         state: { user: user, isNewLogin: true },
+      //       });
+      //     }, 100);
+      //   },
+      //   (error) => {
+      //     okErrorToast("Error: " + error.response.status, error.response.data);
+      //   }
+      // );
     } else {
       setValidated(true);
     }
@@ -77,6 +113,11 @@ const LoginView = () => {
     >
       <CContainer fluid className="login-bg">
         <CRow className="justify-content-center">
+          <CCol xs={0} md={6} lg={6} className="d-md-block d-none right">
+            <div className="min-vh-100 d-flex justify-content-center align-items-center">
+              <CImage className="login-rt-png " src={login_png} width="78%" />
+            </div>
+          </CCol>
           <CCol
             xs={12}
             md={6}
@@ -101,23 +142,16 @@ const LoginView = () => {
                         style={{ width: 200, height: "auto" }}
                       />
                     </div>
-                    <div className="text-center mt-2 mb-3">
-                      <h4 className="fw-bold" style={{ letterSpacing: "1px" }}>
-                        Welcome to <span className="text-primary">PORT</span>{" "}
-                        Pay
-                      </h4>
-                      <h6
-                        className="mt-4 fs-6"
-                        style={{
-                          fontFamily: "fantasy",
-                          letterSpacing: "0.09rem",
-                        }}
+                    <div className="text-center mt-3 mb-4">
+                      <div
+                        className="fw-bold"
+                        style={{ letterSpacing: "1px", fontSize: "24px" }}
                       >
-                        Your Corporate Payment Partner
-                      </h6>
+                        Welcome!
+                      </div>
                     </div>
 
-                    <div className="mb-1 mt-5 position-relative">
+                    <div className="mb-3 mt-4 position-relative">
                       <CFormInput
                         className="input-style"
                         name="eMob"
@@ -150,7 +184,7 @@ const LoginView = () => {
                         ""
                       )}
                     </div>
-                    <div className="mb-3 mt-5">
+                    <div className="mb-1 mt-4">
                       <CInputGroup className="flex-sm-wrap mb-2">
                         <CFormInput
                           className="input-style"
@@ -231,6 +265,9 @@ const LoginView = () => {
                         size="sm"
                         variant="outline"
                         disabled={request}
+                        onClick={() => {
+                          history.push(CM_Nav.SIGNUP_VIEW);
+                        }}
                       >
                         Sign UP
                       </CButton>
@@ -249,11 +286,6 @@ const LoginView = () => {
 
                 <CRow className="justify-content-center"></CRow>
               </CContainer>
-            </div>
-          </CCol>
-          <CCol xs={0} md={6} lg={6} className="d-md-block d-none right">
-            <div className="min-vh-100 d-flex justify-content-center align-items-center">
-              <CImage className="login-rt-png" src={login_rt_png} width="80%" />
             </div>
           </CCol>
         </CRow>

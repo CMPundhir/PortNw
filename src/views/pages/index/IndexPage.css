@@ -1,17 +1,29 @@
 .navHeader {
-  background-color: #0079b6;
-  box-shadow: 0px 8px 10px 0px #acabab;
+  background-color:#FFFFFF6E;
+  position: sticky;
+  top: 0;
 }
 .signInBtn {
-  color: #0079b6;
+  color: #1B76FF;
   background-color: white;
+  border-radius: 24px;
+  outline: 0px solid #1B76FF;
+  padding: 4px;
+  font-size:12px;
+  margin-right:80px;
+  min-width: 120px;
+  
+}
+.signInBtn:hover {
+  background-color: #196be6b8;
   border-radius: 20px;
-  outline: 3px solid #026fa5;
+  outline:1px solid #1A76FF;
+  color: white;
 }
-.navLinks {
-  border-bottom: 2px silid #0079b6;
-  color: blue;
+ .navLinks {
+  border-bottom: 2px solid #E8F0FF;
 }
+
 .navLinks:hover {
-  border-bottom: 2px silid white;
-}
+  border-bottom: 2px solid #1A76FF;
+} 

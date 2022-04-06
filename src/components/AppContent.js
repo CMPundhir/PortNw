@@ -4,7 +4,6 @@ import { CContainer, CSpinner } from "@coreui/react";
 
 // routes config
 import routes from "../routes";
-import CircleGrad from "src/commons/components/CircleGrad";
 
 const AppContent = ({ user }) => {
   return (
@@ -43,7 +42,7 @@ const AppContent = ({ user }) => {
             to={{
               pathname: "/dashboard",
               user: user,
-              key: 1,
+              key: 1, 
             }}
           />
         </Switch>

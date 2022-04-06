@@ -96,27 +96,33 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .login-bg {
-  background-image: url("src//assets//images//login_bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background-image: url("src/assets/images/svg/SignUpBg.svg"); */
+  background: radial-gradient(
+      circle at center,
+      #1C76FE30 15%,
+      transparent 22%
+    ),
+    #F9FBFF;
+  background-size: 50px 50px;
+  background-repeat: round;
 }
 
 .form-transparent {
-  background-color: #a6d7ff80;
+  background-color: #ffffff;
   backdrop-filter: blur(30px);
   box-shadow: 0 0 4px 0px #d3d3d3d3;
-  padding: 24px;
+  padding: 48px;
   border-radius: 16px;
 }
 
 .input-style {
   background-color: #ffffff5e;
   backdrop-filter: blur(10px);
-  padding: 12px;
+  padding: 8px 18px;
   color: #1692ff;
   font-weight: bold;
   border-radius: 16px;
-  border: none;
+  border: 1px solid #1692ff;
   box-shadow: rgba(255, 254, 254, 0.7) 0px -23px 25px 0px inset,
     rgba(255, 255, 255, 0.7) 0px -36px 30px 0px inset,
     rgba(255, 255, 255, 0.5) 0px 79px 40px 0px inset,
@@ -132,24 +138,29 @@ input[type="number"]::-webkit-outer-spin-button {
 } */
 .input-style-placeholder {
   position: absolute;
-  top: 2px;
-  padding: 7px 0 0 13px;
+  top: 4px;
+  padding: 7px 16px 0 16px;
   transition: all 200ms;
   color: #1692ff;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.1em;
   z-index: 1;
+  font-size: 12px;
 }
 .input-style:focus + .input-style-placeholder,
 .input-style:valid + .input-style-placeholder {
   /* font-size: 75%; */
-  transform: translate3d(-5px, -110%, 0);
+  transform: translate3d(-5px, -120%, 0);
   color: #000;
 }
 
-.login-rt-png {
-  animation: move 8s infinite;
+ .login-rt-png {
+  /* animation: move 8s infinite; */
+
+  margin-left: 60px;
 }
+
+/*
 
 @keyframes move {
   0% {
@@ -161,11 +172,12 @@ input[type="number"]::-webkit-outer-spin-button {
   100% {
     margin-top: 64px;
   }
-}
+} */
 
 .login-form-btn {
   backdrop-filter: blur("10px");
   border: 2px solid #a2caec;
+  
   border-radius: 16px;
   font-size: 1rem;
   font-weight: 400;
@@ -173,9 +185,9 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 8px;
   text-decoration: none;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   width: 80%;
 }
 
