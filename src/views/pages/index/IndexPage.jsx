@@ -7,6 +7,8 @@ import "./IndexPage.css";
 import SectionOne from "./SectionOne";
 import SectionTwo from "./SectionTwo";
 import SectionThree from "./SectionThree";
+import { SectionFour } from "./SectionFour";
+import SectionFive from "./SectionFive";
 
 const IndexPage = () => {
   return (
@@ -14,13 +16,14 @@ const IndexPage = () => {
       <IndexNav />
       <div style={{ overflowY: "scroll", overflowX: "hidden" }}>
         {/* section 1 */}
+
         <div
           style={{
             zIndex: -10,
             width: "100vw",
             height: "110vh",
             background:
-              "transparent linear-gradient(180deg, #FFFFFF70 0%, #1563FF80 100%) 0% 0% no-repeat padding-box",
+              "transparent linear-gradient(180deg, #FFFFFF70 0%, #1563FF80 100%) 0% 0% no-repeat padding-box  ",
           }}
         >
           <SectionOne />
@@ -50,7 +53,9 @@ const IndexPage = () => {
         </div>
 
         <SectionTwo />
-        <SectionThree />
+        {/* <SectionThree /> */}
+        <SectionFour />
+        <SectionFive />
       </div>
     </>
   );
