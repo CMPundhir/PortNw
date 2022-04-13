@@ -8,7 +8,12 @@ import signup_Bg from "src/assets/images/png/signup.png";
 import portpay_logo from "src/assets/images/logo_2.png";
 import smallStar from "src/assets/images/home/star.svg";
 import lapTop from "src/assets/images/home/laptop.png";
+import dummy_man from "src/assets/images/home/dummy.jpg";
 
+import Trusted_svg1 from "src/assets/images/home/accenture.svg";
+import Trusted_svg2 from "src/assets/images/home/react.svg";
+import Trusted_svg3 from "src/assets/images/home/airbnb.svg";
+import Trusted_svg4 from "src/assets/images/home/sky.svg";
 
 
 
@@ -19,13 +24,20 @@ export const transaction = transaction_png;
 export const jio= jio_png;
 export const airtel= airtel_logo;
 export const qrCode_png= qrCode;
-export const Index_png=indexImg;
 export const login_png=loginBg;
 export const signup_png=signup_Bg;
 
 export const portPay=portpay_logo;
 export const star_svg=smallStar;
 export const lapTop_png=lapTop;
+export const dummy_jpg=dummy_man;
+
+export const Trusted1=Trusted_svg1;
+export const Trusted2=Trusted_svg2;
+export const Trusted3=Trusted_svg3;
+export const Trusted4=Trusted_svg4;
+
+
 
 
 
