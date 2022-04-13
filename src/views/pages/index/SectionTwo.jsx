@@ -141,7 +141,7 @@ const SectionTwo = () => {
               </span>
 
               <p className="mt-5" style={{ fontWeight: "bold" }}>
-                Safe
+                Helpful
               </p>
               <p style={{ width: "200px" }}>
                 We ensure you get a good night sleep with your money staying
