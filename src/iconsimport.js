@@ -15,6 +15,8 @@ import Trusted_svg2 from "src/assets/images/home/react.svg";
 import Trusted_svg3 from "src/assets/images/home/airbnb.svg";
 import Trusted_svg4 from "src/assets/images/home/sky.svg";
 
+import cloudImage from "src/assets/images/png/cloud.png";
+import circuit  from "src/assets/images/svg/electronic-circuit.svg";
 
 
 
@@ -36,6 +38,8 @@ export const Trusted1=Trusted_svg1;
 export const Trusted2=Trusted_svg2;
 export const Trusted3=Trusted_svg3;
 export const Trusted4=Trusted_svg4;
+export const cloudImage_png=cloudImage;
+export const circuit_svg=circuit;
 
 
 

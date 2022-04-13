@@ -6,48 +6,46 @@ import React from "react";
 const SectionTwo = () => {
   return (
     <>
-      <div className="d-flex text-center" style={{ marginTop: "150px" }}>
-        <CRow>
-          <CCol>
-            <span
-              className="py-2 px-3"
-              style={{
-                backgroundColor: "#F9F0FF",
-                borderRadius: "22px",
-                fontSize: "15px",
-                fontWeight: "bold",
-                color: "#1B76FF",
-              }}
-            >
-              <FontAwesomeIcon
-                style={{ marginRight: "5px", fontSize: "20px" }}
-                icon={faEye}
-              />
-              Why Portpay
-            </span>
-          </CCol>
-          <h1
-            className="mt-4"
+      <CRow className="d-flex text-center" style={{ marginTop: "150px" }}>
+        <CCol>
+          <span
+            className="py-2 px-3"
             style={{
-              fontSize: "40px",
+              backgroundColor: "#F9F0FF",
+              borderRadius: "22px",
+              fontSize: "15px",
               fontWeight: "bold",
+              color: "#1B76FF",
             }}
           >
-            Built with security in mind
-          </h1>
-          <div className="d-flex justify-content-center align-item-center text-center mt-4">
-            <span style={{ width: "50%" }}>
-              Lorem Media is a full-service social media agency. We offer
-              businesses innovative solutions that deliver the right type of
-              audience to you in the most effective strategies possible. We
-              strive to develop a community around your business, polishing your
-              branding, and improving your public relations. Social Media is now
-              one of the most powerful marketing tools with the ability to
-              communicate with a target audience in real time.
-            </span>
-          </div>
-        </CRow>
-      </div>
+            <FontAwesomeIcon
+              style={{ marginRight: "5px", fontSize: "20px" }}
+              icon={faEye}
+            />
+            Why Portpay
+          </span>
+        </CCol>
+        <h1
+          className="mt-4"
+          style={{
+            fontSize: "40px",
+            fontWeight: "bold",
+          }}
+        >
+          Built with security in mind
+        </h1>
+        <div className="d-flex justify-content-center align-item-center  mt-4">
+          <span style={{ width: "50%" }}>
+            Lorem Media is a full-service social media agency. We offer
+            businesses innovative solutions that deliver the right type of
+            audience to you in the most effective strategies possible. We strive
+            to develop a community around your business, polishing your
+            branding, and improving your public relations. Social Media is now
+            one of the most powerful marketing tools with the ability to
+            communicate with a target audience in real time.
+          </span>
+        </div>
+      </CRow>
       <div style={{ marginTop: "40px" }}>
         <CRow
           md={9}
@@ -141,7 +139,7 @@ const SectionTwo = () => {
               </span>
 
               <p className="mt-5" style={{ fontWeight: "bold" }}>
-                Safe
+                Helpful
               </p>
               <p style={{ width: "200px" }}>
                 We ensure you get a good night sleep with your money staying

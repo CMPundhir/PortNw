@@ -4,18 +4,20 @@ import {
   CForm,
   CFormInput,
   CFormLabel,
+  CImage,
   CRow,
 } from "@coreui/react";
 import "./IndexPage.css";
 
 import React from "react";
+import { Button } from "bootstrap";
 
 const SectionFiveForm = () => {
   return (
     <div className=" lg-5  front text-center">
       <CForm id="signup_form text-center">
         <div className="text-center ">
-          <h3 className="mt-5">Sign Up</h3>
+          <h3 className="mt-2">Sign Up</h3>
           <CFormInput
             placeholder="Your primary email"
             className="Sinput p-3"
@@ -25,9 +27,6 @@ const SectionFiveForm = () => {
             size="sm"
             required
           />
-        </div>
-
-        <div className=" text-center  ">
           <CFormInput
             placeholder="Password"
             className="Sinput  p-3"
@@ -37,8 +36,6 @@ const SectionFiveForm = () => {
             size="sm"
             required
           />
-        </div>
-        <div className=" position-relative text-center">
           <CFormInput
             placeholder="Re-type password"
             className="Sinput p-3"
@@ -50,22 +47,37 @@ const SectionFiveForm = () => {
           />
         </div>
       </CForm>
-      <CRow className="text-center">
-        <div className="pb-5 mt-4 d-flex justify-content-center">
-          <CButton
-            style={{ width: "320px", padding: "9px" }}
-            className=" text-center"
-            form="signup_form"
-            type="submit"
-            size="sm"
-          >
-            Start your free trial
-          </CButton>
-          <CRow>
-            <CButton>Or Sign in with Google</CButton>
-          </CRow>
-        </div>
-      </CRow>
+      <div
+        style={{
+          marginTop: "20px",
+        }}
+      >
+        <span className="buttonCss">Start your free trial</span>
+      </div>
+      <div>
+        <span>OR</span>
+      </div>
+      <div
+        style={{
+          marginTop: "10px",
+        }}
+      >
+        <CButton>Sign in with Google</CButton>
+      </div>
+      <hr
+        style={{
+          marginLeft: "25px",
+          marginRight: "25px",
+          marginTop: "15px",
+        }}
+      ></hr>
+
+      <div>
+        <span>Already have an account?</span>
+        <span>
+          <a href="#"> Login</a>
+        </span>
+      </div>
     </div>
   );
 };
