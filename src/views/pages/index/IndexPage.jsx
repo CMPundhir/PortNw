@@ -14,7 +14,10 @@ const IndexPage = () => {
   return (
     <>
       <IndexNav />
-      <div style={{ overflowY: "scroll", overflowX: "hidden" }}>
+      <div
+        className="text-center"
+        style={{ overflowY: "scroll", overflowX: "hidden" }}
+      >
         {/* section 1 */}
 
         <div
@@ -53,7 +56,7 @@ const IndexPage = () => {
         </div>
 
         <SectionTwo />
-        {/* <SectionThree /> */}
+        <SectionThree />
         <SectionFour />
         <SectionFive />
       </div>
