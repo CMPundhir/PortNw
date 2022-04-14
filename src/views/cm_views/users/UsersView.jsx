@@ -33,6 +33,7 @@ import AddNewUserModal from "src/commons/modals/AddNewUserModal";
 import UserDataCard from "src/commons/cards/UserDataCard";
 
 let lastPage = 1;
+
 const UsersView = ({ user, title, userType }) => {
   const [list, setList] = useState([]);
   const [totalRows, setTotalRows] = useState(0);

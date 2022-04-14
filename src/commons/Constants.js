@@ -33,6 +33,7 @@ export const CM_Nav = {
   DASHBOARD: "/dashboard",
   DASHBOARDOLD: "/dashboard-old",
   HOME: "/home",
+  COUPONS : "/coupons",
   TRANSACTION: "/transactions",
   TRANSACTION2: "/my-transactions",
   USERS: "/users",

@@ -36,7 +36,7 @@ const HeadLine = ({ user, onRefresh, loading = false }) => {
       className="justify-content-md-between align-items-center d-flex"
     >
       <CCol className="pt-2">
-        <h4 className="fw-bold text-black">DashBoard</h4>
+        <h4 className="fw-bold text-black">Dashboard</h4>
       </CCol>
 
       <CCol>
