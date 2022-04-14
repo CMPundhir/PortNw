@@ -17,6 +17,10 @@ import Trusted_svg4 from "src/assets/images/home/sky.svg";
 
 import cloudImage from "src/assets/images/png/cloud.png";
 import circuit  from "src/assets/images/svg/electronic-circuit.svg";
+import Twitter_svg from "src/assets/images/home/twitter.svg";
+import FaceBook_svg from "src/assets/images/home/fbook.svg";
+import Instagram_svg  from "src/assets/images/home/insta.svg";
+
 
 
 
@@ -40,6 +44,10 @@ export const Trusted3=Trusted_svg3;
 export const Trusted4=Trusted_svg4;
 export const cloudImage_png=cloudImage;
 export const circuit_svg=circuit;
+export const FBook=FaceBook_svg;
+export const Twitter=Twitter_svg;
+export const Insta=Instagram_svg;
+
 
 
 

@@ -14,7 +14,7 @@ import SectionFiveForm from "./SectionFiveForm";
 
 const SectionFive = () => {
   return (
-    <div style={{ marginBottom: "50px" }}>
+    <div style={{ marginBottom: "50px", background: "" }}>
       <CRow>
         <CCol style={{ marginTop: "150px" }} lg={6} className="text-center">
           <div

@@ -9,6 +9,7 @@ export const SectionFour = () => {
       style={{
         marginBotton: "50px",
         marginTop: "80px",
+        clipPath: "polygon(50% 0%, 100% 0, 100% 75%, 0 91%, 0 0)",
         background:
           "transparent linear-gradient(180deg, #FFFFFF70 0%, #1563FF80 100%) 0% 0% no-repeat padding-box",
       }}
@@ -35,7 +36,7 @@ export const SectionFour = () => {
             style={{
               fontWeight: "bold",
               fontSize: "15px",
-              marginBottom: "30px",
+              marginBottom: "100px",
             }}
           >
             Narender Modi

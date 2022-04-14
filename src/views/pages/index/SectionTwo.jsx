@@ -6,7 +6,7 @@ import React from "react";
 const SectionTwo = () => {
   return (
     <>
-      <CRow className="d-flex text-center" style={{ marginTop: "150px" }}>
+      <CRow className="d-flex text-center" style={{ marginTop: "200px" }}>
         <CCol>
           <span
             className="py-2 px-3"
@@ -19,7 +19,11 @@ const SectionTwo = () => {
             }}
           >
             <FontAwesomeIcon
-              style={{ marginRight: "5px", fontSize: "20px" }}
+              style={{
+                marginRight: "5px",
+                fontSize: "20px",
+                marginTop: "150px",
+              }}
               icon={faEye}
             />
             Why Portpay

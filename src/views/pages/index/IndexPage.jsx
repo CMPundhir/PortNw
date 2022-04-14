@@ -9,6 +9,8 @@ import SectionTwo from "./SectionTwo";
 import SectionThree from "./SectionThree";
 import { SectionFour } from "./SectionFour";
 import SectionFive from "./SectionFive";
+import IndexHeader from "./IndexFooter";
+import IndexFooter from "./IndexFooter";
 
 const IndexPage = () => {
   return (
@@ -25,6 +27,7 @@ const IndexPage = () => {
             zIndex: -10,
             width: "100vw",
             height: "110vh",
+            clipPath: "polygon(50% 0%, 100% 0, 100% 75%, 0 91%, 0 0)",
             background:
               "transparent linear-gradient(180deg, #FFFFFF70 0%, #1563FF80 100%) 0% 0% no-repeat padding-box  ",
           }}
@@ -59,6 +62,7 @@ const IndexPage = () => {
         <SectionThree />
         <SectionFour />
         <SectionFive />
+        <IndexFooter />
       </div>
     </>
   );
