@@ -1,5 +1,5 @@
 import React from "react";
-
+import TransparentCard from "src/commons/cards/TransparentCard";
 import UsersView from "./UsersView";
 import { UserType } from "src/commons/Constants";
 

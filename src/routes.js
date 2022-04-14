@@ -22,6 +22,9 @@ const HomeView = React.lazy(() =>
 const MyQrCodeView = React.lazy(() =>
   import("src/views/cm_views/my_qr_code/MyQrCodeView")
 );
+const CouponsView = React.lazy(() =>
+  import("src/views/cm_views/coupons/CouponsView")
+);
 const MyAeps = React.lazy(() =>
   import("src/views/cm_views/aeps/MyAeps")
 );
@@ -177,6 +180,7 @@ const SettingView = React.lazy(() =>
 const BankCommercialsView = React.lazy(() =>
   import("./views/cm_views/settings/BankCommercialsView")
 );
+
 const NotificationView = React.lazy(() =>
   import("./views/cm_views/settings/NotificationView")
 );
@@ -193,6 +197,7 @@ const ApiDocView = React.lazy(() => import("./views/cm_views/ApiDocView"));
 
 const routes = [
   { path: "/", exact: true, name: "Home" },
+  { path: "/", exact: true, name: "Coupons" },
   { path: "/dashboard", name: "Dashboard", component: Dashboard },
   // { path: "/theme", name: "Theme", component: Colors, exact: true },
   // { path: "/theme/colors", name: "Colors", component: Colors },
@@ -258,6 +263,11 @@ const routes = [
     path: CM_Nav.SUB_ADMIN,
     name: "Sub Admins",
     component: SubAdminsView,
+  },
+  {
+    path: CM_Nav.COUPONS,
+    name: "Coupons",
+    component: CouponsView,
   },
   {
     path: CM_Nav.ACCOUNTS,

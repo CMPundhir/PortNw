@@ -40,7 +40,7 @@ const AppSidebar = ({ user }) => {
   const history = useHistory();
   const unfoldable = useSelector((state) => state.sidebarUnfoldable);
   const sidebarShow = useSelector((state) => state.sidebarShow);
-  var sideMenus = nav_merchants;
+  var sideMenus = nav_admin;
 
   if (user) {
     // if(user.sub_role == "Admin" || user.sub_role == "Sub Admin"){

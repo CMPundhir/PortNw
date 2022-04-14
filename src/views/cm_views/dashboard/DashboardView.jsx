@@ -8,9 +8,7 @@ import { SimpleCard } from "../custom/cm_views";
 import BarChart from "./components/BarChart";
 import DaySelection from "./components/DaySelection";
 import HeadLine from "./components/HeadLine";
-import PieChart from "./components/PieChart";
-import SummaryTable from "./components/SummaryTable";
-import TransactionStatus from "./components/TransactionStatus";
+import TransparentCard from "src/commons/cards/TransparentCard";
 import TransactionTiles from "./components/TransactionTiles";
 
 const DashboardView = ({ user }) => {
@@ -48,24 +46,25 @@ const DashboardView = ({ user }) => {
 
   return (
     <SimpleCard>
-      <HeadLine
-        user={user}
-        onRefresh={() => fetchDashData(type)}
-        loading={loading}
-      />
-      <DaySelection
-        onTypeSelect={(t) => {
-          //setType(t);
-          fetchDashData(t);
-        }}
-      />
-      <CRow className="mt-4 p-4">
-        <BarChart user={user} reports={currentDashData} />
-      </CRow>
-      <CRow>
-        <TransactionTiles user={user} reports={currentDashData} />
-      </CRow>
-      {/* <CRow xs={{ gutter: 2 }} className="m-2">
+      <TransparentCard>
+        <HeadLine
+          user={user}
+          onRefresh={() => fetchDashData(type)}
+          loading={loading}
+        />
+        <DaySelection
+          onTypeSelect={(t) => {
+            //setType(t);
+            fetchDashData(t);
+          }}
+        />
+        <CRow className="mt-4 p-4">
+          <BarChart user={user} reports={currentDashData} />
+        </CRow>
+        <CRow className="pb-3">
+          <TransactionTiles user={user} reports={currentDashData} />
+        </CRow>
+        {/* <CRow xs={{ gutter: 2 }} className="m-2">
         <CCol sm={12} lg={3} md={6}>
           <div style={{ height: "100%" }}>
             <PieChart />
@@ -77,11 +76,12 @@ const DashboardView = ({ user }) => {
           </div>
         </CCol>
       </CRow> */}
-      {/* <CRow>
-        <CCol className="mt-4 p-3 text-center daysbtnCard-bg">
+        {/* <CRow>
+      <CCol className="mt-4 p-3 text-center daysbtnCard-bg">
           <SummaryTable user={user} type={type} />
         </CCol>
       </CRow> */}
+      </TransparentCard>
     </SimpleCard>
   );
 };

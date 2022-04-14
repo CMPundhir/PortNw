@@ -68,6 +68,18 @@ export const nav_admin = [
   },
   {
     component: CNavItem,
+    name: "Coupon",
+    to: CM_Nav.COUPONS,
+    icon: (
+      <FontAwesomeIcon
+        size="sm"
+        icon={faChartLine}
+        style={{ marginRight: 22, marginLeft: 5 }}
+      />
+    ),
+  },
+  {
+    component: CNavItem,
     name: "Transactions",
     to: CM_Nav.TRANSACTION,
     icon: (
