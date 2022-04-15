@@ -15,9 +15,13 @@ const IndexFooter = () => {
                 <CImage src={portPay} width={200} />
               </li>
               <li className="p-2">
-                <CImage className="p-3" src={FBook} />
-                <CImage className="p-3" src={Twitter} />
-                <CImage className="p-3" src={Insta} />
+                <CImage className="p-3" src={FBook} style={{ width: "50px" }} />
+                <CImage
+                  className="p-3"
+                  src={Twitter}
+                  style={{ width: "50px" }}
+                />
+                <CImage className="p-3" src={Insta} style={{ width: "50px" }} />
               </li>
             </ul>
           </div>

@@ -7,7 +7,7 @@ import "./SignupView.css";
 const SignupView = ({}) => {
   return (
     <div className="min-vh-100 align-items-center signup-bg d-flex flex-row  text-center">
-      <CContainer fluid className=" ">
+      <CContainer fluid>
         <CRow className="text-center d-flex justify-content-between px-5">
           <CCol className="text-center" xs={12} md={5} lg={6}>
             <div className="p-3 signUpForm">
@@ -25,13 +25,13 @@ const SignupView = ({}) => {
                   marginBottom: "20px",
                 }}
               >
-                Enter your detail to join us.
+                Please fill in this form to create an account.
               </div>
               <SignUpForm />
             </div>
           </CCol>
           <CCol
-            className="right d-flex align-items-center justify-content-start"
+            className="right d-flex align-items-center justify-content-start px-4 py-5"
             xs={0}
             md={5}
             lg={6}

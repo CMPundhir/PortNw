@@ -8,8 +8,13 @@ import {
   CRow,
 } from "@coreui/react";
 import React from "react";
+import { useHistory, useLocation } from "react-router";
+import { CM_Nav } from "src/commons/Constants";
 
 const SignUpForm = () => {
+  const history = useHistory();
+
+  // signup api call . . .  . . ..
   const handleSignup = (event) => {
     const form = event.currentTarget;
     event.preventDefault();
@@ -122,7 +127,7 @@ const SignUpForm = () => {
         </CRow>
       </CForm>
       <CRow className="text-center">
-        <div className="pb-5 mt-4 d-flex justify-content-center">
+        <div className="pb-3 mt-4 d-flex justify-content-center">
           <CButton
             className="signup-btn signUp text-center signup-form-btn"
             form="signup_form"
@@ -131,6 +136,17 @@ const SignUpForm = () => {
           >
             Sign Up
           </CButton>
+        </div>
+        <div style={{ marginBottom: "20px" }}>
+          <span>Already have an account?</span>
+          <span
+            style={{ color: "#1c76fe", cursor: "pointer", paddingLeft: "3px" }}
+            onClick={(e) => {
+              history.push(CM_Nav.LOG_IN);
+            }}
+          >
+            Login
+          </span>
         </div>
       </CRow>
     </>

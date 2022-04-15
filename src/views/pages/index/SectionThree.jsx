@@ -9,7 +9,7 @@ import { circuit_svg, cloudImage_png } from "src/iconsimport.js";
 
 const SectionThree = () => {
   return (
-    <>
+    <div style={{ marginTop: "150px" }}>
       <CRow lg={12} className="text-center d-flex align-items-center">
         <CCol lg={6} className="d-flex justify-content-center">
           <div
@@ -79,7 +79,7 @@ const SectionThree = () => {
             className="mt-2"
             style={{
               width: "370px",
-              color: "#8989A2",
+              // color: "#8989A2",
               fontSize: "12px",
             }}
           >
@@ -89,7 +89,7 @@ const SectionThree = () => {
           </div>
         </CCol>
       </CRow>
-    </>
+    </div>
   );
 };
 

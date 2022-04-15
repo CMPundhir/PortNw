@@ -6,7 +6,7 @@ const SectionOne = () => {
   return (
     <div
       className="indexView"
-      style={{ position: "absolute", marginTop: "60px" }}
+      style={{ position: "absolute", marginTop: "30px" }}
     >
       <CRow>
         <CCol className="rightSide d-flex text-right justify-content-right align-item-right px-5">

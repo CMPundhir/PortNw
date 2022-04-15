@@ -126,7 +126,7 @@ const LoginView = () => {
           >
             <div className="min-vh-100 d-flex flex-row align-items-center">
               <CContainer
-                style={{ backgroundColor: "transparent", padding: 8 }}
+                style={{ backgroundColor: "transparent", padding: "8" }}
               >
                 <div className="form form-transparent">
                   <CForm
@@ -143,15 +143,12 @@ const LoginView = () => {
                       />
                     </div>
                     <div className="text-center mt-3 mb-4">
-                      <div
-                        className="fw-bold"
-                        style={{ letterSpacing: "1px", fontSize: "24px" }}
-                      >
-                        Welcome!
+                      <div style={{ letterSpacing: "1px", fontSize: "16.5px" }}>
+                        Enter your login details.
                       </div>
                     </div>
 
-                    <div className="mb-3 mt-4 position-relative">
+                    <div className="mb-2 mt-5 position-relative">
                       <CFormInput
                         className="input-style"
                         name="eMob"
@@ -184,8 +181,8 @@ const LoginView = () => {
                         ""
                       )}
                     </div>
-                    <div className="mb-1 mt-4">
-                      <CInputGroup className="flex-sm-wrap mb-2">
+                    <div className="mb-2 mt-5">
+                      <CInputGroup className="flex-sm-wrap mb-3">
                         <CFormInput
                           className="input-style"
                           name="ePass"
@@ -269,13 +266,13 @@ const LoginView = () => {
                           history.push(CM_Nav.SIGNUP_VIEW);
                         }}
                       >
-                        Sign UP
+                        Sign Up
                       </CButton>
                     </div>
 
-                    <div className="mb-3 d-flex text-black justify-content-center mt-1">
+                    <div className="mb-3 mt-3 d-flex text-black justify-content-center mt-1">
                       <small
-                        className="px-3 py-0 fw-bold terms-btn mt-2"
+                        className="px-0 py-0  terms-btn mt-2"
                         disabled={request}
                       >
                         Terms and Conditions

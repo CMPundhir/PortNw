@@ -22,7 +22,7 @@ const SectionTwo = () => {
               style={{
                 marginRight: "5px",
                 fontSize: "20px",
-                marginTop: "150px",
+                marginTop: "50px",
               }}
               icon={faEye}
             />

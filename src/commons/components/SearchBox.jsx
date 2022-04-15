@@ -4,20 +4,31 @@ import {
   CFormInput,
   CInputGroupText,
   CInput,
+  CImage,
+  CButton,
 } from "@coreui/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { mSend_png } from "src/iconsimport";
+import { margin, width } from "@mui/system";
 
 const SearchBox = () => {
   return (
     <>
-      <CInputGroup className="flex-nowrap">
-        <CFormInput
-          placeholder="Username"
-          aria-label="Username"
-          aria-describedby="addon-wrapping"
+      <div className="input-container">
+        <input
+          style={{ padding: "8px" }}
+          className="input-field"
+          type="text"
+          placeholder="Email"
+          name="usrnm"
         />
-        <CInputGroupText id="addon-wrapping"></CInputGroupText>
-      </CInputGroup>
+        <CImage
+          src={mSend_png}
+          style={{ width: "30px", margin: "-40px" }}
+          onClick={() => {
+            alert("hello");
+          }}
+        />
+      </div>
     </>
   );
 };

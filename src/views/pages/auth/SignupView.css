@@ -14,10 +14,11 @@
   background-color: #ffffff;
   backdrop-filter: blur(30px);
   box-shadow: 0 0 4px 0px #d3d3d3d3;
-  padding: 48px;
+  padding: 80px;
   border-radius: 16px;
   width: 80%;
   margin-left: 65px;
+  
   
 }
 
@@ -28,8 +29,8 @@
   padding: 8px 8px;
   color: #1692ff;
   font-weight: bold;
-  border-radius: 16px;
-  border: 1px solid #1692ff;
+  border-radius: 20px;
+  border: 2px solid #1692ff;
   box-shadow: rgba(255, 254, 254, 0.7) 0px -23px 25px 0px inset,
     rgba(255, 255, 255, 0.7) 0px -36px 30px 0px inset,
     rgba(255, 255, 255, 0.5) 0px 79px 40px 0px inset,
@@ -42,9 +43,9 @@
   position: absolute;
   top: 4px;
   left: 16px;
-  padding: 7px 0px 0 0px;
+  padding: 7px 0px 2px 0px;
   transition: all 200ms;
-  color: #1692ff;
+  color: #455A64;
   font-weight: 500;
   letter-spacing: 0.1em;
   z-index: 1;
@@ -53,7 +54,8 @@
 .input-style2:focus + .input-style-placeholder,
 .input-style2:valid + .input-style-placeholder {
   transform: translate3d(-5px, -120%, 0);
-  color: #000;
+  color: #1692ff;
+  font-size: 15px;
 }
 
 .signup-btn{
