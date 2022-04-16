@@ -4,10 +4,7 @@ import { lapTop_png, star_svg } from "src/iconsimport";
 
 const SectionOne = () => {
   return (
-    <div
-      className="indexView"
-      style={{ position: "absolute", marginTop: "30px" }}
-    >
+    <div>
       <CRow>
         <CCol className="rightSide d-flex text-right justify-content-right align-item-right px-5">
           <div className="rightSide2 d-flex justify-content-left my-5 column1-margin">

@@ -2,15 +2,10 @@ import React from "react";
 import CircleLightPurple from "src/commons/components/CircleLightPurple";
 import CircleSmallPurple from "src/commons/components/CircleSmallPurple";
 
-import { IndexNav } from "./IndexNav";
-import "./IndexPage.css";
-import SectionOne from "./SectionOne";
-import SectionTwo from "./SectionTwo";
-import SectionThree from "./SectionThree";
-import { SectionFour } from "./SectionFour";
-import SectionFive from "./SectionFive";
-import IndexHeader from "./IndexFooter";
-import IndexFooter from "./IndexFooter";
+import { IndexNav } from "./components/IndexNav";
+import "./helper/IndexPage.css";
+import SectionOne from "src/views/pages/index/components/SectionOne";
+import SectionTwo from "src/views/pages/index/components/SectionTwo";
 
 const IndexPage = () => {
   return (
@@ -18,51 +13,50 @@ const IndexPage = () => {
       <IndexNav />
       <div
         className="text-center"
-        style={{ overflowY: "scroll", overflowX: "hidden" }}
+        style={{
+          overflowY: "scroll",
+          overflowX: "hidden",
+        }}
       >
-        {/* section 1 */}
-
         <div
           style={{
             zIndex: -10,
-            width: "100vw",
-            height: "110vh",
+            width: "100%",
+            height: "100vh",
+            paddingBottom: "25%",
             clipPath: "polygon(50% 0%, 100% 0, 100% 75%, 0 91%, 0 0)",
+            position: "relative",
             background:
               "transparent linear-gradient(180deg, #FFFFFF70 0%, #1563FF80 100%) 0% 0% no-repeat padding-box  ",
           }}
         >
-          <SectionOne />
+          <div className="position-absolute" style={{ top: "0" }}>
+            <SectionOne />
+          </div>
           {/* circle 1 */}
           <div
             style={{
               position: "relative",
               zIndex: -2,
-              left: "850px",
-              marginTop: "50px",
-              marginLeft: "100px",
+              left: "60%",
+              marginTop: "3%",
+              marginLeft: "5%",
             }}
           >
-            <CircleLightPurple width="400px" height="400px" radius="300px" />
+            <CircleLightPurple width="25rem" height="25rem" radius="19rem" />
           </div>
           {/* circle 2 */}
           <div
             style={{
               position: "relative",
               zIndex: -2,
-              marginTop: "3px",
-              marginLeft: "890px",
+              marginLeft: "50%",
             }}
           >
-            <CircleSmallPurple width="130px" height="130px" radius="300px" />
+            <CircleSmallPurple width="8rem" height="8rem" radius="19rem" />
           </div>
         </div>
-
         <SectionTwo />
-        <SectionThree />
-        <SectionFour />
-        <SectionFive />
-        <IndexFooter />
       </div>
     </>
   );
