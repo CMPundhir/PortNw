@@ -14,9 +14,15 @@ import SectionFiveForm from "./SectionFiveForm";
 
 const SectionFive = () => {
   return (
-    <div style={{ marginBottom: "50px", background: "" }}>
+    <div style={{ marginBottom: "300px" }}>
       <CRow>
-        <CCol style={{ marginTop: "150px" }} lg={6} className="text-center">
+        <CCol
+          style={{ marginTop: "230px" }}
+          lg={6}
+          md={6}
+          sm={12}
+          className="text-center"
+        >
           <div
             style={{
               fontWeight: "bolder",
@@ -54,6 +60,9 @@ const SectionFive = () => {
         </CCol>
 
         <CCol
+          md={6}
+          sm={12}
+          lg={6}
           style={{ marginTop: "100px" }}
           className="parent d-flex justify-content-center"
         >

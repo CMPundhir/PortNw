@@ -9,7 +9,6 @@ import SectionTwo from "./SectionTwo";
 import SectionThree from "./SectionThree";
 import { SectionFour } from "./SectionFour";
 import SectionFive from "./SectionFive";
-import IndexHeader from "./IndexFooter";
 import IndexFooter from "./IndexFooter";
 
 const IndexPage = () => {
@@ -18,11 +17,12 @@ const IndexPage = () => {
       <IndexNav />
       <div
         className="text-center"
-        style={{ overflowY: "scroll", overflowX: "hidden" }}
+        style={{ overflowy: "scroll", overflowX: "hidden" }}
       >
         {/* section 1 */}
 
         <div
+          className="sec1_bg"
           style={{
             zIndex: -10,
             width: "100vw",
