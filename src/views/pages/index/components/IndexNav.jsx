@@ -14,7 +14,7 @@ import { portPay } from "src/iconsimport";
 export const IndexNav = () => {
   return (
     <>
-      <Navbar className="navHeader" expand="lg">
+      <Navbar className="navHeader" position="fixed" expand="lg">
         <Container>
           <Navbar.Brand style={{ marginLeft: "50px" }} href="#home">
             <CImage src={portPay} width="90px" height="auto" />

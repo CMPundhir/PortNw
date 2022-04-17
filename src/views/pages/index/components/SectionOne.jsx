@@ -5,7 +5,11 @@ import { lapTop_png, star_svg } from "src/iconsimport";
 
 const SectionOne = () => {
   return (
+<<<<<<< HEAD:src/views/pages/index/SectionOne.jsx
     <div className="indexView">
+=======
+    <div>
+>>>>>>> aca6d4e6778e49902233dff649c3139fffd59079:src/views/pages/index/components/SectionOne.jsx
       <CRow>
         <CCol
           lg={6}

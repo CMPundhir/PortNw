@@ -1,12 +1,13 @@
-import { CCol, CRow } from "@coreui/react";
+import { CCol, CRow, CTable } from "@coreui/react";
 import { faEye, faLock, faUserClock } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Table } from "@material-ui/core";
 import React from "react";
 
 const SectionTwo = () => {
   return (
-    <>
-      <CRow className="d-flex text-center" style={{ marginTop: "200px" }}>
+    <div style={{ border: "solid black" }}>
+      <CRow className="d-flex text-center">
         <CCol>
           <span
             className="py-2 px-3"
@@ -29,17 +30,9 @@ const SectionTwo = () => {
             Why Portpay
           </span>
         </CCol>
-        <h1
-          className="mt-4"
-          style={{
-            fontSize: "40px",
-            fontWeight: "bold",
-          }}
-        >
-          Built with security in mind
-        </h1>
-        <div className="d-flex justify-content-center align-item-center  mt-4">
-          <span style={{ width: "50%" }}>
+        <h1 className="mt-4 fw-bold">Built with security in mind</h1>
+        <div className="d-flex justify-content-center align-item-center  mt-4 d-flex text-center">
+          <span style={{ width: "60%" }}>
             Lorem Media is a full-service social media agency. We offer
             businesses innovative solutions that deliver the right type of
             audience to you in the most effective strategies possible. We strive
@@ -50,8 +43,17 @@ const SectionTwo = () => {
           </span>
         </div>
       </CRow>
-      <div style={{ marginTop: "40px" }}>
-        <CRow
+      <div className="mt-4 d-flex justify-content-center text-center">
+        <table class="table" style={{ width: "60%" }}>
+          <thead>
+            <tr>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+        </table>
+        {/* <CRow
           md={9}
           className="d-flex justify-content-center align-item-center my-5 mx-5"
         >
@@ -151,9 +153,9 @@ const SectionTwo = () => {
               </p>
             </div>
           </CCol>
-        </CRow>
+        </CRow> */}
       </div>
-    </>
+    </div>
   );
 };
 
