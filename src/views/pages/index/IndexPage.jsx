@@ -1,33 +1,37 @@
 import React from "react";
 import CircleLightPurple from "src/commons/components/CircleLightPurple";
 import CircleSmallPurple from "src/commons/components/CircleSmallPurple";
+
 import { IndexNav } from "./components/IndexNav";
 import "./helper/IndexPage.css";
 import SectionOne from "src/views/pages/index/components/SectionOne";
 import SectionTwo from "src/views/pages/index/components/SectionTwo";
-
+import SectionThree from "src/views/pages/index/components/SectionThree";
+import { SectionFour } from "./components/SectionFour";
+import { SectionFive } from "./components/SectionFive";
+import IndexFooter from "./components/IndexFooter";
 const IndexPage = () => {
   return (
     <>
       <IndexNav />
       <div
         className="text-center"
-        style={{ overflowy: "scroll", overflowX: "hidden" }}
+        style={{
+          overflowY: "scroll",
+          overflowX: "hidden",
+        }}
       >
         <div
-          className="sec1_bg"
           style={{
             zIndex: -10,
             width: "100%",
             height: "100vh",
-            paddingBottom: "25%",
             clipPath: "polygon(50% 0%, 100% 0, 100% 75%, 0 91%, 0 0)",
-            position: "relative",
             background:
               "transparent linear-gradient(180deg, #FFFFFF70 0%, #1563FF80 100%) 0% 0% no-repeat padding-box  ",
           }}
         >
-          <div className="position-absolute" style={{ top: "0" }}>
+          <div className="position-absolute margin-top-70">
             <SectionOne />
           </div>
           {/* circle 1 */}
@@ -54,6 +58,10 @@ const IndexPage = () => {
           </div>
         </div>
         <SectionTwo />
+        <SectionThree />
+        <SectionFour />
+        <SectionFive />
+        <IndexFooter />
       </div>
     </>
   );

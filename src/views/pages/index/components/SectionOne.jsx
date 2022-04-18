@@ -1,23 +1,13 @@
 import { CButton, CCol, CImage, CRow } from "@coreui/react";
 import React from "react";
-import "./IndexPage.css";
 import { lapTop_png, star_svg } from "src/iconsimport";
 
 const SectionOne = () => {
   return (
-<<<<<<< HEAD:src/views/pages/index/SectionOne.jsx
-    <div className="indexView">
-=======
     <div>
->>>>>>> aca6d4e6778e49902233dff649c3139fffd59079:src/views/pages/index/components/SectionOne.jsx
       <CRow>
-        <CCol
-          lg={6}
-          md={6}
-          sm={6}
-          className="rightSide mt-5 d-flex text-right justify-content-right align-item-right"
-        >
-          <div className="rightSide2 d-flex justify-content-left my-4 column1-margin">
+        <CCol className="rightSide d-flex text-right justify-content-right align-item-right px-5">
+          <div className="rightSide2 d-flex justify-content-left my-5 column1-margin">
             <div>
               <div
                 className="mt-3 fw-bold"
@@ -26,7 +16,7 @@ const SectionOne = () => {
                   fontWeight: "bold",
                 }}
               >
-                <div className="mb-4 mt-2">
+                <div className="mb-3">
                   <span
                     className="px-5"
                     style={{
@@ -46,11 +36,11 @@ const SectionOne = () => {
                   PortPay
                 </div>
               </div>
-              <div style={{ fontSize: "15px", padding: "8px" }}>
+              <div>
                 PortPay is India’s Neo Banking platform delivering full stack
                 banking services to individuals and businesses of all sizes.
               </div>
-              <div className="d-md-flex d-flex justify-content-center">
+              <div className="d-md-flex justify-content-center">
                 <CButton
                   style={{ color: "white" }}
                   className="Ibtn"
@@ -67,10 +57,12 @@ const SectionOne = () => {
           </div>
         </CCol>
 
-        <CCol className=" mt-5 " lg={5} md={5} sm={6}>
-          <div className="column2-margin  d-flex text-center">
-            <CImage src={lapTop_png} style={{ width: "90%" }} />
-          </div>
+        <CCol className=" mt-3 d-flex" lg={6} md={0}>
+          <CImage
+            className="column2-margin"
+            src={lapTop_png}
+            style={{ width: "90%" }}
+          />
         </CCol>
       </CRow>
     </div>

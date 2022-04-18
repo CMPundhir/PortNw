@@ -36,7 +36,7 @@ export const SectionFour = () => {
             style={{
               fontWeight: "bold",
               fontSize: "15px",
-              marginBottom: "100px",
+              marginBottom: "150px",
             }}
           >
             Narender Modi

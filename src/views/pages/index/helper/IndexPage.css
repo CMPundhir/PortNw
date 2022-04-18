@@ -46,13 +46,7 @@
     margin-left: 30%;
   }
 }
-.column2-margin{
-}
-@media only screen and (min-width: 767px){
-  .column2-margin{
-    margin-right: 3%;
-    margin-top: -50px;  }
-}
+
 
 .Ibtn{
   width: 150px;
@@ -302,3 +296,27 @@ font-weight: bold;
 }
 
 
+.s2table{
+  border-collapse:collapse;
+  outline:"none";
+  width: 60%;
+}
+@media only screen and (min-width: 767px){
+  .margin-top-70{
+    margin-top: 70px;
+  }
+}
+@media only screen and (max-width: 767.5px){
+  .column2-margin{
+    display: none;
+  }
+}
+.parent{
+  margin-top: "70px" 
+
+}
+@media only screen and (max-width: 767.5px){
+  .parent{
+    display: none;
+  }
+}

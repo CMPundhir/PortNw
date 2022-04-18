@@ -1,12 +1,11 @@
-import { CCol, CRow, CTable } from "@coreui/react";
+import { CCol, CContainer, CRow } from "@coreui/react";
 import { faEye, faLock, faUserClock } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Table } from "@material-ui/core";
 import React from "react";
 
 const SectionTwo = () => {
   return (
-    <div style={{ border: "solid black" }}>
+    <div style={{ marginBottom: "8%" }}>
       <CRow className="d-flex text-center">
         <CCol>
           <span
@@ -43,118 +42,95 @@ const SectionTwo = () => {
           </span>
         </div>
       </CRow>
-      <div className="mt-4 d-flex justify-content-center text-center">
-        <table class="table" style={{ width: "60%" }}>
-          <thead>
-            <tr>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
-            </tr>
-          </thead>
-        </table>
-        {/* <CRow
-          md={9}
-          className="d-flex justify-content-center align-item-center my-5 mx-5"
-        >
-          <CCol md={3} sm={6}>
-            <div
-              style={{
-                alignItems: "center",
-                padding: "10px",
-              }}
-            >
-              <span
-                style={{
-                  backgroundColor: "#F6FFED",
-                  padding: "6px",
-                  borderRadius: "25px",
-                }}
-              >
-                <FontAwesomeIcon
-                  style={{
-                    fontSize: "20px",
-                    color: " #52C41A",
-                  }}
-                  icon={faLock}
-                />
-              </span>
 
-              <p className="mt-5" style={{ fontWeight: "bold" }}>
-                Safe
-              </p>
-              <p style={{ width: "200px" }}>
-                We ensure you get a good night sleep with your money staying
-                with large and highly stable banks in India.
-              </p>
+      <CContainer style={{ marginTop: "80px" }}>
+        <CRow>
+          <CCol className="text-center" md={4}>
+            <div>
+              <div className="mb-4">
+                <span
+                  style={{
+                    backgroundColor: "#F6FFED",
+                    padding: "6px",
+                    borderRadius: "25px",
+                  }}
+                >
+                  <FontAwesomeIcon
+                    style={{
+                      fontSize: "20px",
+                      color: " #52C41A",
+                    }}
+                    icon={faLock}
+                  />
+                </span>
+              </div>
+            </div>
+            <div>
+              <span style={{ fontWeight: "bold" }}>Safe</span>
+            </div>
+            <div>
+              We ensure you get a good night sleep with your money staying with
+              large and highly stable banks in India.
             </div>
           </CCol>
-          <CCol md={3} sm={6}>
-            <div
-              style={{
-                alignItems: "center",
-                padding: "10px",
-              }}
-            >
-              <span
-                style={{
-                  backgroundColor: "#FFF1F0",
-                  padding: "6px",
-                  borderRadius: "25px",
-                }}
-              >
-                <FontAwesomeIcon
+          <CCol className="text-center" md={4}>
+            <div>
+              <div className="mb-4">
+                <span
                   style={{
-                    fontSize: "20px",
-                    color: " #F5222D",
+                    backgroundColor: "#FFF1F0",
+                    padding: "6px",
+                    borderRadius: "25px",
                   }}
-                  icon={faEye}
-                />
-              </span>
-
-              <p className="mt-5" style={{ fontWeight: "bold" }}>
-                Secure
-              </p>
-              <p style={{ width: "200px" }}>
-                We ensure you get a good night sleep with your money staying
-                with large and highly stable banks in India.
-              </p>
+                >
+                  <FontAwesomeIcon
+                    style={{
+                      fontSize: "20px",
+                      color: " #F5222D",
+                    }}
+                    icon={faEye}
+                  />
+                </span>
+              </div>
+            </div>
+            <div>
+              <span style={{ fontWeight: "bold" }}>Safe</span>
+            </div>
+            <div>
+              We ensure you get a good night sleep with your money staying with
+              large and highly stable banks in India.
             </div>
           </CCol>
-          <CCol md={3} sm={6}>
-            <div
-              style={{
-                alignItems: "center",
-                padding: "10px",
-              }}
-            >
-              <span
-                style={{
-                  backgroundColor: "#E6F7FF",
-                  padding: "6px",
-                  borderRadius: "25px",
-                }}
-              >
-                <FontAwesomeIcon
+          <CCol className="text-center" md={4}>
+            <div>
+              <div className="mb-4">
+                <span
                   style={{
-                    fontSize: "20px",
-                    color: " #1B76FF",
+                    backgroundColor: "#E6F7FF",
+                    padding: "6px",
+                    borderRadius: "25px",
                   }}
-                  icon={faUserClock}
-                />
-              </span>
-
-              <p className="mt-5" style={{ fontWeight: "bold" }}>
-                Helpful
-              </p>
-              <p style={{ width: "200px" }}>
-                We ensure you get a good night sleep with your money staying
-                with large and highly stable banks in India.
-              </p>
+                >
+                  <FontAwesomeIcon
+                    style={{
+                      fontSize: "20px",
+                      color: " #1B76FF",
+                    }}
+                    icon={faUserClock}
+                  />
+                </span>
+              </div>
+            </div>
+            <div>
+              <span style={{ fontWeight: "bold" }}>Safe</span>
+            </div>
+            <div>
+              We ensure you get a good night sleep with your money staying with
+              large and highly stable banks in India.
             </div>
           </CCol>
-        </CRow> */}
-      </div>
+        </CRow>
+      </CContainer>
     </div>
   );
 };

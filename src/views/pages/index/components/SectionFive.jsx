@@ -8,16 +8,15 @@ import {
   Trusted3,
   Trusted4,
 } from "src/iconsimport";
-import SignUpForm from "../auth/Component/SignUpForm";
-import "./IndexPage.css";
+import SignUpForm from "../../auth/Component/SignUpForm";
 import SectionFiveForm from "./SectionFiveForm";
 
-const SectionFive = () => {
+export const SectionFive = () => {
   return (
-    <div style={{ marginBottom: "300px" }}>
+    <div style={{ marginBottom: "" }}>
       <CRow>
         <CCol
-          style={{ marginTop: "230px" }}
+          style={{ marginTop: "100px" }}
           lg={6}
           md={6}
           sm={12}
@@ -63,8 +62,7 @@ const SectionFive = () => {
           md={6}
           sm={12}
           lg={6}
-          style={{ marginTop: "100px" }}
-          className="parent d-flex justify-content-center"
+          className=" parent d-flex justify-content-center"
         >
           <div class="back"></div>
           <div className=" text-center d-flex justify-content-center">
@@ -75,5 +73,3 @@ const SectionFive = () => {
     </div>
   );
 };
-
-export default SectionFive;

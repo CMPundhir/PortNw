@@ -7,7 +7,6 @@ import {
   CImage,
   CRow,
 } from "@coreui/react";
-import "./IndexPage.css";
 
 import React from "react";
 import { Button } from "bootstrap";
