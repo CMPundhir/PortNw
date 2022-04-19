@@ -74,28 +74,35 @@ export const loginApi = (uname, paswd, setIsProgress, onSuccess, onError) => {
     })
     .then((response) => {
       setIsProgress(false);
-      // alert(JSON.stringify(response.data, null, 2));
+      //alert(JSON.stringify(response.data, null, 2));
       const data = response.data;
-      if (data && data.data) {
-        const dt = data.data;
-        const user = dt.user;
-        localStorage.setItem("qik_token", user.api_token);
-        saveKeyVal(StoreKey.TOKEN, dt.token, (msg)=>{
-          saveKeyVal(
-            StoreKey.USER,
-            user,
-            (msg) => {
-              onSuccess(user);
-            },
-            (err) => {
-              alert(err);
-            }
-          );
-        },
-        (err) => {
-          alert(err);
-        });
-        
+      if (data) {
+        //alert(data.api_token)
+        const token = data.api_token
+        postJsonData(ApiEndpoints.GET_ME_USER, {
+          api_token : token
+        }, setIsProgress, data=>{
+          const user = data.info;
+          localStorage.setItem("api_token", user.api_token);
+          saveKeyVal(StoreKey.TOKEN, token, (msg)=>{
+            saveKeyVal(
+              StoreKey.USER,
+              user,
+              (msg) => {
+                onSuccess(user);
+              },
+              (err) => {
+                alert(err);
+              }
+            );
+          },
+          (err) => {
+            alert(err);
+            onError(err)
+          });
+        }, error=>{
+          onError(error)
+        })
       } else {
         onError("User data null : " + data);
       }
@@ -263,7 +270,7 @@ export const getRequest = (
 ) => {
   if(setIsProgress) setIsProgress(true);
   axios
-    .get(endpoint + "?api_token=" + token, {
+    .get(endpoint , {
       params: {
         api_token: token,
       },

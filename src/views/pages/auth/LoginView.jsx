@@ -18,16 +18,21 @@ import logo_png from "./../../../assets/images/logo.png";
 import login_rt_png from "./../../../assets/images/login_rt.png";
 
 import "./LoginView.css";
-import { loginApi } from "src/networks/ApiController";
+import { getRequest, loginApi, postJsonData } from "src/networks/ApiController";
 import { useHistory } from "react-router";
 import { CM_Nav, UserType } from "src/commons/Constants";
 import { store } from "src/utils/CMLocalStorage";
 import { isValidMobile, isValidPass } from "src/utils/ValidationUtil";
-import { okErrorToast } from "src/views/cm_views/custom/cm_toast";
+import {
+  apiErrorToast,
+  okErrorToast,
+  okSuccessToast,
+} from "src/views/cm_views/custom/cm_toast";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { ForgotPasswordModal } from "src/views/cm_views/custom/cm_modals";
 import { login_png } from "src/iconsimport";
+import ApiEndpoints from "src/networks/ApiEndpoints";
 
 const myUser = {
   id: 9,
@@ -77,30 +82,40 @@ const LoginView = () => {
     //   event.stopPropagation();
     //   setValidated(true);
     // }
+    // {
+    //   username: "9350265444",
+    //   password: "2020@Vihaan",
+    // }
     if (validMob && validPass) {
       //setValidated(false);
-      setTimeout(() => {
-        history.push({
-          pathname: CM_Nav.DASHBOARD,
-          state: { user: myUser, isNewLogin: true },
-        });
-      }, 100);
-      // loginApi(
-      //   form.eMob.value,
-      //   form.ePass.value,
+      // getRequest(
+      //   ApiEndpoints.GET_ME_USER,
+      //   "c01652e06270aba98d8b5af488c13737f1a4c987ed41965330a1416cd9a39623",
       //   setRequest,
-      //   (user) => {
-      //     setTimeout(() => {
-      //       history.push({
-      //         pathname: CM_Nav.DASHBOARD,
-      //         state: { user: user, isNewLogin: true },
-      //       });
-      //     }, 100);
+      //   (data) => {
+      //     okSuccessToast("Success", JSON.stringify(data));
       //   },
       //   (error) => {
-      //     okErrorToast("Error: " + error.response.status, error.response.data);
+      //     apiErrorToast(error);
+      //     console.log(error);
       //   }
       // );
+      loginApi(
+        form.eMob.value,
+        form.ePass.value,
+        setRequest,
+        (user) => {
+          setTimeout(() => {
+            history.push({
+              pathname: CM_Nav.DASHBOARD,
+              state: { user: user, isNewLogin: true },
+            });
+          }, 100);
+        },
+        (error) => {
+          apiErrorToast(error);
+        }
+      );
     } else {
       setValidated(true);
     }

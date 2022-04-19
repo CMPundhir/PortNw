@@ -9,9 +9,12 @@ import {
   Navbar,
   NavDropdown,
 } from "react-bootstrap";
+import { CM_Nav, UserType } from "src/commons/Constants";
+import { useHistory } from "react-router";
 import { portPay } from "src/iconsimport";
 
 export const IndexNav = () => {
+  const history = useHistory();
   return (
     <>
       <Navbar className="navHeader" position="fixed" expand="lg">
@@ -32,7 +35,12 @@ export const IndexNav = () => {
               <span href="#" className="navLinks me-4">
                 ContactUs
               </span>
-              <span href="#" className="navLinks me-4">
+              <span
+                onClick={() => {
+                  history.push(CM_Nav.LOG_IN);
+                }}
+                className="navLinks me-4"
+              >
                 Login
               </span>
               <div className=" justify-content-md-left">

@@ -36,7 +36,7 @@ const SignupView = ({}) => {
             md={5}
             lg={6}
           >
-            <div>
+            <div className="d-md-block d-none ">
               <CImage
                 className="login-rt-png"
                 src={signup_png}

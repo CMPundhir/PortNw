@@ -1,8 +1,11 @@
-export const BASE_URL = "https://api.apexpay.co.in/";
-//export const BASE_URL = "https://api.imoneypay.in/";
+export const BASE_URL = "https://api.portpay.co/api/";
+//export const BASE_URL = "https://apigateway.impsguru.com/";
 
 const ApiEndpoints = {
-  SIGN_IN: "signIn",
+  SIGN_IN: "user/login",
+  //SIGN_IN: "auth/signIn",
+  GET_TOKEN: "auth/getToken",
+  GET_ME_USER: "user/getUser",
   GET_TRANSACTIONS: "getTransactions",
   GET_BENEFICIERIES: "getBeneficieries",
   GET_CREDITREQ: "getCreditReq",
