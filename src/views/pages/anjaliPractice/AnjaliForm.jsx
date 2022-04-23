@@ -68,6 +68,7 @@ const AnjaliForm = () => {
         return (
           <CCard className="FolowerTable mb-3" style={{ maxWidth: "400px" }}>
             <CRow className="text-center">
+              <CCardTitle>My Repositary</CCardTitle>
               <CCardBody>
                 <div>{repositary && repositary.name}</div>
               </CCardBody>
