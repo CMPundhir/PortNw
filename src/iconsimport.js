@@ -20,8 +20,8 @@ import circuit  from "src/assets/images/svg/electronic-circuit.svg";
 import Twitter_svg from "src/assets/images/home/twitter.svg";
 import FaceBook_svg from "src/assets/images/home/fbook.svg";
 import Instagram_svg  from "src/assets/images/home/insta.svg";
-
 import messageSend  from "src/assets/images/home/mSend.png";
+import anjali_form  from "src/assets/images/anjali_form/dummy_img.jpg";
 
 
 
@@ -48,8 +48,9 @@ export const circuit_svg=circuit;
 export const FBook=FaceBook_svg;
 export const Twitter=Twitter_svg;
 export const Insta=Instagram_svg;
-
 export const mSend_png=messageSend;
+
+export const dummyImg=anjali_form;
 
 
 

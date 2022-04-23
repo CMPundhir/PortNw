@@ -3,6 +3,7 @@ import { BrowserRouter, HashRouter, Route, Switch } from "react-router-dom";
 import "./scss/style.scss";
 import "src/assets/css/hover.css";
 import SignupView from "./views/pages/auth/SignupView";
+import { CM_Nav } from "./commons/Constants";
 
 const loading = (
   <div className="pt-3 text-center">
@@ -19,6 +20,7 @@ const Register = React.lazy(() => import("./views/pages/register/Register"));
 const Page404 = React.lazy(() => import("./views/pages/page404/Page404"));
 const Page500 = React.lazy(() => import("./views/pages/page500/Page500"));
 const IndexPage = React.lazy(() => import("./views/pages/index/IndexPage"));
+const AnjaliForm = React.lazy(() => import("./views/pages/anjaliPractice/AnjaliForm"));
 
 class App extends Component {
   render() {
@@ -61,6 +63,11 @@ class App extends Component {
               path="/500"
               name="Page 500"
               render={(props) => <Page500 {...props} />}
+            />
+            <Route
+              path={CM_Nav.ANJALI}
+              name="anjaliForm"
+              render={(props) => <AnjaliForm {...props} />}
             />
             <Route
               path=""

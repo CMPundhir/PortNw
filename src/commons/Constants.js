@@ -29,7 +29,8 @@ export const UPDATE_ACTION = {
   REMOVE: "remove",
 };
 
-export const CM_Nav = {
+export const 
+CM_Nav = {
   DASHBOARD: "/dashboard",
   DASHBOARDOLD: "/dashboard-old",
   HOME: "/home",
@@ -72,6 +73,7 @@ export const CM_Nav = {
   MY_AEPS: "/aeps",
   INDEX_PAGE: "/index_page",
   SIGNUP_VIEW: "/signup",
+  ANJALI:"/anjaliForm"
 
 
 };

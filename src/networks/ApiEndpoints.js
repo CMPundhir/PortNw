@@ -1,4 +1,5 @@
-export const BASE_URL = "https://api.portpay.co/api/";
+// export const BASE_URL = "https://api.portpay.co/api/";
+export const BASE_URL = "https://api.github.com/";
 //export const BASE_URL = "https://apigateway.impsguru.com/";
 
 const ApiEndpoints = {
@@ -60,6 +61,9 @@ const ApiEndpoints = {
   CHANGE_API_MODE: "apiMode", // userId
   Val_Tk: "vT", // userId
   FORGOT_PASSWORD: "forgetPassword",
+
+  // github api endpoints . . . . 
+  GET_USER_GITHUB: "users/",
 };
 
 export default ApiEndpoints;

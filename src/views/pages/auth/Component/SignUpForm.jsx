@@ -129,7 +129,7 @@ const SignUpForm = () => {
       <CRow className="text-center">
         <div className="pb-3 mt-4 d-flex justify-content-center">
           <CButton
-            className="signup-btn signUp text-center signup-form-btn"
+            className="signUpBtn"
             form="signup_form"
             type="submit"
             size="sm"
@@ -140,7 +140,7 @@ const SignUpForm = () => {
         <div style={{ marginBottom: "20px" }}>
           <span>Already have an account?</span>
           <span
-            style={{ color: "#1c76fe", cursor: "pointer", paddingLeft: "3px" }}
+            style={{ cursor: "pointer", paddingLeft: "3px", color: "#1692ff" }}
             onClick={(e) => {
               history.push(CM_Nav.LOG_IN);
             }}

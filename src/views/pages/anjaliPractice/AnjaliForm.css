@@ -1,0 +1,41 @@
+.formContainer{
+    width: 20%;
+    margin-top: 50px;
+    box-shadow: 0 0 3px 3px #d3d3d3d3;
+    background-color: #ffffff;
+    padding: 50px; 
+position:static;
+}
+.imgView{
+  position: fixed;
+}
+
+.btn{
+    width: 50%;
+    color: #ffffff;
+  }
+
+p{
+font-size: 30px;
+font-weight: bold;
+}
+.img{
+  border-radius: 50%;
+}
+
+.fImg{
+  border-radius: 50%;
+  width: 50%;
+}
+.FolowerTable{
+  margin-top: 50px;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 0 1px 1px #d3d3d3d3;
+    border-radius: 50px 0px 0px 50px
+}
+.FolowerTable:hover{
+  box-shadow: 0 0 8px 3px #d3d3d3d3;
+
+
+}
