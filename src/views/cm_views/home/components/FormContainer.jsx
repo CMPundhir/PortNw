@@ -7,35 +7,41 @@ import MobileForm from "./MobileForm";
 
 const FormContainer = ({ action }) => {
   return (
-    <>
+    <div className="p-3">
       <div
+        className="mt-5"
         hidden={action != ACTION.MOBILE_RECHARGE && action != ACTION.DTH}
-        className="dth-form-container"
       >
         <DthForm action={action} />
       </div>
-      <div hidden={action != ACTION.ELECTRICITY} className="ElectricityForm">
+      <div
+        hidden={action != ACTION.ELECTRICITY}
+        className="ElectricityForm mt-5"
+      >
         <ElectricityForm />
       </div>
-      <div hidden={action != ACTION.CREDIT_CARD} className="ElectricityForm">
+      <div
+        hidden={action != ACTION.CREDIT_CARD}
+        className="ElectricityForm mt-5"
+      >
         <MobileForm />
       </div>
-      <div hidden={action != ACTION.BROADBAND} className="ElectricityForm">
+      <div hidden={action != ACTION.BROADBAND} className="ElectricityForm mt-5">
         <MobileForm />
       </div>
-      <div hidden={action != ACTION.LANDLINE} className="ElectricityForm">
+      <div hidden={action != ACTION.LANDLINE} className="ElectricityForm mt-5">
         <MobileForm />
       </div>
-      <div hidden={action != ACTION.GAS} className="ElectricityForm">
+      <div hidden={action != ACTION.GAS} className="ElectricityForm mt-5">
         <MobileForm />
       </div>
-      <div hidden={action != ACTION.WATER} className="ElectricityForm">
+      <div hidden={action != ACTION.WATER} className="ElectricityForm mt-5 ">
         <MobileForm />
       </div>
-      <div hidden={action != ACTION.COUPON} className="Coupon">
+      <div hidden={action != ACTION.COUPON} className="Coupon mt-5 ">
         <CouponForm />
       </div>
-    </>
+    </div>
   );
 };
 

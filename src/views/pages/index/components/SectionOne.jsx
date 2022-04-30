@@ -1,8 +1,12 @@
 import { CButton, CCol, CImage, CRow } from "@coreui/react";
 import React from "react";
+import { CM_Nav } from "src/commons/Constants";
 import { lapTop_png, star_svg } from "src/iconsimport";
+import { useHistory } from "react-router";
 
 const SectionOne = () => {
+  const history = useHistory();
+
   return (
     <div>
       <CRow>
@@ -46,6 +50,9 @@ const SectionOne = () => {
                   className="Ibtn"
                   type="submit"
                   color="primary"
+                  onClick={() => {
+                    history.push(CM_Nav.SIGNUP_VIEW);
+                  }}
                 >
                   Join now
                 </CButton>

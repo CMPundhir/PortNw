@@ -14,71 +14,55 @@ import Custom_dropDown from "src/commons/inputs/Custom_dropDown";
 
 const DthForm = ({ action }) => {
   return (
-    <>
-      <CRow>
-        <CCol
-          lg={12}
-          md={12}
-          className="d-flex flex-column align-items-center justify-content-center"
-        >
-          <br />
-          <div>
-            <CRow>
-              <CCol xs={6}>
-                <CustomInput
-                  className="inputCss bordernew"
-                  label={
-                    action == ACTION.MOBILE_RECHARGE
-                      ? "Mobile Number"
-                      : "Customer ID"
-                  }
-                  type="number"
-                  id={action == ACTION.MOBILE_RECHARGE ? "Mobile" : "Customer"}
-                  placeholder={
-                    action == ACTION.MOBILE_RECHARGE
-                      ? "Mobile Number"
-                      : "Customer ID"
-                  }
-                  name={
-                    action == ACTION.MOBILE_RECHARGE ? "Mobile" : "CustomerID"
-                  }
-                />
-              </CCol>
-              <CCol xs={6}>
-                <Custom_dropDown
-                  lable="Select Operator"
-                  className="inputCss bordernew"
-                  option1="TATASky"
-                  option2="Airtel"
-                />
-              </CCol>
-            </CRow>
-            <CRow>
-              <CCol xs={12}>
-                <CustomInput
-                  className="inputCss bordernew"
-                  label="Amount"
-                  type="number"
-                  id="customer_id"
-                  placeholder="Enter Amount"
-                  name="customer_id"
-                />
-              </CCol>
-            </CRow>
-            <br />
-            <CRow>
-              <CCol>
-                <div className="justify-content-center">
-                  <CButton type="submit" className="formbtnCss ">
-                    Submit
-                  </CButton>
-                </div>
-              </CCol>
-            </CRow>
-          </div>
-        </CCol>
-      </CRow>
-    </>
+    <CRow>
+      <CCol sm={2} xs={0}></CCol>
+      <CCol sm={8} xs={12}>
+        <CRow>
+          <CCol sm={6}>
+            <CustomInput
+              className="inputCss bordernew p-2"
+              label={
+                action == ACTION.MOBILE_RECHARGE
+                  ? "Mobile Number"
+                  : "Customer ID"
+              }
+              type="number"
+              id={action == ACTION.MOBILE_RECHARGE ? "Mobile" : "Customer"}
+              placeholder={
+                action == ACTION.MOBILE_RECHARGE
+                  ? "Mobile Number"
+                  : "Customer ID"
+              }
+              name={action == ACTION.MOBILE_RECHARGE ? "Mobile" : "CustomerID"}
+            />
+          </CCol>
+          <CCol sm={6}>
+            <Custom_dropDown
+              lable="Select Operator"
+              className="inputCss bordernew p-2"
+              option1="TATASky"
+              option2="Airtel"
+            />
+          </CCol>
+          <CCol xs={12}>
+            <CustomInput
+              className="inputCss bordernew p-2"
+              label="Amount"
+              type="number"
+              id="customer_id"
+              placeholder="Enter Amount"
+              name="customer_id"
+            />
+          </CCol>
+        </CRow>
+      </CCol>
+      <CCol sm={2} xs={0}></CCol>
+      <div className="d-flex justify-content-center mt-3">
+        <CButton className="formbtnCss px-3 py-1" type="submit">
+          Submit
+        </CButton>
+      </div>
+    </CRow>
   );
 };
 

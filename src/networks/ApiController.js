@@ -81,7 +81,8 @@ export const loginApi = (uname, paswd, setIsProgress, onSuccess, onError) => {
         const token = data.api_token
         postJsonData(ApiEndpoints.GET_ME_USER, {
           api_token : token
-        }, setIsProgress, data=>{
+        }, setIsProgress, 
+        data=>{
           const user = data.info;
           localStorage.setItem("api_token", user.api_token);
           saveKeyVal(StoreKey.TOKEN, token, (msg)=>{

@@ -1,14 +1,19 @@
 import { CCol, CContainer, CForm, CImage, CRow } from "@coreui/react";
-import React from "react";
+import React, { useState } from "react";
+import CommonModal from "src/commons/modals/CommonModal";
 import { portPay, signup_bg, Signup_bg, signup_png } from "src/iconsimport";
 import SignUpForm from "./Component/SignUpForm";
+import PinInput from "src/commons/pin-input/PinInput";
+
 import "./SignupView.css";
 
 const SignupView = ({}) => {
+  const [isOtpModalVisible, setIsOtpModalVisible] = useState(false);
+
   return (
     <div className="min-vh-100 align-items-center signup-bg d-flex flex-row  text-center">
       <CContainer fluid>
-        <CRow className="text-center d-flex justify-content-between px-5">
+        <CRow className="align-items-center d-flex justify-content-between px-5">
           <CCol className="text-center" xs={12} md={5} lg={6}>
             <div className="p-3 signUpForm">
               <CImage

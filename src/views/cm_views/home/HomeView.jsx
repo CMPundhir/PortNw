@@ -34,7 +34,7 @@ const HomeView = ({ user }) => {
   return (
     <>
       <CRow>
-        <CCol lg={8} md={12}>
+        <CCol lg={9} md={12}>
           <TransparentCard title={title}>
             <CRow className="d-flex align-items-center justify-content-center">
               <CategoryButton

@@ -12,7 +12,9 @@ import {
 const Custom_dropDown = ({ lable, className, option1, option2, id, name }) => {
   return (
     <>
-      <CFormLabel htmlFor="operator">{lable}</CFormLabel>
+      <CFormLabel className="fw-bold" htmlFor="operator">
+        {lable}
+      </CFormLabel>
       <CFormSelect className={className} size="sm" id={id} name={name}>
         <option>Select</option>
         <option value="1">{option1}</option>

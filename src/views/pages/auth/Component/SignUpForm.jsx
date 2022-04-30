@@ -7,25 +7,36 @@ import {
   CFormLabel,
   CRow,
 } from "@coreui/react";
-import React from "react";
+import React, { useState } from "react";
 import { useHistory, useLocation } from "react-router";
+import SpinnerButton from "src/commons/buttons/SpinnerButton";
 import { CM_Nav } from "src/commons/Constants";
+import CommonModal from "src/commons/modals/CommonModal";
+import PinInput from "src/commons/pin-input/PinInput";
+import VrfySignup from "./VrfySignup";
 
-const SignUpForm = () => {
+const SignUpForm = ({ user }) => {
+  const [otpVisible, setOtpVisible] = useState(false);
+  const [isModelVisible, setisModelVisible] = useState(false);
+
   const history = useHistory();
-
   // signup api call . . .  . . ..
   const handleSignup = (event) => {
     const form = event.currentTarget;
     event.preventDefault();
-
     const fname = form.fname.value;
     const lname = form.lname.value;
     const mobile = form.mobile.value;
     const email = form.email.value;
-    const pan = form.pan.value;
-    const aadhaar = form.aadhaar.value;
+    // const pan = form.pan.value;
+    // const aadhaar = form.aadhaar.value;
+    setOtpVisible(true);
   };
+
+  function verifyOtp() {
+    setisModelVisible(true);
+  }
+
   return (
     <>
       <CForm id="signup_form" onSubmit={handleSignup}>
@@ -93,35 +104,10 @@ const SignUpForm = () => {
             </div>
           </CCol>
         </CRow>
-        <CRow className="px-4   ">
+        <CRow className="px-4">
           <CCol>
-            <div className="mb-3 mt-4 position-relative">
-              <CFormInput
-                className="input-style2"
-                name="pan"
-                type="text"
-                id="pan"
-                size="sm"
-                required
-              />
-              <CFormLabel className="input-style-placeholder" htmlFor="pan">
-                Pan Number
-              </CFormLabel>
-            </div>
-          </CCol>
-          <CCol>
-            <div className="mb-3 mt-4 position-relative ">
-              <CFormInput
-                className="input-style2"
-                name="aadhaar"
-                type="number"
-                id="aadhaar"
-                size="sm"
-                required
-              />
-              <CFormLabel className="input-style-placeholder" htmlFor="aadhaar">
-                Aadhaar Number
-              </CFormLabel>
+            <div hidden={!otpVisible}>
+              <PinInput n={6} />
             </div>
           </CCol>
         </CRow>
@@ -129,12 +115,23 @@ const SignUpForm = () => {
       <CRow className="text-center">
         <div className="pb-3 mt-4 d-flex justify-content-center">
           <CButton
+            hidden={otpVisible}
             className="signUpBtn"
             form="signup_form"
             type="submit"
             size="sm"
           >
-            Sign Up
+            Send OTP
+          </CButton>
+          <CButton
+            hidden={!otpVisible}
+            className="signUpBtn"
+            size="sm"
+            onClick={() => {
+              verifyOtp();
+            }}
+          >
+            Verify
           </CButton>
         </div>
         <div style={{ marginBottom: "20px" }}>
@@ -147,6 +144,12 @@ const SignUpForm = () => {
           >
             Login
           </span>
+          <CommonModal
+            isVisible={isModelVisible}
+            setIsVisible={setisModelVisible}
+          >
+            <VrfySignup />
+          </CommonModal>
         </div>
       </CRow>
     </>

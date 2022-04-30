@@ -30,7 +30,7 @@ const Recent = ({ icon, text, mob, btn }) => {
             {text ? text : "Last recharge on :"}
           </small>
         </div>
-        <div>
+        <div className="d-flex justify-content-center">
           <ScrollCardBtn txt="Repeat"></ScrollCardBtn>
         </div>
       </div>

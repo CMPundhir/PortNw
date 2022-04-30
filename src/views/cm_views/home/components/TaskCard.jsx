@@ -12,24 +12,23 @@ const TaskCard = () => {
           <div
             style={{
               width: "80%",
-              height: "80%",
               borderTop: "2px solid rgb(231, 224, 224)",
               marginLeft: "30px",
             }}
           >
-            <CCallout color="primary">
+            <CCallout color="primary p-3">
               <CFormCheck id="flexCheckDefault" label="Default checkbox" />
             </CCallout>
-            <CCallout color="warning">
+            <CCallout color="warning p-3">
               <CFormCheck id="flexCheckChecked" label="Checked checkbox" />
             </CCallout>
-            <CCallout color="dark">
+            <CCallout color="dark p-3">
               <CFormCheck id="flexCheckChecked" label="Checked checkbox" />
             </CCallout>
-            <CCallout color="success">
+            <CCallout color="success p-3">
               <CFormCheck id="flexCheckChecked" label="Checked checkbox" />
             </CCallout>
-            <CCallout color="danger">
+            <CCallout color="danger p-3">
               <CFormCheck id="flexCheckChecked" label="Checked checkbox" />
             </CCallout>
           </div>

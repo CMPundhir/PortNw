@@ -341,8 +341,11 @@ body {
   // text-decoration: underline wavy #8000ff;
 }
 
+
 .inputCss {
   border-radius: 20px;
+  
+
 }
 
 .bordernew {
@@ -382,11 +385,11 @@ body {
   border-radius: 25px;
 }
 .parent-div {
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   border-radius: 50px;
   box-shadow: 0 0 5px 1px #d3d3d3;
-  padding: 10px;
+  padding: 15px;
   background-color: #fff;
   border-bottom: 2px solid transparent;
 }
@@ -469,16 +472,21 @@ body {
 .formbtnCss {
   background-color: #0079b6;
   color: white;
-  margin: 10px;
-  border-radius: 16px;
-  width: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 93px;
+  border-radius: 8px;
 }
 
 //radio btn css in aeps page
 .input:checked {
   background-color: #1692ff;
+}
+
+.pin-input > .form-control {
+  margin: 0 20px;
+  height: 45px;
+  width: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  background: rgb(242, 242, 242);
+  border: 0px solid #fff;
+  border-bottom: 2px solid gray;
 }

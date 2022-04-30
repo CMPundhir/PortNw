@@ -22,6 +22,7 @@ import FaceBook_svg from "src/assets/images/home/fbook.svg";
 import Instagram_svg  from "src/assets/images/home/insta.svg";
 import messageSend  from "src/assets/images/home/mSend.png";
 import anjali_form  from "src/assets/images/anjali_form/dummy_img.jpg";
+import g_logo  from "src/assets/images/home/googleLogo.png";
 
 
 
@@ -52,6 +53,7 @@ export const mSend_png=messageSend;
 
 export const dummyImg=anjali_form;
 
+export const gLogo=g_logo;
 
 
 

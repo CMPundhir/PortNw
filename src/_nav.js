@@ -42,18 +42,18 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const nav_admin = [
-  {
-    component: CNavItem,
-    name: "Dashboard",
-    to: CM_Nav.DASHBOARD,
-    icon: (
-      <FontAwesomeIcon
-        size="sm"
-        icon={faChartLine}
-        style={{ marginRight: 22, marginLeft: 5 }}
-      />
-    ),
-  },
+  // // {
+  // //   component: CNavItem,
+  // //   name: "Dashboard",
+  // //   to: CM_Nav.DASHBOARD,
+  // //   icon: (
+  // //     <FontAwesomeIcon
+  // //       size="sm"
+  // //       icon={faChartLine}
+  // //       style={{ marginRight: 22, marginLeft: 5 }}
+  // //     />
+  // //   ),
+  // },
   {
     component: CNavItem,
     name: "Home",
@@ -102,176 +102,176 @@ export const nav_admin = [
       />
     ),
   },
-  {
-    component: CNavItem,
-    name:"AEPS",
-    to: CM_Nav.MY_AEPS,
-    icon: (
-      <FontAwesomeIcon
-        size="sm"
-        icon={faRandom}
-        style={{ marginRight: 23, marginLeft: 8 }}
-      />
-    ),
-  },
+  // {
+  //   component: CNavItem,
+  //   name:"AEPS",
+  //   to: CM_Nav.MY_AEPS,
+  //   icon: (
+  //     <FontAwesomeIcon
+  //       size="sm"
+  //       icon={faRandom}
+  //       style={{ marginRight: 23, marginLeft: 8 }}
+  //     />
+  //   ),
+  // },
  
   
-  {
-    component: CNavGroup,
-    name: "Users",
-    to: CM_Nav.USERS,
-    icon: (
-      <FontAwesomeIcon
-        size="sm"
-        icon={faUser}
-        style={{ marginRight: 22, marginLeft: 8 }}
-      />
-    ),
-    items: [
-      {
-        component: CNavItem,
-        name: "Sub Admin",
-        to: CM_Nav.SUB_ADMIN,
-      },
-      {
-        component: CNavItem,
-        name: "Accounts",
-        to: CM_Nav.ACCOUNTS,
-      },
-      {
-        component: CNavItem,
-        name: "On Boarding",
-        to: CM_Nav.ON_BOARDING,
-      },
-      {
-        component: CNavItem,
-        name: "Technical",
-        to: CM_Nav.TECHNICAL,
-      },
-      {
-        component: CNavItem,
-        name: "Merchants",
-        to: CM_Nav.MERCHANTS,
-      },
-    ],
-  },
-  {
-    component: CNavGroup,
-    name: "Load Money",
-    to: CM_Nav.LOAD_MONEY,
-    // icon: <CIcon icon={cilWallet} customClassName="nav-icon" />,
-    icon: (
-      <FontAwesomeIcon
-        size="sm"
-        icon={faRupeeSign}
-        style={{ marginRight: 26, marginLeft: 10 }}
-      />
-    ),
-    items: [
-      {
-        component: CNavItem,
-        name: "Requests",
-        to: CM_Nav.LOAD_MONEY_REQUESTS,
-      },
-      {
-        component: CNavItem,
-        name: "History",
-        to: CM_Nav.LOAD_MONEY_HISTORY,
-      },
-      {
-        component: CNavItem,
-        name: "Admin Credits",
-        to: CM_Nav.ADMIN_CREDITS,
-      },
-    ],
-  },
-  {
-    component: CNavGroup,
-    name: "Settings",
-    to: CM_Nav.SETTINGS,
-    icon: (
-      <FontAwesomeIcon
-        size="sm"
-        icon={faCogs}
-        style={{ marginRight: 22, marginLeft: 6 }}
-      />
-    ),
-    items: [
-      {
-        component: CNavItem,
-        name: "Bank Commercials",
-        to: CM_Nav.BANK_COMMERCIALS_SETTINGS,
-      },
-      {
-        component: CNavItem,
-        name: "Notifications",
-        to: CM_Nav.NOTIFICATION_SETTINGS,
-      },
-      {
-        component: CNavItem,
-        name: "Support",
-        to: CM_Nav.SUPPORT_SETTINGS,
-      },
-      {
-        component: CNavItem,
-        name: "Admin Services",
-        to: CM_Nav.ADMIN_SERVICES,
-      },
-    ],
-  },
-  {
-    component: CNavGroup,
-    name: "Risk",
-    to: CM_Nav.RISK,
-    icon: (
-      <FontAwesomeIcon
-        size="sm"
-        icon={faShieldAlt}
-        style={{ marginRight: 26, marginLeft: 8 }}
-      />
-    ),
-    items: [
-      {
-        component: CNavItem,
-        name: "Block Accounts",
-        to: CM_Nav.RISK_BLOCK_ACC,
-      },
-      {
-        component: CNavItem,
-        name: "Transactions",
-        to: CM_Nav.RISK_TRANSACTIONS,
-      },
-    ],
-  },
-  {
-    component: CNavGroup,
-    name: "Reports",
-    to: CM_Nav.REPORTS,
-    icon: (
-      <FontAwesomeIcon
-        size="sm"
-        icon={faFileInvoice}
-        style={{ marginRight: 26, marginLeft: 9 }}
-      />
-    ),
-    items: [
-      {
-        component: CNavItem,
-        name: "Invoice",
-        to: CM_Nav.INVOICE_REPORTS,
-      },
-      {
-        component: CNavItem,
-        name: "Reconcilation",
-        to: CM_Nav.RECONCILATION,
-      },
-      {
-        component: CNavItem,
-        name: "Downloads",
-        to: CM_Nav.DOWNLOAD_REPORTS,
-      },
-    ],
-  },
+  // {
+  //   component: CNavGroup,
+  //   name: "Users",
+  //   to: CM_Nav.USERS,
+  //   icon: (
+  //     <FontAwesomeIcon
+  //       size="sm"
+  //       icon={faUser}
+  //       style={{ marginRight: 22, marginLeft: 8 }}
+  //     />
+  //   ),
+  //   items: [
+  //     {
+  //       component: CNavItem,
+  //       name: "Sub Admin",
+  //       to: CM_Nav.SUB_ADMIN,
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: "Accounts",
+  //       to: CM_Nav.ACCOUNTS,
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: "On Boarding",
+  //       to: CM_Nav.ON_BOARDING,
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: "Technical",
+  //       to: CM_Nav.TECHNICAL,
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: "Merchants",
+  //       to: CM_Nav.MERCHANTS,
+  //     },
+  //   ],
+  // },
+  // {
+  //   component: CNavGroup,
+  //   name: "Load Money",
+  //   to: CM_Nav.LOAD_MONEY,
+  //   // icon: <CIcon icon={cilWallet} customClassName="nav-icon" />,
+  //   icon: (
+  //     <FontAwesomeIcon
+  //       size="sm"
+  //       icon={faRupeeSign}
+  //       style={{ marginRight: 26, marginLeft: 10 }}
+  //     />
+  //   ),
+  //   items: [
+  //     {
+  //       component: CNavItem,
+  //       name: "Requests",
+  //       to: CM_Nav.LOAD_MONEY_REQUESTS,
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: "History",
+  //       to: CM_Nav.LOAD_MONEY_HISTORY,
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: "Admin Credits",
+  //       to: CM_Nav.ADMIN_CREDITS,
+  //     },
+  //   ],
+  // },
+  // {
+  //   component: CNavGroup,
+  //   name: "Settings",
+  //   to: CM_Nav.SETTINGS,
+  //   icon: (
+  //     <FontAwesomeIcon
+  //       size="sm"
+  //       icon={faCogs}
+  //       style={{ marginRight: 22, marginLeft: 6 }}
+  //     />
+  //   ),
+  //   items: [
+  //     {
+  //       component: CNavItem,
+  //       name: "Bank Commercials",
+  //       to: CM_Nav.BANK_COMMERCIALS_SETTINGS,
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: "Notifications",
+  //       to: CM_Nav.NOTIFICATION_SETTINGS,
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: "Support",
+  //       to: CM_Nav.SUPPORT_SETTINGS,
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: "Admin Services",
+  //       to: CM_Nav.ADMIN_SERVICES,
+  //     },
+  //   ],
+  // },
+  // {
+  //   component: CNavGroup,
+  //   name: "Risk",
+  //   to: CM_Nav.RISK,
+  //   icon: (
+  //     <FontAwesomeIcon
+  //       size="sm"
+  //       icon={faShieldAlt}
+  //       style={{ marginRight: 26, marginLeft: 8 }}
+  //     />
+  //   ),
+  //   items: [
+  //     {
+  //       component: CNavItem,
+  //       name: "Block Accounts",
+  //       to: CM_Nav.RISK_BLOCK_ACC,
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: "Transactions",
+  //       to: CM_Nav.RISK_TRANSACTIONS,
+  //     },
+  //   ],
+  // },
+  // {
+  //   component: CNavGroup,
+  //   name: "Reports",
+  //   to: CM_Nav.REPORTS,
+  //   icon: (
+  //     <FontAwesomeIcon
+  //       size="sm"
+  //       icon={faFileInvoice}
+  //       style={{ marginRight: 26, marginLeft: 9 }}
+  //     />
+  //   ),
+  //   items: [
+  //     {
+  //       component: CNavItem,
+  //       name: "Invoice",
+  //       to: CM_Nav.INVOICE_REPORTS,
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: "Reconcilation",
+  //       to: CM_Nav.RECONCILATION,
+  //     },
+  //     {
+  //       component: CNavItem,
+  //       name: "Downloads",
+  //       to: CM_Nav.DOWNLOAD_REPORTS,
+  //     },
+  //   ],
+  // },
   // {
   //   component: CNavItem,
   //   name: "Api Docs",

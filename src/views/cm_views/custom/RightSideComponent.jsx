@@ -6,17 +6,17 @@ import TaskCard from "../home/components/TaskCard";
 
 const RightSideComponent = () => {
   return (
-    <CCol lg={4} md={12}>
-      <div className="RightCard ms-4">
-        <CRow lg={4} md={8}>
+    <CCol lg={3} md={12}>
+      <div className="RightCard ms-2">
+        <CRow>
           <DetailsCard />
         </CRow>
-        <CRow lg={4} md={8}>
+        <CRow>
           <ProgressCard />
         </CRow>
-        <CRow lg={4} md={8}>
+        {/* <CRow lg={4} md={8}>
           <TaskCard />
-        </CRow>
+        </CRow> */}
       </div>
     </CCol>
   );

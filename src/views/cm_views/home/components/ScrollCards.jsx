@@ -11,7 +11,7 @@ const ScrollCards = ({}) => {
         scroll,
       }}
     >
-      <div className="d-flex">
+      <div className="d-flex justify-content-center">
         <Recent icon={jio} mob="+91-000000000" text="not found" />
         <Recent icon={jio} mob="+91-000000000" text="not found" />
         <Recent icon={airtel} mob="+91-000000000" text="not found" />

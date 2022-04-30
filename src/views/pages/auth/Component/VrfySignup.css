@@ -1,0 +1,40 @@
+
+
+
+.input-style3 {
+  background-color: #ffffff5e;
+  backdrop-filter: blur(10px);
+  padding: 8px 8px;
+  color: #1692ff;
+  font-weight: bold;
+  border-radius: 20px;
+  border: 2px solid #1692ff;
+  box-shadow: rgba(255, 254, 254, 0.7) 0px -23px 25px 0px inset,
+    rgba(255, 255, 255, 0.7) 0px -36px 30px 0px inset,
+    rgba(255, 255, 255, 0.5) 0px 79px 40px 0px inset,
+    rgba(255, 255, 255, 0.06) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px,
+    rgba(255, 255, 255, 0.09) 0px 8px 4px;
+    margin-top: 30px;
+    width:170px;
+}
+.input-style-placeholder {
+  position: absolute;
+  top: 4px;
+  left: 16px;
+  padding: 7px 0px 2px 0px;
+  transition: all 200ms;
+  color: #455A64;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  z-index: 1;
+  font-size: 12px;
+}
+.input-style3:focus + .input-style-placeholder,
+.input-style3:valid + .input-style-placeholder {
+  transform: translate3d(-5px, -120%, 0);
+  color: #1692ff;
+  font-size: 15px;
+}
+.head{
+    font-size: 20px;
+}

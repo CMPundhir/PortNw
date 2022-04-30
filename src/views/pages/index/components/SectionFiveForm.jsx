@@ -10,6 +10,8 @@ import {
 
 import React from "react";
 import { Button } from "bootstrap";
+import { gLogo } from "src/iconsimport";
+import CIcon from "@coreui/icons-react";
 
 const SectionFiveForm = () => {
   return (
@@ -59,9 +61,13 @@ const SectionFiveForm = () => {
       <div
         style={{
           marginTop: "10px",
+          backgroundColor: "white",
         }}
       >
-        <CButton>Sign in with Google</CButton>
+        <CButton className="btn-light">
+          <CImage src={gLogo} width="20px" className="mx-2 " />
+          Sign in with Google
+        </CButton>
       </div>
       <hr
         style={{

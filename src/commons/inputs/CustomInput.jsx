@@ -19,7 +19,7 @@ const CustomInput = ({
 }) => {
   return (
     <div className="">
-      <CFormLabel htmlFor={id} style={{ fontSize: "14px" }}>
+      <CFormLabel className="fw-bold" htmlFor={id} style={{ fontSize: "16px" }}>
         {label}
       </CFormLabel>
       <CFormInput

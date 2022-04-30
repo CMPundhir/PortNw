@@ -1,6 +1,8 @@
 import { CButton, CCol, CImage, CRow } from "@coreui/react";
 import { Button } from "bootstrap";
 import React from "react";
+import { useHistory } from "react-router";
+
 import {
   Container,
   Form,
@@ -10,7 +12,6 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 import { CM_Nav, UserType } from "src/commons/Constants";
-import { useHistory } from "react-router";
 import { portPay } from "src/iconsimport";
 
 export const IndexNav = () => {
@@ -44,7 +45,14 @@ export const IndexNav = () => {
                 Login
               </span>
               <div className=" justify-content-md-left">
-                <CButton className="signInBtn">Get Started</CButton>
+                <CButton
+                  className="signInBtn"
+                  onClick={() => {
+                    history.push(CM_Nav.SIGNUP_VIEW);
+                  }}
+                >
+                  Get Started
+                </CButton>
               </div>
             </Nav>
             {/* <Form className="d-flex d-md-none">

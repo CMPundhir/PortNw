@@ -1,0 +1,99 @@
+/* * {
+  box-sizing: border-box;
+}
+body,html {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+.btn-back {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(120,120,120,1);
+}
+.otp fieldset, .otp input {
+    border: none;
+    float: left;
+}
+form {
+  display: flex;
+  justify-content: center;
+}
+.otp fieldset {
+  display: block;
+}
+fieldset input {
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  border: none;
+  margin-right: 20px;
+  text-align: center;
+  border-bottom: 1px solid black!important;
+}
+fieldset input:focus {
+  border: 1px solid rgba(150,150,150,1);
+}
+.otp-page-wrapper {
+  display:flex;
+  justify-content: space-between;
+  flex-flow: column;
+  height: 100vh;
+  padding: 20px;
+}
+.otp-content-wrapper {
+  font-size: 1.1rem;
+  margin-top: 50px;
+}
+.mobile-number-confirmation {
+  color: orange;
+  font-size: .9rem;
+}
+.havent-received {
+  color: blue;
+  cursor: pointer;
+}
+.fixed-action-btn {
+    position: fixed;
+    right: 23px;
+    bottom: 23px;
+    padding-top: 15px;
+    margin-bottom: 0;
+    z-index: 997;
+} */
+/* .otp-page-wrapper{
+    
+}
+.otp {
+
+    display: flex;
+    justify-content: center;
+  }
+  .otp input{
+     
+      
+      
+  }
+  .otp input:focus{
+      outline: solid #8cb3ff;
+      padding: 5px;
+  }
+
+  .btn{
+  } */
+  .pin-input > .form-control {
+    margin: 0 20px;
+    height: 45px;
+    width: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    background: rgb(242, 242, 242);
+    border: 0px solid #fff;
+    border-bottom: 2px solid gray;
+  }
