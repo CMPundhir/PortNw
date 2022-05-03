@@ -23,6 +23,12 @@ import Instagram_svg  from "src/assets/images/home/insta.svg";
 import messageSend  from "src/assets/images/home/mSend.png";
 import anjali_form  from "src/assets/images/anjali_form/dummy_img.jpg";
 import g_logo  from "src/assets/images/home/googleLogo.png";
+import small_ICon1 from "src/assets/images/home/sImg1.png";
+import small_ICon2 from "src/assets/images/home/sImg2.png";
+import small_ICon3 from "src/assets/images/home/sImg3.png";
+import small_ICon4 from "src/assets/images/home/sImg4.png";
+import small_ICon5 from "src/assets/images/home/sImg5.jpg";
+import small_ICon6 from "src/assets/images/home/sImg6.png";
 
 
 
@@ -50,10 +56,17 @@ export const FBook=FaceBook_svg;
 export const Twitter=Twitter_svg;
 export const Insta=Instagram_svg;
 export const mSend_png=messageSend;
-
 export const dummyImg=anjali_form;
-
 export const gLogo=g_logo;
+export const smIcon1 =small_ICon1;
+export const smIcon2 =small_ICon2;
+export const smIcon3 =small_ICon3;
+export const smIcon4 =small_ICon4;
+export const smIcon5 =small_ICon5;
+export const smIcon6 =small_ICon6;
+
+
+
 
 
 

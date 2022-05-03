@@ -12,25 +12,23 @@ body {
   margin: auto;
 }
 
-.left {
+/* .left {
   top: 0px;
   left: 0px;
-  /* width: 45%; */
+  width: 45%;
   height: 100%;
-  max-width: 948px;
-  min-width: 350px;
-  min-width: none;
-  /* background: #ecf2f7 0% 0% no-repeat padding-box; */
+  background: #ecf2f7 0% 0% no-repeat padding-box;
   opacity: 1;
-}
+} */
 
-.right {
+.left {
   top: 0px;
   left: 55%;
   /* width: 45%; */
   height: 100%;
-  max-width: 948px;
+  max-width: 80%;
   min-width: 350px;
+  background-color: #1692ff;
   /* background: #ffffff 0% 0% no-repeat padding-box; */
   opacity: 1;
 }

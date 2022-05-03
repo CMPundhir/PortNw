@@ -128,16 +128,16 @@ const LoginView = () => {
     >
       <CContainer fluid className="login-bg">
         <CRow className="justify-content-center">
-          <CCol xs={0} md={6} lg={6} className="d-md-block d-none right">
-            <div className="min-vh-100 d-flex justify-content-center align-items-center">
-              <CImage className="login-rt-png " src={login_png} width="78%" />
+          <CCol xs={0} md={6} lg={5} className="d-md-block d-none ">
+            <div className="min-vh-100 d-flex justify-content-around align-items-center ml-5">
+              <CImage className="" src={login_png} width="90%" />
             </div>
           </CCol>
           <CCol
             xs={12}
             md={6}
-            lg={6}
-            className="left d-md-block justify-content-center"
+            lg={7}
+            className=" d-md-block justify-content-center"
           >
             <div className="min-vh-100 d-flex flex-row align-items-center">
               <CContainer

@@ -7,10 +7,11 @@ import {
   CFormSelect,
   CRow,
 } from "@coreui/react";
+import { faArrowDown, faMobile } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import { ACTION } from "src/commons/Constants";
 import CustomInput from "src/commons/inputs/CustomInput";
-import Custom_dropDown from "src/commons/inputs/Custom_dropDown";
+import CustomSelect from "src/commons/inputs/CustomSelect";
 
 const DthForm = ({ action }) => {
   return (
@@ -20,6 +21,7 @@ const DthForm = ({ action }) => {
         <CRow>
           <CCol sm={6}>
             <CustomInput
+              icon={faMobile}
               className="inputCss bordernew p-2"
               label={
                 action == ACTION.MOBILE_RECHARGE
@@ -36,10 +38,10 @@ const DthForm = ({ action }) => {
               name={action == ACTION.MOBILE_RECHARGE ? "Mobile" : "CustomerID"}
             />
           </CCol>
-          <CCol sm={6}>
-            <Custom_dropDown
+          <CCol sm={6} className="mt-4">
+            <CustomSelect
+              icon={faArrowDown}
               lable="Select Operator"
-              className="inputCss bordernew p-2"
               option1="TATASky"
               option2="Airtel"
             />

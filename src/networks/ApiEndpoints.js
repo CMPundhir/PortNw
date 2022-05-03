@@ -4,6 +4,9 @@ export const BASE_URL = "https://api.portpay.co/api/";
 
 const ApiEndpoints = {
   SIGN_IN: "user/login",
+  REGISTER: "user/register",
+  VERIFY_USER: "user/verifyOtpCode",
+
   //SIGN_IN: "auth/signIn",
   GET_TOKEN: "auth/getToken",
   GET_ME_USER: "user/getUser",

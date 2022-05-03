@@ -4,7 +4,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./SectionThree.css";
 import React from "react";
 import { borderRadius } from "@mui/system";
-import { circuit_svg, cloudImage_png } from "src/iconsimport.js";
+import {
+  circuit_svg,
+  cloudImage_png,
+  smIcon1,
+  smIcon2,
+  smIcon3,
+  smIcon4,
+  smIcon5,
+  smIcon6,
+} from "src/iconsimport.js";
 
 const SectionThree = () => {
   return (
@@ -18,17 +27,21 @@ const SectionThree = () => {
               width: "400px",
             }}
           >
-            <img className="image1" src={cloudImage_png} />
-            <img src={cloudImage_png} className="image2" />
-            <img src={cloudImage_png} className="image3" />
-            <img src={cloudImage_png} className="image4" />
-            <img src={cloudImage_png} className="image5" />
+            <img className="image1" src={smIcon1} />
+            <img src={smIcon3} className="image2" />
+            <img src={smIcon2} className="image3" />
+            <img src={smIcon4} className="image4" />
+            <img src={smIcon5} className="image5" />
             <img src={cloudImage_png} className="image6" />
-            <img src={cloudImage_png} className="image7" />
-            <img src={cloudImage_png} className="image8" />
+            <img src={smIcon5} className="image7" />
+            <img src={smIcon6} className="image8" />
           </div>
         </CCol>
-        <CCol lg={6} style={{ textAlign: "left", marginTop: "80px" }}>
+        <CCol
+          className="ml-3"
+          lg={6}
+          style={{ textAlign: "left", marginTop: "80px" }}
+        >
           <span
             className="py-2 px-3"
             style={{

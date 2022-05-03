@@ -7,112 +7,147 @@ import {
   CFormLabel,
   CRow,
 } from "@coreui/react";
+import {
+  faKey,
+  faMailBulk,
+  faMobile,
+  faUserAlt,
+} from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
 import { useHistory, useLocation } from "react-router";
 import SpinnerButton from "src/commons/buttons/SpinnerButton";
 import { CM_Nav } from "src/commons/Constants";
+import CustomInput from "src/commons/inputs/CustomInput";
 import CommonModal from "src/commons/modals/CommonModal";
 import PinInput from "src/commons/pin-input/PinInput";
+import { postJsonData } from "src/networks/ApiController";
+import ApiEndpoints from "src/networks/ApiEndpoints";
+import {
+  apiErrorToast,
+  okSuccessToast,
+} from "src/views/cm_views/custom/cm_toast";
+import Swal from "sweetalert2";
 import VrfySignup from "./VrfySignup";
-
+let mobile;
 const SignUpForm = ({ user }) => {
   const [otpVisible, setOtpVisible] = useState(false);
   const [isModelVisible, setisModelVisible] = useState(false);
-
+  const [request, setRequest] = useState(false);
+  const [otp, setOtp] = useState();
   const history = useHistory();
+
   // signup api call . . .  . . ..
   const handleSignup = (event) => {
     const form = event.currentTarget;
     event.preventDefault();
-    const fname = form.fname.value;
-    const lname = form.lname.value;
-    const mobile = form.mobile.value;
+    const name = form.name.value;
+    mobile = form.mobile.value;
     const email = form.email.value;
-    // const pan = form.pan.value;
-    // const aadhaar = form.aadhaar.value;
-    setOtpVisible(true);
+    const password = form.password.value;
+
+    if (name == "" || mobile == "" || email == "" || password == "") {
+      event.preventDefault();
+    } else {
+      postJsonData(
+        ApiEndpoints.REGISTER,
+        {
+          username: mobile,
+          password: password,
+          name: name,
+          email: email,
+        },
+        setRequest,
+        (data) => {
+          okSuccessToast("Kindly Verify Yourself");
+          setOtpVisible(true);
+        },
+        (error) => {
+          apiErrorToast("Please verify Yourself", error);
+          setOtpVisible(true);
+        }
+      );
+    }
   };
 
-  function verifyOtp() {
-    setisModelVisible(true);
+  // otp user verification function to be implemented later  . . . . .
+  function verifyOtp(otp) {
+    if (otp) {
+      postJsonData(
+        ApiEndpoints.VERIFY_USER,
+        {
+          otp: otp,
+          username: mobile,
+        },
+        setRequest,
+        (data) => {
+          okSuccessToast("user verified..... Redirecting . . .", data.message);
+          history.push(CM_Nav.LOG_IN);
+        },
+        (error) => {
+          apiErrorToast(error);
+        }
+      );
+    }
   }
 
   return (
     <>
-      <CForm id="signup_form" onSubmit={handleSignup}>
+      <CForm className="mx-5 my-5" id="signup_form" onSubmit={handleSignup}>
         <CRow className="px-4">
-          <CCol>
-            <div className=" position-relative text-center">
-              <CFormInput
-                className="input-style2"
-                name="fname"
-                type="text"
-                id="fname"
-                size="sm"
-                required
-              />
-              <CFormLabel className="input-style-placeholder" htmlFor="fname">
-                First Name
-              </CFormLabel>
-            </div>
+          <CCol md={6}>
+            <CustomInput
+              icon={faUserAlt}
+              label="Name"
+              id="name"
+              name="name"
+              placeholder="Enter Your Name"
+            />
           </CCol>
-          <CCol>
-            <div className="mb-3 mt-4 position-relative text-center">
-              <CFormInput
-                className="input-style2"
-                name="lname"
-                type="text"
-                id="lname"
-                size="sm"
-                required
-              />
-              <CFormLabel className="input-style-placeholder" htmlFor="lname">
-                Last Name
-              </CFormLabel>
-            </div>
+          <CCol md={6}>
+            <CustomInput
+              icon={faMobile}
+              label="Mobile Number"
+              id="mobile"
+              name="mobile"
+              placeholder="Enter Mobile Number"
+            />
           </CCol>
         </CRow>
-        <CRow className="px-4">
-          <CCol>
-            <div className="mb-3 mt-4 position-relative text-center">
-              <CFormInput
-                className="input-style2 "
-                name="mobile"
-                type="number"
-                id="mobile"
-                size="sm"
-                required
-              />
-              <CFormLabel className="input-style-placeholder" htmlFor="mobile">
-                Mobile Number
-              </CFormLabel>
-            </div>
+        <CRow>
+          <CCol md={6}>
+            <CustomInput
+              icon={faMailBulk}
+              label="Email ID"
+              id="email"
+              name="email"
+              placeholder="Enter your Email ID"
+            />
           </CCol>
-          <CCol>
-            <div className="mb-3 mt-4 position-relative text-center">
-              <CFormInput
-                className="input-style2 "
-                name="email"
-                type="text"
-                id="email"
-                size="sm"
-                required
-              />
-              <CFormLabel className="input-style-placeholder" htmlFor="email">
-                Email id
-              </CFormLabel>
-            </div>
+          <CCol md={6}>
+            <CustomInput
+              icon={faKey}
+              label="Password"
+              id="password"
+              name="password"
+              placeholder="Create your password"
+              type="password"
+            />
           </CCol>
         </CRow>
         <CRow className="px-4">
           <CCol>
             <div hidden={!otpVisible}>
-              <PinInput n={6} />
+              <PinInput
+                n={6}
+                onComplete={(otpp) => {
+                  setOtp(otpp);
+                }}
+              />
             </div>
           </CCol>
         </CRow>
       </CForm>
-      <CRow className="text-center">
+      <CRow className="text-center px-4">
         <div className="pb-3 mt-4 d-flex justify-content-center">
           <CButton
             hidden={otpVisible}
@@ -121,20 +156,32 @@ const SignUpForm = ({ user }) => {
             type="submit"
             size="sm"
           >
-            Send OTP
+            Register
           </CButton>
           <CButton
             hidden={!otpVisible}
             className="signUpBtn"
             size="sm"
             onClick={() => {
-              verifyOtp();
+              verifyOtp(otp);
             }}
           >
             Verify
           </CButton>
         </div>
-        <div style={{ marginBottom: "20px" }}>
+        {/* <div className="d-flex justify-content-center align-items-center">
+          <CButton
+            className="signUpBtn"
+            form="signup_form"
+            type="submit"
+            size="sm"
+          >
+            Register
+          </CButton>
+          
+        </div> */}
+
+        <div className="mb-5 mt-2">
           <span>Already have an account?</span>
           <span
             style={{ cursor: "pointer", paddingLeft: "3px", color: "#1692ff" }}

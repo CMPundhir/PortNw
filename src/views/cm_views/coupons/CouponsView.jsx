@@ -1,4 +1,4 @@
-import { faSync } from "@fortawesome/free-solid-svg-icons";
+import { faAirFreshener, faSync } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
 import CommonPage from "src/commons/components/CommonPage";
 import ApiPaginate from "src/commons/tables/ApiPaginate";
@@ -73,7 +73,12 @@ const couponsView = ({ user }) => {
       <CommonPage
         title="Coupons"
         actions={[
-          <SearchInput setList={setList} filterFunc={filterFunc} />,
+          <SmOutlineButton
+            txt="Purchase Coupon"
+            variant="outline"
+            faImg={faAirFreshener}
+            size="md"
+          />,
           <SmOutlineButton
             txt="Refresh"
             variant="outline"

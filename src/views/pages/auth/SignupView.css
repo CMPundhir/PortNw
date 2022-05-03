@@ -1,5 +1,4 @@
 .signup-bg {
-  /* background-image: url("src/assets/images/svg/SignUpBg.svg"); */
   background: radial-gradient(
       circle at center,
       #1C76FE30 15%,
@@ -12,13 +11,8 @@
 
 .signUpForm {
   background-color: #ffffff;
-  backdrop-filter: blur(30px);
   box-shadow: 0 0 4px 0px #d3d3d3d3;
-  padding: 80px;
   border-radius: 16px;
-  width: 80%;
-  margin-left: 65px;
-  
   
 }
 
@@ -96,4 +90,9 @@ pin-input > .form-control {
   background: rgb(242, 242, 242);
   border: 0px solid #fff;
   border-bottom: 2px solid gray;
+}
+@media only screen and (max-width: 992px){
+  .right-column{
+    display: none;
+  }
 }

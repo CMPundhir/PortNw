@@ -10,7 +10,6 @@ import {
 import React from "react";
 import { ACTION } from "src/commons/Constants";
 import CustomInput from "src/commons/inputs/CustomInput";
-import Custom_dropDown from "src/commons/inputs/Custom_dropDown";
 
 const CouponForm = ({ action }) => {
   return (

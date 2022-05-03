@@ -10,7 +10,7 @@ import {
 import React from "react";
 import { ACTION } from "src/commons/Constants";
 import CustomInput from "src/commons/inputs/CustomInput";
-import Custom_dropDown from "src/commons/inputs/Custom_dropDown";
+import CustomSelect from "src/commons/inputs/CustomSelect";
 
 const ElectricityForm = ({ action }) => {
   return (
@@ -37,7 +37,7 @@ const ElectricityForm = ({ action }) => {
             />
           </CCol>
           <CCol sm={6}>
-            <Custom_dropDown
+            <CustomSelect
               lable="Select Operator"
               className="inputCss bordernew p-2"
               option1="TATASky"
