@@ -113,7 +113,7 @@ const SignUpForm = ({ user }) => {
             />
           </CCol>
         </CRow>
-        <CRow>
+        <CRow className="px-4">
           <CCol md={6}>
             <CustomInput
               icon={faMailBulk}

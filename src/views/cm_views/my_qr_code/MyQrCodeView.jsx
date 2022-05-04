@@ -11,16 +11,16 @@ const TransactionView = ({ user }) => {
   return (
     <>
       <CRow>
-        <CCol lg={8} md={12}>
+        <CCol lg={9} md={12}>
           <TransparentCard title="My QR Code">
             <CRow className="text-center">
               <div className="text-center">
                 <div style={{ fontWeight: "bold", fontSize: "25px" }}>
                   Rahul Sharma
                 </div>
-                <div>rahulsharma005663@icici</div>
+                <div className="mt-3">rahulsharma005663@icici</div>
               </div>
-              <div style={{ marginTop: "60px" }}>
+              <div style={{ marginTop: "50px" }}>
                 <CImage
                   align="center"
                   rounded

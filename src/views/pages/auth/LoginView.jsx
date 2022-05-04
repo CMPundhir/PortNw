@@ -107,7 +107,7 @@ const LoginView = () => {
         (user) => {
           setTimeout(() => {
             history.push({
-              pathname: CM_Nav.DASHBOARD,
+              pathname: CM_Nav.HOME,
               state: { user: user, isNewLogin: true },
             });
           }, 100);

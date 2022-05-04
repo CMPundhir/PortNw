@@ -117,7 +117,7 @@ const HomeView = ({ user }) => {
                 icon={faHandHoldingWater}
                 text="Water"
               />
-              <CategoryButton
+              {/* <CategoryButton
                 isActive={action == ACTION.COUPON}
                 onClick={() => {
                   setAction(ACTION.COUPON);
@@ -126,7 +126,7 @@ const HomeView = ({ user }) => {
                 }}
                 icon={faIdCard}
                 text="Coupon"
-              />
+              /> */}
             </CRow>
             <FormContainer action={action} />
             <div

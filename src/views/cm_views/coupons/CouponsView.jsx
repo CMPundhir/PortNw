@@ -8,10 +8,41 @@ import ApiEndpoints from "src/networks/ApiEndpoints";
 import { SmOutlineButton } from "../custom/cm_views";
 import UsersView from "../users/UsersView";
 import ApiPaginateTable from "src/commons/tables/ApiPaginate";
+import CommonModal from "src/commons/modals/CommonModal";
+import BuyCouponModal from "./components/BuyCouponModal";
+import { CButton } from "@coreui/react";
+import { myDate } from "src/utils/DateTimeUtil";
+import { rupeeIn2Dec } from "src/utils/RupeeUtil";
+import ShowCouponModal from "./components/ShowCouponModal";
 
 let currentUser;
 let lastPage;
 let currentRefetch;
+const copy = () => {
+  var copyText;
+};
+// const dummyCoupons = [
+
+//   {
+//     id: 1,
+//     user_id: 45,
+//     coupon_number: "kbdcjbwcuyvbeuycfwe7h823bdy873tvc766rf763t",
+//     amount: 10000,
+//     status: "Active",
+//     created_at: "24-3-2022 13:21:01",
+//     updated_at: "20-4-2022 12:30:06",
+//   },
+//   {
+//     id: 2,
+//     user_id: 145,
+//     coupon_number:
+//       "sdkhicuwehoihe87y8437y973yn847ry48n09mn4u65456cf316541tf767348yp",
+//     amount: 20000,
+//     status: "Active",
+//     created_at: "24-3-2022 13:21:01",
+//     updated_at: "20-4-2022 12:30:06",
+//   },
+// ];
 
 const getUrl = (page, per_page) => {
   return `${ApiEndpoints.GET_USERS}?api_token=${
@@ -25,40 +56,31 @@ const filterFunc = (item, SearchInput) => {
     item.amount.toLowerCase().includes(SearchInput.toLowerCase());
   return st;
 };
-
 const columns = [
   {
-    name: "ID",
-    selector: (row) => row.id,
-    wrap: true,
-  },
-  {
-    name: "User",
-    selector: (row) => row.user_id,
-  },
-  {
-    name: "Coupon",
-    selector: (row) => row.coupon_number,
+    name: "Coupon SNo.",
+    selector: (row) => <span>{row.id}</span>,
+    width: "200px",
   },
   {
     name: "Amount",
-    selector: (row) => "\u20b9 " + parseFloat(row.amount).toFixed(2),
+    selector: (row) => <span>{rupeeIn2Dec(row.amount)}</span>,
+    width: "200px",
   },
   {
-    name: "Status",
-    button: true,
-    // grow: 0,
-    cell: (row) => row.status,
+    name: "Created On",
+    cell: (row) => myDate(row.created_at),
+    width: "200px",
   },
   {
-    name: "Created",
-    button: true,
-    cell: (row) => row.created_at,
+    name: "Updated On",
+    cell: (row) => myDate(row.updated_at),
+    width: "200px",
   },
   {
-    name: "Expiry",
-    button: true,
-    cell: (row) => row.expire_at,
+    name: "Get Coupon",
+    selector: (row) => <ShowCouponModal user={currentUser} row={row} />,
+    grow: 3,
   },
 ];
 
@@ -67,6 +89,7 @@ const couponsView = ({ user }) => {
   const [list, setList] = useState([]);
   const [totalRows, setTotalRows] = useState(0);
   const [perPage, setPerPage] = useState(10);
+  const [isCouponModalVisible, setIsCouponModalVisible] = useState(false);
 
   return (
     <div>
@@ -78,20 +101,25 @@ const couponsView = ({ user }) => {
             variant="outline"
             faImg={faAirFreshener}
             size="md"
+            onClick={(e) => {
+              setIsCouponModalVisible(true);
+            }}
           />,
           <SmOutlineButton
             txt="Refresh"
             variant="outline"
             faImg={faSync}
             size="md"
-            onClick={currentRefetch}
+            onClick={() => {
+              currentRefetch();
+            }}
           />,
         ]}
       >
         <ApiPaginateTable
           user={user}
           columns={columns}
-          apiEnd={ApiEndpoints.GET_TRANSACTIONS}
+          apiEnd={ApiEndpoints.LIST_COUPON}
           filterFunc={filterFunc}
           ExpandedComponent={null}
           returnRefetch={(refetch) => {
@@ -99,6 +127,11 @@ const couponsView = ({ user }) => {
           }}
         />
       </CommonPage>
+      <BuyCouponModal
+        user={user}
+        isCouponModalVisible={isCouponModalVisible}
+        setIsCouponModalVisible={setIsCouponModalVisible}
+      />
     </div>
   );
 };

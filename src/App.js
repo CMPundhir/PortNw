@@ -22,6 +22,7 @@ const Page500 = React.lazy(() => import("./views/pages/page500/Page500"));
 const IndexPage = React.lazy(() => import("./views/pages/index/IndexPage"));
 const AnjaliForm = React.lazy(() => import("./views/pages/anjaliPractice/AnjaliForm"));
 
+
 class App extends Component {
   render() {
     return (

@@ -95,7 +95,7 @@ const AppSidebar = ({ user }) => {
         <CImage
           className="m-3"
           src={logo_png}
-          style={{ width: 120, height: "auto" }}
+          style={{ width: 150, height: "auto" }}
         />
       </span>
       <CSidebarNav

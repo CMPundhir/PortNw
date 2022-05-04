@@ -7,6 +7,7 @@ let lastPage = 1;
 const ApiPaginateTable = ({
   user,
   columns = [],
+  listData,
   apiEnd,
   filterFunc,
   ExpandedComponent,
@@ -29,10 +30,11 @@ const ApiPaginateTable = ({
   const [{ data, loading, error }, refetch] = useAx(getUrl(lastPage, perPage));
   if (returnRefetch) returnRefetch(refetch);
   useEffect(() => {
-    if (data) {
-      console.log("Type of Data => " + data.length);
-      if (data.data) {
-        setUiData(data.data, data.total);
+    if (data && data.info && data.info.data) {
+      console.log("Type of Data => " + data.info.data.length);
+      console.log("data found=> ", JSON.stringify(data.info));
+      if (data.info.data) {
+        setUiData(data.info.data, data.info.total);
       } else if (data) {
         setUiData(data, data.length);
       }
@@ -42,7 +44,11 @@ const ApiPaginateTable = ({
 
   useEffect(() => {
     if (error) {
-      apiErrorToast(error);
+      if (listData) {
+        setUiData(listData, listData.length);
+      } else {
+        apiErrorToast(error);
+      }
     }
     return () => {};
   }, [error]);

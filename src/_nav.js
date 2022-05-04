@@ -21,6 +21,7 @@ import { CImage, CNavGroup, CNavItem, CNavTitle } from "@coreui/react";
 import { CM_Nav } from "./commons/Constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faAirFreshener,
   faChartLine,
   faCog,
   faCogs,
@@ -28,9 +29,11 @@ import {
   faFileCode,
   faFileExport,
   faFileInvoice,
+  faHome,
   faLaptopCode,
   faList,
   faPersonBooth,
+  faQrcode,
   faRandom,
   faRupeeSign,
   faShieldAlt,
@@ -61,7 +64,7 @@ export const nav_admin = [
     icon: (
       <FontAwesomeIcon
         size="sm"
-        icon={faChartLine}
+        icon={faHome}
         style={{ marginRight: 22, marginLeft: 5 }}
       />
     ),
@@ -73,7 +76,7 @@ export const nav_admin = [
     icon: (
       <FontAwesomeIcon
         size="sm"
-        icon={faChartLine}
+        icon={faAirFreshener}
         style={{ marginRight: 22, marginLeft: 5 }}
       />
     ),
@@ -97,7 +100,7 @@ export const nav_admin = [
     icon: (
       <FontAwesomeIcon
         size="sm"
-        icon={faRandom}
+        icon={faQrcode}
         style={{ marginRight: 23, marginLeft: 8 }}
       />
     ),

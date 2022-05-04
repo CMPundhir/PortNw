@@ -6,6 +6,10 @@ const ApiEndpoints = {
   SIGN_IN: "user/login",
   REGISTER: "user/register",
   VERIFY_USER: "user/verifyOtpCode",
+  CREATE_COUPON: "user/createCoupon",
+  LIST_COUPON: "user/getCouponList",
+  SHOW_COUPON: "user/showCoupon",
+
 
   //SIGN_IN: "auth/signIn",
   GET_TOKEN: "auth/getToken",

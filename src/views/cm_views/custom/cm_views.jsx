@@ -65,7 +65,7 @@ export const SmOutlineButton = ({
       className="m-1 px-4 py-2"
       color={color}
       variant={variant ? variant : ""}
-      onClick={(e) => onClick(e)}
+      onClick={onClick}
     >
       <FontAwesomeIcon
         size="sm"
