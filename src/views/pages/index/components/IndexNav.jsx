@@ -2,7 +2,6 @@ import { CButton, CCol, CImage, CRow } from "@coreui/react";
 import { Button } from "bootstrap";
 import React from "react";
 import { useHistory } from "react-router";
-
 import {
   Container,
   Form,
@@ -12,7 +11,7 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 import { CM_Nav, UserType } from "src/commons/Constants";
-import { portPay } from "src/iconsimport";
+import { logo_png, portPay } from "src/iconsimport";
 
 export const IndexNav = () => {
   const history = useHistory();
@@ -21,7 +20,7 @@ export const IndexNav = () => {
       <Navbar className="navHeader" position="fixed" expand="lg">
         <Container>
           <Navbar.Brand style={{ marginLeft: "50px" }} href="#home">
-            <CImage src={portPay} width="90px" height="auto" />
+            <CImage src={logo_png} width="90px" height="auto" />
           </Navbar.Brand>
           <Navbar.Toggle />
 

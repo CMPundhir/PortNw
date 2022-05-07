@@ -31,8 +31,8 @@ const ApiPaginateTable = ({
   if (returnRefetch) returnRefetch(refetch);
   useEffect(() => {
     if (data && data.info && data.info.data) {
-      console.log("Type of Data => " + data.info.data.length);
-      console.log("data found=> ", JSON.stringify(data.info));
+      // console.log("Type of Data => " + data.info.data.length);
+      // console.log("data found=> ", JSON.stringify(data.info));
       if (data.info.data) {
         setUiData(data.info.data, data.info.total);
       } else if (data) {

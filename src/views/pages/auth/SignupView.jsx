@@ -1,7 +1,13 @@
 import { CCol, CContainer, CForm, CImage, CRow } from "@coreui/react";
 import React, { useState } from "react";
 import CommonModal from "src/commons/modals/CommonModal";
-import { portPay, signup_bg, Signup_bg, signup_png } from "src/iconsimport";
+import {
+  logo_png,
+  portPay,
+  signup_bg,
+  Signup_bg,
+  signup_png,
+} from "src/iconsimport";
 import SignUpForm from "./Component/SignUpForm";
 import PinInput from "src/commons/pin-input/PinInput";
 
@@ -16,7 +22,7 @@ const SignupView = ({}) => {
         <CCol className="text-center d-flex justify-content-around" lg={6}>
           <div className="pt-3 signUpForm">
             <CImage
-              src={portPay}
+              src={logo_png}
               width="230px"
               height="auto"
               style={{ marginTop: "19px" }}

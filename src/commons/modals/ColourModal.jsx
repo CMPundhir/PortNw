@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import IconTextButton from "../buttons/IconTextButton";
 
-const CommonModal = ({
+const ColourModal = ({
   btn,
   btnTxt,
   btnIcon,
@@ -63,12 +63,18 @@ const CommonModal = ({
         }}
         scrollable
       >
-        <CModalBody className={`px-2 py-0`} style={{ overflowX: "hidden" }}>
-          {children}
-        </CModalBody>
+        <div
+          style={{
+            background: "rgb(62,170,225)",
+            background:
+              "linear-gradient(175deg, rgba(62,170,225,0.8858893899356618) 0%, rgba(186,232,255,1) 51%, rgba(255,255,255,1) 100%)",
+          }}
+        >
+          <CModalBody className="px-0 py-0">{children}</CModalBody>
+        </div>
       </CModal>
     </div>
   );
 };
 
-export default CommonModal;
+export default ColourModal;

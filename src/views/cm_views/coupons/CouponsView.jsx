@@ -60,7 +60,7 @@ const columns = [
   {
     name: "Coupon SNo.",
     selector: (row) => <span>{row.id}</span>,
-    width: "200px",
+    width: "250px",
   },
   {
     name: "Amount",
@@ -70,12 +70,12 @@ const columns = [
   {
     name: "Created On",
     cell: (row) => myDate(row.created_at),
-    width: "200px",
+    width: "250px",
   },
   {
     name: "Updated On",
     cell: (row) => myDate(row.updated_at),
-    width: "200px",
+    width: "250px",
   },
   {
     name: "Get Coupon",
