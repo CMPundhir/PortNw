@@ -31,16 +31,18 @@ const CategoryButton = ({
                 : "d-flex flex-column align-items-center justify-content-center parent-div parent-div-hover"
             }
           >
-            <div className="d-flex justify-content-center align-items-center">
+            <div
+              className="d-flex justify-content-center align-items-center"
+              style={{ fontSize: "20px" }}
+            >
               <FontAwesomeIcon
-                color={hover || isActive ? "white" : "purple"}
+                color={hover || isActive ? "white" : "#005b89"}
                 icon={icon ? icon : faMobile}
-                size="lg"
               />
             </div>
           </div>
           <div
-            className="pt-2"
+            className="pt-2 fw-bold"
             style={{
               fontSize: "12px",
               fontFamily: "font-family: 'Lato', sans-serif",

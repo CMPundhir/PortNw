@@ -9,7 +9,7 @@ import React, { useState } from "react";
 import IconTextButton from "src/commons/buttons/IconTextButton";
 import CustomInput from "src/commons/inputs/CustomInput";
 import ColourModal from "src/commons/modals/ColourModal";
-import { logo_png, portPay } from "src/iconsimport";
+import { coupon_bg, coupon_img, logo_png, portPay } from "src/iconsimport";
 import { postJsonData } from "src/networks/ApiController";
 import ApiEndpoints from "src/networks/ApiEndpoints";
 import { makeid } from "src/utils/RandomString";
@@ -66,6 +66,7 @@ const BuyCouponModal = ({
   return (
     <>
       <ColourModal
+        background={coupon_bg}
         btn={""}
         outDismiss={true}
         isVisible={isCouponModalVisible}
@@ -74,13 +75,15 @@ const BuyCouponModal = ({
         <CRow className="mx-3 py-3  d-flex justify-content-center">
           <CCol sm={8} xs={12}>
             <CRow>
-              <div
-                className="text-center fw-bold mb-4 px-0"
+              <CCol
+                // md={10}
+                className=" fw-bold text-center mb-4 px-0"
                 style={{ fontSize: "25px" }}
               >
-                Purchase your Coupon
-              </div>
-              <CForm id="CouponForm ">
+                Purchase Your Coupon
+              </CCol>
+
+              <CForm id="CouponForm">
                 <CCol xs={12}>
                   <CustomInput
                     icon={faRupeeSign}

@@ -76,7 +76,7 @@ const columns = [
   {
     name: "Number ",
     // cell: (row) => myDate(row.created_at),
-    cell: (row) => <b>9999999999</b>,
+    cell: (row) => <span>9999999999</span>,
 
     // width: "250px",
   },
@@ -84,14 +84,14 @@ const columns = [
   {
     name: "Amount",
     // cell: (row) => myDate(row.updated_at),
-    cell: (row) => <b>550</b>,
+    cell: (row) => <span>550</span>,
 
     // width: "250px",
   },
   {
     name: "Order ID",
     // cell: (row) => myDate(row.updated_at),
-    cell: (row) => <b>abc123xd4</b>,
+    cell: (row) => <span>abc123xd4</span>,
 
     // width: "250px",
   },
@@ -99,7 +99,7 @@ const columns = [
   {
     name: "Balance",
     // cell: (row) => myDate(row.updated_at),
-    cell: (row) => <b>5000</b>,
+    cell: (row) => <span>5000</span>,
 
     // width: "250px",
   },

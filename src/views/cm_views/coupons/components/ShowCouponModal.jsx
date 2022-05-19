@@ -7,23 +7,21 @@ import {
   faCross,
   faRupeeSign,
   faTimes,
+  faVolumeUp,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { logo_png, portPay } from "src/iconsimport";
 import { postJsonData } from "src/networks/ApiController";
 import ApiEndpoints from "src/networks/ApiEndpoints";
-import { myDate } from "src/utils/DateTimeUtil";
+import { myDate, myDateMMyy } from "src/utils/DateTimeUtil";
 import { makeid } from "src/utils/RandomString";
 import { apiErrorToast, okSuccessToast } from "../../custom/cm_toast";
-import ColourModal from "src/commons/modals/ColourModal";
-import { splitString } from "src/utils/SplitStringUtil";
+import ImageBgModel from "src/commons/modals/ImageBgModel";
+import { formatCoupon, splitString } from "src/utils/SplitStringUtil";
 
 Array.prototype.insert = function (index, item) {
   this.splice(index, 0, item);
-};
-const copyToClipboard = (e) => {
-  const text = document.getElementById("copy");
 };
 
 const ShowCouponModal = ({ user, row }) => {
@@ -76,61 +74,143 @@ const ShowCouponModal = ({ user, row }) => {
     console.log("coupon data: ", coupon_number);
     return () => {};
   }, [couponData]);
+  const parts =
+    couponData && couponData.couponNo.split(/(.{4})/).filter((O) => O);
+  // const data = parts.replace(",", " ");
+  console.log(`parts=>${parts}.`);
+  console.log(`amount=>${parseInt(couponData && couponData.amount)}`);
 
   return (
-    <ColourModal
-      btn={
+    <div>
+      <ImageBgModel
+        btn={
+          <CButton
+            className="px-3 py-1"
+            color="success"
+            variant="outline"
+            onClick={() => {
+              setVisible(true);
+            }}
+          >
+            View Coupon
+          </CButton>
+        }
+        outDismiss={true}
+        isVisible={visible}
+        setIsVisible={setVisible}
+      >
+        {/* <CCol className="d-flex justify-content-end mt-4">
         <CButton
-          className="px-3 py-1"
-          color="success"
-          variant="outline"
+          className="fw-bold"
+          color="dark"
+          variant="ghost"
           onClick={() => {
-            setVisible(true);
+            setVisible(false);
           }}
         >
-          View Coupon
+          <FontAwesomeIcon icon={faTimes} className="me-2" />
+          Close
         </CButton>
-      }
-      outDismiss={true}
-      isVisible={visible}
-      setIsVisible={setVisible}
-    >
-      <CRow className="mt-3 mb-4 mx-3">
-        <CRow className="">
-          <CCol>
-            <CImage
-              className=""
-              src={logo_png}
-              style={{ width: 100, height: "auto" }}
-            />
+      </CCol> */}
+        <CRow className="m-4">
+          <CCol md={6}>
+            <div
+              className="fw-bold"
+              style={{ fontSize: "25px", color: "white" }}
+            >
+              Coupon
+            </div>
           </CCol>
-        </CRow>
-        <CRow className="p-1 mb-4">
-          <CCol sm={12} xs={12}>
-            <CRow>
-              <div
-                className="text-center fw-bold mb-4"
-                style={{ fontSize: "25px" }}
-              >
-                Coupon Details
-              </div>
+          <CCol md={6} className="d-flex justify-content-end">
+            <CImage src={logo_png} style={{ width: 110, height: "auto" }} />
+          </CCol>
+
+          <div
+            className="m-2"
+            style={{
+              backgroundColor: " rgb(192, 192, 194)",
+              width: "50px",
+              height: "40px",
+              borderRadius: "10px",
+            }}
+          ></div>
+          <div>
+            <CCol md={12} style={{ fontSize: "40px", color: "white" }}>
+              {couponData && formatCoupon(couponData.couponNo)}
+            </CCol>
+            <CRow md={12}>
+              <CCol md={6}>
+                <CRow className="d-flex justify-content-end">
+                  <CCol md={2} className="d-flex justify-content-center">
+                    <div
+                      style={{
+                        fontSize: "10px",
+                        color: "#a9a9aa",
+                      }}
+                    >
+                      VALID
+                      <br />
+                      FROM
+                    </div>
+                  </CCol>
+                  <CCol
+                    md={4}
+                    className="d-flex justify-content-center"
+                    style={{ color: "rgb(192, 192, 194)" }}
+                  >
+                    {row && myDateMMyy(row.created_at)}
+                  </CCol>
+                </CRow>
+              </CCol>
+              <CCol md={6}>
+                <CRow className=" d-flex justify-content-start">
+                  <CCol md={2} className="d-flex justify-content-center ">
+                    <div style={{ fontSize: "10px", color: "#a9a9aa" }}>
+                      VALID
+                      <br />
+                      THRU
+                    </div>
+                  </CCol>
+                  <CCol md={4} style={{ color: "rgb(192, 192, 194)" }}>
+                    {couponData && myDateMMyy(couponData.expiryDate)}
+                  </CCol>
+                </CRow>
+              </CCol>
             </CRow>
-          </CCol>
-          <CRow className="text-center fw-bold">
-            <CCol md={6}>Coupon Number :</CCol>
-            <CCol md={6}>{couponData && couponData.couponNo}</CCol>
-            <CCol md={6}>Expiry Date :</CCol>
-            <CCol md={6}>{couponData && myDate(couponData.expiryDate)}</CCol>
-            <CCol md={6}>Amount :</CCol>
-            <CCol md={6}>{couponData && couponData.amount}</CCol>
+          </div>
+
+          <CRow md={6}>
+            <CCol>
+              <div style={{ color: "rgb(192, 192, 194)" }}>
+                Rahul Verma
+                <br />
+                <span style={{ fontSize: "10px" }}>
+                  Coupon Sno. {row && row.id}
+                </span>
+              </div>
+            </CCol>
+            <CCol className="d-flex justify-content-end mt-2">
+              <div
+                className="fw-bold text-center pt-2 "
+                style={{
+                  backgroundColor: "white",
+                  opacity: "0.5",
+                  width: "50%",
+                  height: "40px",
+                  fontSize: "18px",
+                  borderRadius: "4px",
+                }}
+              >
+                {parseInt(couponData && couponData.amount)}
+                {"\u20B9"}
+              </div>
+            </CCol>
           </CRow>
-        </CRow>
-        <CRow>
-          <CCol className="d-flex justify-content-center mt-4">
+          <CCol className="mt-3">
             <CButton
               color="info"
               variant="outline"
-              className="px-3 py-1 "
+              className="px-2 py-1 "
               onClick={() => {
                 navigator.clipboard.writeText(
                   couponData && couponData.couponNo
@@ -145,22 +225,9 @@ const ShowCouponModal = ({ user, row }) => {
               Copy
             </CButton>
           </CCol>
-          <CCol className="d-flex justify-content-center mt-4">
-            <CButton
-              className="fw-bold"
-              color="dark"
-              variant="ghost"
-              onClick={() => {
-                setVisible(false);
-              }}
-            >
-              <FontAwesomeIcon icon={faTimes} className="me-2" />
-              Close
-            </CButton>
-          </CCol>
         </CRow>
-      </CRow>
-    </ColourModal>
+      </ImageBgModel>
+    </div>
   );
 };
 

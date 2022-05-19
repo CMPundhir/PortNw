@@ -50,3 +50,11 @@ export const myDate5 = (dateObj) => {
   const d = new Date(dateObj);
   return d.getDate()+"/"+(d.getMonth() + 1);
 };
+
+export const myDateMMyy = (dateObj) => {
+  const d = new Date(dateObj);
+  let m = (d.getMonth() + 1)
+  m = m<10 ? "0"+m : m;
+  let y = d.getFullYear()%100
+  return m+"/"+y;
+};

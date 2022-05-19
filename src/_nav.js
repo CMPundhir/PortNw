@@ -30,6 +30,7 @@ import {
   faFileExport,
   faFileInvoice,
   faHome,
+  faHouseUser,
   faLaptopCode,
   faList,
   faPersonBooth,
@@ -104,6 +105,18 @@ export const nav_admin = [
         style={{ marginRight: 23, marginLeft: 8 }}
       />
     ),
+  },
+    {
+      component: CNavItem,
+      name: "My Profile",
+      to: CM_Nav.MY_PROFILE,
+      icon: (
+        <FontAwesomeIcon
+          size="sm"
+          icon={faUser}
+          style={{ marginRight: 23, marginLeft: 8 }}
+        />
+      ),
   },
   // {
   //   component: CNavItem,

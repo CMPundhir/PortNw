@@ -93,7 +93,7 @@ const SignUpForm = ({ user }) => {
   return (
     <>
       <CForm className="mx-5 my-5" id="signup_form" onSubmit={handleSignup}>
-        <CRow className="px-4">
+        <CRow className="px-5 py-3">
           <CCol md={6}>
             <CustomInput
               icon={faUserAlt}
@@ -113,7 +113,7 @@ const SignUpForm = ({ user }) => {
             />
           </CCol>
         </CRow>
-        <CRow className="px-4">
+        <CRow className="px-5 py-3">
           <CCol md={6}>
             <CustomInput
               icon={faMailBulk}
@@ -148,7 +148,7 @@ const SignUpForm = ({ user }) => {
         </CRow>
       </CForm>
       <CRow className="text-center px-4">
-        <div className="pb-3 mt-4 d-flex justify-content-center">
+        <div className="pb-3 d-flex justify-content-center">
           <CButton
             hidden={otpVisible}
             className="signUpBtn"

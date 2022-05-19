@@ -29,6 +29,7 @@ const SignupView = ({}) => {
             />
 
             <div
+              className="fw-bold"
               style={{
                 font: "'Montserrat', sans-serif",
                 fontSize: "17px",
@@ -37,7 +38,9 @@ const SignupView = ({}) => {
             >
               Please fill in this form to create an account.
             </div>
-            <SignUpForm />
+            <div>
+              <SignUpForm />
+            </div>
           </div>
         </CCol>
         <CCol lg={6}>

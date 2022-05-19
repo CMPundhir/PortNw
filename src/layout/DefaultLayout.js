@@ -76,9 +76,9 @@ const DefaultLayout = () => {
         <CircleGradPurple  width="140px" height="140px" radius="70px" />
       </div>
 
-      <div style={{position : "fixed", zIndex: -1, left: "450px", top: "350px"}}>
+      {/* <div style={{position : "fixed", zIndex: -1, left: "350px", top: "250px"}}>
         <CircleGradRed  width="100px" height="100px" radius="50px" />
-      </div>
+      </div> */}
 
       <AppSidebar user={user} />
       <div className="wrapper d-flex flex-column min-vh-100 bg-transparent">

@@ -6,3 +6,9 @@ return myArray;
     //     return myArray[i];
     // }
 }
+
+export const formatCoupon = (coupon) => {
+    if(!coupon) return "";
+    const a = coupon.split(/(.{4})/).reduce((x, y) => x+" "+y)
+    return a;
+}

@@ -31,6 +31,8 @@ import small_ICon3 from "src/assets/images/home/sImg3.png";
 import small_ICon4 from "src/assets/images/home/sImg4.png";
 import small_ICon5 from "src/assets/images/home/sImg5.jpg";
 import small_ICon6 from "src/assets/images/home/sImg6.png";
+import coupon_png from "src/assets/images/png/coupon.png";
+import couponBg from "src/assets/images/bg/bgCoupon.jpg";
 
 
 
@@ -69,6 +71,11 @@ export const smIcon3 =small_ICon3;
 export const smIcon4 =small_ICon4;
 export const smIcon5 =small_ICon5;
 export const smIcon6 =small_ICon6;
+
+export const coupon_img =coupon_png;
+export const coupon_bg =couponBg;
+
+
 
 
 
