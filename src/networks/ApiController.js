@@ -78,32 +78,41 @@ export const loginApi = (uname, paswd, setIsProgress, onSuccess, onError) => {
       const data = response.data;
       if (data) {
         //alert(data.api_token)
-        const token = data.api_token
-        postJsonData(ApiEndpoints.GET_ME_USER, {
-          api_token : token
-        }, setIsProgress, 
-        data=>{
-          const user = data.info;
-          localStorage.setItem("api_token", user.api_token);
-          saveKeyVal(StoreKey.TOKEN, token, (msg)=>{
+        const token = data.api_token;
+        postJsonData(
+          ApiEndpoints.GET_ME_USER,
+          {
+            api_token: token,
+          },
+          setIsProgress,
+          (data) => {
+            const user = data.info;
+            localStorage.setItem("api_token", user.api_token);
             saveKeyVal(
-              StoreKey.USER,
-              user,
+              StoreKey.TOKEN,
+              token,
               (msg) => {
-                onSuccess(user);
+                saveKeyVal(
+                  StoreKey.USER,
+                  user,
+                  (msg) => {
+                    onSuccess(user);
+                  },
+                  (err) => {
+                    alert(err);
+                  }
+                );
               },
               (err) => {
                 alert(err);
+                onError(err);
               }
             );
           },
-          (err) => {
-            alert(err);
-            onError(err)
-          });
-        }, error=>{
-          onError(error)
-        })
+          (error) => {
+            onError(error);
+          }
+        );
       } else {
         onError("User data null : " + data);
       }
@@ -217,7 +226,7 @@ export const postJsonData = (
   onSuccess,
   onError
 ) => {
-  if(setIsProgress) setIsProgress(true);
+  if (setIsProgress) setIsProgress(true);
   //console.log("data => "+JSON.stringify(jsonData))
   return axios
     .post(endpoint, jsonData, {
@@ -226,12 +235,12 @@ export const postJsonData = (
       },
     })
     .then((response) => {
-      if(setIsProgress) setIsProgress(false);
+      if (setIsProgress) setIsProgress(false);
       const data = response.data;
       onSuccess(data);
     })
     .catch((error) => {
-      if(setIsProgress) setIsProgress(false);
+      if (setIsProgress) setIsProgress(false);
       onInValidAuth(error, onError);
     });
 };
@@ -269,9 +278,9 @@ export const getRequest = (
   onSuccess,
   onError
 ) => {
-  if(setIsProgress) setIsProgress(true);
+  if (setIsProgress) setIsProgress(true);
   axios
-    .get(endpoint , {
+    .get(endpoint, {
       params: {
         api_token: token,
       },
@@ -279,25 +288,25 @@ export const getRequest = (
     .then((response) => {
       const data = response.data;
       onSuccess(data);
-      if(setIsProgress) setIsProgress(false);
+      if (setIsProgress) setIsProgress(false);
     })
     .catch((error) => {
-      if(setIsProgress) setIsProgress(false);
+      if (setIsProgress) setIsProgress(false);
       onInValidAuth(error, onError);
     });
 };
 
 export const get = (endpoint, setIsProgress, onSuccess, onError) => {
-  if(setIsProgress) setIsProgress(true);
+  if (setIsProgress) setIsProgress(true);
   axios
     .get(endpoint)
     .then((response) => {
       const data = response.data;
       onSuccess(data);
-      if(setIsProgress) setIsProgress(false);
+      if (setIsProgress) setIsProgress(false);
     })
     .catch((error) => {
-      if(setIsProgress) setIsProgress(false);
+      if (setIsProgress) setIsProgress(false);
       onInValidAuth(error, onError);
     });
 };
