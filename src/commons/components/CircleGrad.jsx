@@ -13,7 +13,9 @@ const CircleGrad = ({
         height: height,
         borderRadius: radius,
         background:
-          "transparent linear-gradient(328deg, #ffffff 0%, #2d62ed 37%, #7b92cf 80%, #7d93ce 100%) 0% 0% no-repeat padding-box",
+          "transparent linear-gradient(328deg, #ffffff 0%, #eaed2d 37%, #ff8989 80%, #ffa585 100%) 0% 0% no-repeat padding-box",
+
+        // "transparent linear-gradient(328deg, #ffffff 0%, #ff8989 37%, #eaed2d 80%, #eaed2d 100%) 0% 0% no-repeat padding-box",
       }}
     >
       {children}

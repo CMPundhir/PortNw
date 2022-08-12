@@ -15,7 +15,7 @@ const TransparentCard = ({ user, title, img, actions, children }) => {
   return (
     <>
       <CRow>
-        <CCol className="transparent-card mt-3 pb-4">
+        <CCol className="transparent-card  pb-4">
           <div hidden={!title}>
             <CRow
               xs={{ cols: "auto" }}

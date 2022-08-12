@@ -13,7 +13,7 @@ const CircleLightPurple = ({
         height: height,
         borderRadius: radius,
         background:
-          "transparent linear-gradient(328deg, #789FF8 20%, #AABDE9 ) 0% 0% no-repeat padding-box",
+          "transparent linear-gradient(328deg, #831e4d 30%, #e1609c 70% ) 0% 0% no-repeat padding-box",
       }}
     >
       {children}

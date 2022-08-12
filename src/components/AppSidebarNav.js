@@ -25,12 +25,14 @@ export const AppSidebarNav = ({ items }) => {
     const { component, name, badge, icon, ...rest } = item;
     const Component = component;
     var isActive = location.pathname === rest.to;
-    if(isActive){
-      console.log(`${index} ${name} isActive=> ${isActive} ${rest.to} ${typeof(rest)}`);
+    if (isActive) {
+      console.log(
+        `${index} ${name} isActive=> ${isActive} ${rest.to} ${typeof rest}`
+      );
       for (const [key, value] of Object.entries(rest)) {
         console.log(`${key}: ${value}`);
       }
-    } 
+    }
     return (
       <div
         style={
@@ -47,7 +49,7 @@ export const AppSidebarNav = ({ items }) => {
                 backgroundColor: "#4093f7",
                 color: "white",
               }
-            : { marginTop: 8, marginBottom: 8 }
+            : { marginTop: 25, marginBottom: 25 }
         }
         key={index}
       >
@@ -65,11 +67,11 @@ export const AppSidebarNav = ({ items }) => {
       </div>
     );
   };
-const navGroup = (item, index) => {
+  const navGroup = (item, index) => {
     const { component, name, icon, to, ...rest } = item;
     const Component = component;
     return (
-      <div key={index} style={{ marginTop: 16, marginBottom: 16, }}>
+      <div key={index} style={{ marginTop: 16, marginBottom: 16 }}>
         <Component
           idx={String(index)}
           key={index}

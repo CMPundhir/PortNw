@@ -10,7 +10,7 @@ export const customStyles = {
       textTransform: "uppercase",
       fontSize: "14px",
       color: "#fff",
-      backgroundColor: "#0079B6",
+      backgroundColor: "#af3b71",
     },
   },
   cells: {

@@ -184,7 +184,7 @@ const SignUpForm = ({ user }) => {
         <div className="mb-5 mt-2">
           <span>Already have an account?</span>
           <span
-            style={{ cursor: "pointer", paddingLeft: "3px", color: "#1692ff" }}
+            style={{ cursor: "pointer", paddingLeft: "3px", color: "#e1609c" }}
             onClick={(e) => {
               history.push(CM_Nav.LOG_IN);
             }}

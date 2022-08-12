@@ -16,20 +16,23 @@ const Dashboard = React.lazy(() =>
 const DashboardOld = React.lazy(() =>
   import("src/views/cm_views/DashboardView")
 );
-const HomeView = React.lazy(() =>
-  import("src/views/cm_views/home/HomeView")
-);
+const HomeView = React.lazy(() => import("src/views/cm_views/home/HomeView"));
 const MyQrCodeView = React.lazy(() =>
   import("src/views/cm_views/my_qr_code/MyQrCodeView")
+);
+const ContactUs = React.lazy(() =>
+  import("src/views/cm_views/footerContent/ContactUs")
+);
+const Support = React.lazy(() =>
+  import("src/views/cm_views/footerContent/Support")
+);
+const TermsView = React.lazy(() =>
+  import("src/views/cm_views/footerContent/Terms")
 );
 const CouponsView = React.lazy(() =>
   import("src/views/cm_views/coupons/CouponsView")
 );
-const MyAeps = React.lazy(() =>
-  import("src/views/cm_views/aeps/MyAeps")
-);
-
-
+const MyAeps = React.lazy(() => import("src/views/cm_views/aeps/MyAeps"));
 
 const Colors = React.lazy(() => import("./views/theme/colors/Colors"));
 const Typography = React.lazy(() =>
@@ -173,7 +176,9 @@ const TransactionHis = React.lazy(() =>
 
 // CM Views
 const ProfileView = React.lazy(() => import("./views/cm_views/ProfileView"));
-const TransactionView = React.lazy(() => import("./views/cm_views/transaction/TransactionView"));
+const TransactionView = React.lazy(() =>
+  import("./views/cm_views/transaction/TransactionView")
+);
 const SettingView = React.lazy(() =>
   import("./views/cm_views/settings/SettingView")
 );
@@ -192,8 +197,6 @@ const LoginView = React.lazy(() => import("./views/pages/auth/LoginView"));
 const SignUpView = React.lazy(() => import("./views/pages/auth/SignupView"));
 
 const ApiDocView = React.lazy(() => import("./views/cm_views/ApiDocView"));
-
-
 
 const routes = [
   { path: "/", exact: true, name: "Home" },
@@ -399,7 +402,7 @@ const routes = [
     path: CM_Nav.LOG_OUT,
     name: "LogOut",
     component: LoginView,
-  },  
+  },
   {
     path: CM_Nav.DASHBOARDOLD,
     name: "Dashboard Old",
@@ -419,6 +422,21 @@ const routes = [
     path: CM_Nav.MY_QR_CODE,
     name: "My QR Code",
     component: MyQrCodeView,
+  },
+  {
+    path: CM_Nav.TERMS_CON,
+    name: "Terms & Condition",
+    component: TermsView,
+  },
+  {
+    path: CM_Nav.CONTACT_US,
+    name: "Contact Us",
+    component: ContactUs,
+  },
+  {
+    path: CM_Nav.SUPPORT,
+    name: "Support",
+    component: Support,
   },
   {
     path: CM_Nav.MY_AEPS,

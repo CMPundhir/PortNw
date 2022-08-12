@@ -1,10 +1,6 @@
 .signup-bg {
-  background: radial-gradient(
-      circle at center,
-      #1C76FE30 15%,
-      transparent 22%
-    ),
-    #F9FBFF;
+  background: radial-gradient(circle at center, #831e4d 15%, transparent 22%),
+    #f9fbff;
   background-size: 50px 50px;
   background-repeat: round;
 }
@@ -13,25 +9,23 @@
   background-color: #ffffff;
   box-shadow: 0 0 4px 0px #d3d3d3d3;
   border-radius: 16px;
-  
 }
-
 
 .input-style2 {
   background-color: #ffffff5e;
   backdrop-filter: blur(10px);
-  padding: 8px 8px;
-  color: #1692ff;
+  padding: 9px 9px;
+  color: #e1609c;
   font-weight: bold;
   border-radius: 20px;
-  border: 2px solid #1692ff;
+  border: 2px solid #e1609c;
   box-shadow: rgba(255, 254, 254, 0.7) 0px -23px 25px 0px inset,
     rgba(255, 255, 255, 0.7) 0px -36px 30px 0px inset,
     rgba(255, 255, 255, 0.5) 0px 79px 40px 0px inset,
     rgba(255, 255, 255, 0.06) 0px 2px 1px, rgba(255, 255, 255, 0.09) 0px 4px 2px,
     rgba(255, 255, 255, 0.09) 0px 8px 4px;
-    margin-top: 30px;
-    width:200px;
+  margin-top: 30px;
+  width: 200px;
 }
 .input-style-placeholder {
   position: absolute;
@@ -39,7 +33,7 @@
   left: 16px;
   padding: 7px 0px 2px 0px;
   transition: all 200ms;
-  color: #455A64;
+  color: #455a64;
   font-weight: 500;
   letter-spacing: 0.1em;
   z-index: 1;
@@ -48,20 +42,20 @@
 .input-style2:focus + .input-style-placeholder,
 .input-style2:valid + .input-style-placeholder {
   transform: translate3d(-5px, -120%, 0);
-  color: #1692ff;
+  color: #e1609c;
   font-size: 15px;
 }
 
-.signUpBtn{
+.signUpBtn {
   cursor: "pointer";
-  background-color: #1692ff;
+  background-color: #e1609c;
   color: white;
-  width: 230px;
+  width: 300px;
 
   border-radius: 20px;
   font-size: 15px;
   padding: 8px;
-  margin-top: 15px;
+  /* margin-top: 15px; */
 }
 
 /* .login-rt-png {
@@ -91,8 +85,8 @@ pin-input > .form-control {
   border: 0px solid #fff;
   border-bottom: 2px solid gray;
 }
-@media only screen and (max-width: 992px){
-  .right-column{
+@media only screen and (max-width: 992px) {
+  .right-column {
     display: none;
   }
 }

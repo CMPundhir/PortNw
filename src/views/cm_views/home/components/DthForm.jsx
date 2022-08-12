@@ -24,10 +24,10 @@ const DthForm = ({ action }) => {
       <CCol sm={2} xs={0}></CCol>
       <CCol sm={8} xs={12}>
         <CRow>
-          <CCol sm={6}>
+          <CCol sm={12} md={6}>
             <CustomInput
               icon={action == ACTION.MOBILE_RECHARGE ? faMobile : faUser}
-              className="inputCss bordernew p-2 fw-bold"
+              className="inputCss bordernew p-2 "
               label={
                 action == ACTION.MOBILE_RECHARGE
                   ? "Mobile Number"
@@ -43,15 +43,17 @@ const DthForm = ({ action }) => {
               name={action == ACTION.MOBILE_RECHARGE ? "Mobile" : "CustomerID"}
             />
           </CCol>
-          <CCol sm={6} className="mt-4">
+          <CCol sm={12} md={6} className="">
+            <label>Select Operator</label>
             <CustomSelect
               icon={faArrowDown}
               lable="Select Operator"
+              className="inputCss bordernew "
               option1="TATASky"
               option2="Airtel"
             />
           </CCol>
-          <CCol xs={12}>
+          <CCol sm={12} md={12}>
             <CustomInput
               icon={faRupeeSign}
               className="inputCss bordernew p-2"
@@ -65,8 +67,8 @@ const DthForm = ({ action }) => {
         </CRow>
       </CCol>
       <CCol sm={2} xs={0}></CCol>
-      <div className="d-flex justify-content-center mt-3">
-        <CButton className="formbtnCss px-3 py-1" type="submit">
+      <div className="d-flex justify-content-center my-3">
+        <CButton className="formbtnCss" type="submit">
           Submit
         </CButton>
       </div>

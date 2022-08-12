@@ -32,7 +32,12 @@ export const IndexNav = () => {
               <span href="#" className="navLinks me-4">
                 Pricing
               </span>
-              <span href="#" className="navLinks me-4">
+              <span
+                onClick={() => {
+                  history.push(CM_Nav.INDEX_CONTACT_VIEW);
+                }}
+                className="navLinks me-4"
+              >
                 ContactUs
               </span>
               <span

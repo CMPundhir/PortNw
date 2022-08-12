@@ -20,10 +20,7 @@ const FormContainer = ({ action }) => {
       >
         <ElectricityForm />
       </div>
-      <div
-        hidden={action != ACTION.CREDIT_CARD}
-        className="ElectricityForm mt-5"
-      >
+      <div hidden={action != ACTION.BBPS} className="ElectricityForm mt-5">
         <MobileForm />
       </div>
       <div hidden={action != ACTION.BROADBAND} className="ElectricityForm mt-5">

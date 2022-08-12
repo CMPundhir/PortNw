@@ -7,15 +7,15 @@ const SectionTwo = () => {
   return (
     <div style={{ marginBottom: "8%" }}>
       <CRow className="d-flex text-center">
-        <CCol>
+        <CCol className="my-5">
           <span
-            className="py-2 px-3"
+            className="py-3 px-3"
             style={{
               backgroundColor: "#F9F0FF",
               borderRadius: "22px",
               fontSize: "15px",
               fontWeight: "bold",
-              color: "#1B76FF",
+              color: "#831e4d",
             }}
           >
             <FontAwesomeIcon
@@ -29,8 +29,10 @@ const SectionTwo = () => {
             Why Portpay
           </span>
         </CCol>
-        <h1 className="mt-4 fw-bold">Built with security in mind</h1>
-        <div className="d-flex justify-content-center align-item-center  mt-4 d-flex text-center">
+        <h1 className="mt-5 mb-3 fw-bold">
+          Built <span className="underline"> with security in</span> mind
+        </h1>
+        <div className="d-flex justify-content-center align-item-center  mt-5 d-flex text-center">
           <span style={{ width: "60%" }}>
             Lorem Media is a full-service social media agency. We offer
             businesses innovative solutions that deliver the right type of
@@ -46,87 +48,94 @@ const SectionTwo = () => {
       <CContainer style={{ marginTop: "80px" }}>
         <CRow>
           <CCol className="text-center" md={4}>
-            <div>
-              <div className="mb-4">
-                <span
-                  style={{
-                    backgroundColor: "#F6FFED",
-                    padding: "6px",
-                    borderRadius: "25px",
-                  }}
-                >
-                  <FontAwesomeIcon
+            <div className="offerCard">
+              <div className="">
+                <div className="mb-5 ">
+                  <span
                     style={{
-                      fontSize: "20px",
-                      color: " #52C41A",
+                      backgroundColor: "#F6FFED",
+                      padding: "6px",
+                      borderRadius: "25px",
                     }}
-                    icon={faLock}
-                  />
-                </span>
+                  >
+                    <FontAwesomeIcon
+                      style={{
+                        fontSize: "20px",
+                        color: " #52C41A",
+                      }}
+                      icon={faLock}
+                    />
+                  </span>
+                </div>
               </div>
-            </div>
-            <div>
-              <span style={{ fontWeight: "bold" }}>Safe</span>
-            </div>
-            <div>
-              We ensure you get a good night sleep with your money staying with
-              large and highly stable banks in India.
+              <div>
+                <span style={{ fontWeight: "bold" }}>Safe</span>
+              </div>
+              <div>
+                We ensure you get a good night sleep with your money staying
+                with large and highly stable banks in India.
+              </div>
             </div>
           </CCol>
           <CCol className="text-center" md={4}>
-            <div>
-              <div className="mb-4">
-                <span
-                  style={{
-                    backgroundColor: "#FFF1F0",
-                    padding: "6px",
-                    borderRadius: "25px",
-                  }}
-                >
-                  <FontAwesomeIcon
+            <div className="offerCard">
+              {" "}
+              <div>
+                <div className="mb-5">
+                  <span
                     style={{
-                      fontSize: "20px",
-                      color: " #F5222D",
+                      backgroundColor: "#FFF1F0",
+                      padding: "6px",
+                      borderRadius: "25px",
                     }}
-                    icon={faEye}
-                  />
-                </span>
+                  >
+                    <FontAwesomeIcon
+                      style={{
+                        fontSize: "20px",
+                        color: " #F5222D",
+                      }}
+                      icon={faEye}
+                    />
+                  </span>
+                </div>
               </div>
-            </div>
-            <div>
-              <span style={{ fontWeight: "bold" }}>Safe</span>
-            </div>
-            <div>
-              We ensure you get a good night sleep with your money staying with
-              large and highly stable banks in India.
+              <div>
+                <span style={{ fontWeight: "bold" }}>Secure</span>
+              </div>
+              <div>
+                Moving your card details to a much more secured place.100%
+                Payment Protection. Easy Return Policy.
+              </div>
             </div>
           </CCol>
           <CCol className="text-center" md={4}>
-            <div>
-              <div className="mb-4">
-                <span
-                  style={{
-                    backgroundColor: "#E6F7FF",
-                    padding: "6px",
-                    borderRadius: "25px",
-                  }}
-                >
-                  <FontAwesomeIcon
+            <div className="offerCard">
+              <div>
+                <div className="mb-5">
+                  <span
                     style={{
-                      fontSize: "20px",
-                      color: " #1B76FF",
+                      backgroundColor: "#E6F7FF",
+                      padding: "6px",
+                      borderRadius: "25px",
                     }}
-                    icon={faUserClock}
-                  />
-                </span>
+                  >
+                    <FontAwesomeIcon
+                      style={{
+                        fontSize: "20px",
+                        color: " #831e4d",
+                      }}
+                      icon={faUserClock}
+                    />
+                  </span>
+                </div>
               </div>
-            </div>
-            <div>
-              <span style={{ fontWeight: "bold" }}>Safe</span>
-            </div>
-            <div>
-              We ensure you get a good night sleep with your money staying with
-              large and highly stable banks in India.
+              <div>
+                <span style={{ fontWeight: "bold" }}>Reliable</span>
+              </div>
+              <div>
+                Get your recharge to family and friends in minutes.Always get
+                cheapest price with the best in the industry.
+              </div>
             </div>
           </CCol>
         </CRow>

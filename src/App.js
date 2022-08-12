@@ -20,8 +20,12 @@ const Register = React.lazy(() => import("./views/pages/register/Register"));
 const Page404 = React.lazy(() => import("./views/pages/page404/Page404"));
 const Page500 = React.lazy(() => import("./views/pages/page500/Page500"));
 const IndexPage = React.lazy(() => import("./views/pages/index/IndexPage"));
-const AnjaliForm = React.lazy(() => import("./views/pages/anjaliPractice/AnjaliForm"));
-
+const AnjaliForm = React.lazy(() =>
+  import("./views/pages/anjaliPractice/AnjaliForm")
+);
+const IndexContactView = React.lazy(() =>
+  import("./views/pages/index/components/IndexContactus")
+);
 
 class App extends Component {
   render() {
@@ -74,6 +78,11 @@ class App extends Component {
               path=""
               name="Home"
               render={(props) => <DefaultLayout {...props} />}
+            />
+            <Route
+              path="/contact"
+              name="Contact View"
+              render={(props) => <IndexContactView {...props} />}
             />
             <Route name="Page 404" render={(props) => <Page404 {...props} />} />
           </Switch>

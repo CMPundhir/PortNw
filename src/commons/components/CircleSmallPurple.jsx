@@ -12,7 +12,7 @@ const CircleSmallPurple = ({
         width: width,
         height: height,
         borderRadius: radius,
-        background: "#8292E8 0% 0% no-repeat padding-box",
+        background: "#e1609c 0% 0% no-repeat padding-box",
       }}
     >
       {children}

@@ -11,7 +11,7 @@ export const SectionFour = () => {
         marginTop: "80px",
         clipPath: "polygon(50% 0%, 100% 0, 100% 75%, 0 91%, 0 0)",
         background:
-          "transparent linear-gradient(180deg, #FFFFFF70 0%, #1563FF80 100%) 0% 0% no-repeat padding-box",
+          "transparent linear-gradient(180deg, #FFFFFF70 0%, #ff8989 100%) 0% 0% no-repeat padding-box  ",
       }}
     >
       <CRow>

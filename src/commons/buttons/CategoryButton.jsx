@@ -36,17 +36,18 @@ const CategoryButton = ({
               style={{ fontSize: "20px" }}
             >
               <FontAwesomeIcon
-                color={hover || isActive ? "white" : "#005b89"}
+                color={hover || isActive ? "white" : "#CB6796"}
                 icon={icon ? icon : faMobile}
               />
             </div>
           </div>
           <div
-            className="pt-2 fw-bold"
+            className="pt-2 "
             style={{
-              fontSize: "12px",
+              fontWeight: "",
+              fontSize: "15px",
               fontFamily: "font-family: 'Lato', sans-serif",
-              color: isActive || hover ? "#0079b6" : "black",
+              color: isActive || hover ? "#CB6796" : "black",
             }}
           >
             {text ? text : "Default"}

@@ -28,7 +28,7 @@ const IndexPage = () => {
             height: "100vh",
             clipPath: "polygon(50% 0%, 100% 0, 100% 75%, 0 91%, 0 0)",
             background:
-              "transparent linear-gradient(180deg, #FFFFFF70 0%, #1563FF80 100%) 0% 0% no-repeat padding-box  ",
+              "transparent linear-gradient(180deg, #FFFFFF70 0%, #ff8989 100%) 0% 0% no-repeat padding-box  ",
           }}
         >
           <div className="position-absolute margin-top-70">

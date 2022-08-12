@@ -1,6 +1,8 @@
 import { CCard, CRow, CCol } from "@coreui/react";
 import {
+  faBolt,
   faBroadcastTower,
+  faBurn,
   faCarSide,
   faCreditCard,
   faGasPump,
@@ -8,11 +10,17 @@ import {
   faHandHoldingWater,
   faIdCard,
   faLandmark,
+  faLightbulb,
   faMobile,
+  faMoneyBill,
+  faNetworkWired,
   faPhoneSquare,
+  faPrescriptionBottle,
   faSatellite,
   faSatelliteDish,
+  faTv,
   faWater,
+  faWifi,
 } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
 import CategoryButton from "src/commons/buttons/CategoryButton";
@@ -34,10 +42,10 @@ const HomeView = ({ user }) => {
   return (
     <>
       <CRow>
-        <CCol lg={9} md={12}>
-          <TransparentCard title={title}>
-            <div>
-              <CRow className="d-flex justify-content-around">
+        <CCol lg={12} md={12} className="px-5">
+          <TransparentCard title={title} className="">
+            <div style={{ width: "90%", margin: "0 auto" }}>
+              <CRow className="d-flex justify-content-around p-5">
                 <CategoryButton
                   isActive={action == ACTION.MOBILE_RECHARGE}
                   onClick={() => {
@@ -55,9 +63,10 @@ const HomeView = ({ user }) => {
                     setIsactive(true);
                     setTitle("DTH");
                   }}
-                  icon={faSatelliteDish}
+                  icon={faTv}
                   text="DTH"
                 />
+
                 <CategoryButton
                   isActive={action == ACTION.ELECTRICITY}
                   onClick={() => {
@@ -65,29 +74,32 @@ const HomeView = ({ user }) => {
                     setIsactive(true);
                     setTitle("Electricity");
                   }}
-                  icon={faSatellite}
+                  icon={faLightbulb}
                   text="Electricity"
                 />
+
                 <CategoryButton
-                  isActive={action == ACTION.CREDIT_CARD}
+                  isActive={action == ACTION.BBPS}
                   onClick={() => {
-                    setAction(ACTION.CREDIT_CARD);
+                    setAction(ACTION.BBPS);
                     setIsactive(true);
-                    setTitle("Credit Card");
+                    setTitle("BBPS");
                   }}
-                  icon={faCreditCard}
-                  text="Credit card"
+                  icon={faBolt}
+                  text="BBPS"
                 />
+
                 <CategoryButton
                   isActive={action == ACTION.BROADBAND}
                   onClick={() => {
                     setAction(ACTION.BROADBAND);
                     setIsactive(true);
-                    setTitle("Broad Band");
+                    setTitle("BroadBand");
                   }}
-                  icon={faBroadcastTower}
-                  text="Broad Band"
+                  icon={faWifi}
+                  text="BroadBand"
                 />
+
                 <CategoryButton
                   isActive={action == ACTION.LANDLINE}
                   onClick={() => {
@@ -98,6 +110,7 @@ const HomeView = ({ user }) => {
                   icon={faPhoneSquare}
                   text="Landline"
                 />
+
                 <CategoryButton
                   isActive={action == ACTION.GAS}
                   onClick={() => {
@@ -105,9 +118,10 @@ const HomeView = ({ user }) => {
                     setIsactive(true);
                     setTitle("Piped Gass");
                   }}
-                  icon={faMobile}
+                  icon={faBurn}
                   text="Piped Gass"
                 />
+
                 <CategoryButton
                   isActive={action == ACTION.WATER}
                   onClick={() => {
@@ -144,8 +158,8 @@ const HomeView = ({ user }) => {
             <ScrollCards /> */}
           </TransparentCard>
         </CCol>
-        <RightSideComponent />
-        <CRow className="mt-4">
+        {/* <RightSideComponent /> */}
+        {/* <CRow className="mt-4">
           <div
             style={{
               marginBottom: "none",
@@ -156,7 +170,7 @@ const HomeView = ({ user }) => {
             Repeat
           </div>
           <ScrollCards />
-        </CRow>
+        </CRow> */}
       </CRow>
     </>
   );

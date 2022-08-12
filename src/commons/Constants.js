@@ -29,12 +29,15 @@ export const UPDATE_ACTION = {
   REMOVE: "remove",
 };
 
-export const 
-CM_Nav = {
+export const CM_Nav = {
   DASHBOARD: "/dashboard",
   DASHBOARDOLD: "/dashboard-old",
   HOME: "/home",
-  COUPONS : "/coupons",
+  SUPPORT: "/support",
+  COUPONS: "/coupons",
+  TERMS_CON: "/terms&Condition",
+  CONTACT_US: "/contactUs",
+  PRIVACY_POLICY: "/privacy_policy",
   TRANSACTION: "/transactions",
   TRANSACTION2: "/my-transactions",
   USERS: "/users",
@@ -73,9 +76,9 @@ CM_Nav = {
   MY_AEPS: "/aeps",
   INDEX_PAGE: "/index_page",
   SIGNUP_VIEW: "/signup",
-  ANJALI:"/anjaliForm"
-
-
+  ANJALI: "/anjaliForm",
+  //before login View
+  // INDEX_CONTACT_VIEW: "/ContactView",
 };
 
 export const StoreKey = {
@@ -97,11 +100,11 @@ export const ReportType = {
 export const ACTION = {
   RECHARGE: 0,
   UTILIY: 1,
-  MOBILE_RECHARGE : "m",
+  MOBILE_RECHARGE: "m",
   DTH: "d",
   ELECTRICITY: "e",
   COUPON: "n",
-  CREDIT_CARD: "c",
+  BBPS: "s",
   BROADBAND: "b",
   LANDLINE: "l",
   GAS: "g",

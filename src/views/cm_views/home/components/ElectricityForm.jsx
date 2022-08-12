@@ -45,16 +45,17 @@ const ElectricityForm = ({ action }) => {
               name={action == ACTION.MOBILE_RECHARGE ? "Mobile" : "CustomerID"}
             />
           </CCol>
-          <CCol sm={6} className="mt-4">
+          <CCol sm={6} className="">
+            <label>Select Operator</label>
             <CustomSelect
               icon={faArrowDown}
               lable="Select Operator"
-              className="inputCss bordernew p-2"
+              className="inputCss bordernew "
               option1="TATASky"
               option2="Airtel"
             />
           </CCol>
-          <CCol xs={6}>
+          <CCol sm={12}>
             <CustomInput
               icon={faRupeeSign}
               className="inputCss bordernew p-2"

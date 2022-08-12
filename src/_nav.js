@@ -23,17 +23,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAirFreshener,
   faChartLine,
+  faClipboard,
   faCog,
   faCogs,
   faExchangeAlt,
   faFileCode,
   faFileExport,
   faFileInvoice,
+  faHeadset,
   faHome,
   faHouseUser,
   faLaptopCode,
   faList,
   faPersonBooth,
+  faPhone,
+  faPhoneAlt,
   faQrcode,
   faRandom,
   faRupeeSign,
@@ -46,17 +50,17 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const nav_admin = [
-  // // {
-  // //   component: CNavItem,
-  // //   name: "Dashboard",
-  // //   to: CM_Nav.DASHBOARD,
-  // //   icon: (
-  // //     <FontAwesomeIcon
-  // //       size="sm"
-  // //       icon={faChartLine}
-  // //       style={{ marginRight: 22, marginLeft: 5 }}
-  // //     />
-  // //   ),
+  // {
+  //   component: CNavItem,
+  //   name: "Dashboard",
+  //   to: CM_Nav.DASHBOARD,
+  //   icon: (
+  //     <FontAwesomeIcon
+  //       size="sm"
+  //       icon={faChartLine}
+  //       style={{ marginRight: 22, marginLeft: 5 }}
+  //     />
+  //   ),
   // },
   {
     component: CNavItem,
@@ -70,18 +74,18 @@ export const nav_admin = [
       />
     ),
   },
-  {
-    component: CNavItem,
-    name: "Coupon",
-    to: CM_Nav.COUPONS,
-    icon: (
-      <FontAwesomeIcon
-        size="sm"
-        icon={faAirFreshener}
-        style={{ marginRight: 22, marginLeft: 5 }}
-      />
-    ),
-  },
+  // {
+  //   component: CNavItem,
+  //   name: "Coupon",
+  //   to: CM_Nav.COUPONS,
+  //   icon: (
+  //     <FontAwesomeIcon
+  //       size="sm"
+  //       icon={faAirFreshener}
+  //       style={{ marginRight: 22, marginLeft: 5 }}
+  //     />
+  //   ),
+  // },
   {
     component: CNavItem,
     name: "Transactions",
@@ -94,29 +98,67 @@ export const nav_admin = [
       />
     ),
   },
+
+  // {
+  //   component: CNavItem,
+  //   name: "My QR Code",
+  //   to: CM_Nav.MY_QR_CODE,
+  //   icon: (
+  //     <FontAwesomeIcon
+  //       size="sm"
+  //       icon={faQrcode}
+  //       style={{ marginRight: 23, marginLeft: 8 }}
+  //     />
+  //   ),
+  // },
+
   {
     component: CNavItem,
-    name: "My QR Code",
-    to: CM_Nav.MY_QR_CODE,
+    name: "My Profile",
+    to: CM_Nav.MY_PROFILE,
     icon: (
       <FontAwesomeIcon
         size="sm"
-        icon={faQrcode}
+        icon={faUser}
         style={{ marginRight: 23, marginLeft: 8 }}
       />
     ),
   },
-    {
-      component: CNavItem,
-      name: "My Profile",
-      to: CM_Nav.MY_PROFILE,
-      icon: (
-        <FontAwesomeIcon
-          size="sm"
-          icon={faUser}
-          style={{ marginRight: 23, marginLeft: 8 }}
-        />
-      ),
+  {
+    component: CNavItem,
+    name: "Terms & condition",
+    to: CM_Nav.TERMS_CON,
+    icon: (
+      <FontAwesomeIcon
+        size="sm"
+        icon={faClipboard}
+        style={{ marginRight: 22, marginLeft: 5 }}
+      />
+    ),
+  },
+  {
+    component: CNavItem,
+    name: "Support",
+    to: CM_Nav.SUPPORT,
+    icon: (
+      <FontAwesomeIcon
+        size="sm"
+        icon={faHeadset}
+        style={{ marginRight: 22, marginLeft: 5 }}
+      />
+    ),
+  },
+  {
+    component: CNavItem,
+    name: "Contact Us",
+    to: CM_Nav.CONTACT_US,
+    icon: (
+      <FontAwesomeIcon
+        size="sm"
+        icon={faPhoneAlt}
+        style={{ marginRight: 22, marginLeft: 5 }}
+      />
+    ),
   },
   // {
   //   component: CNavItem,
@@ -130,8 +172,7 @@ export const nav_admin = [
   //     />
   //   ),
   // },
- 
-  
+
   // {
   //   component: CNavGroup,
   //   name: "Users",

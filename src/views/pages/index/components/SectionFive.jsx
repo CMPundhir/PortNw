@@ -1,75 +1,45 @@
-import { CCol, CImage, CRow } from "@coreui/react";
-import { fontSize } from "@mui/system";
-import React from "react";
+import { CCol, CContainer, CImage, CRow } from "@coreui/react";
 import {
-  dummy_jpg,
-  Trusted1,
-  Trusted2,
-  Trusted3,
-  Trusted4,
-} from "src/iconsimport";
-import SignUpForm from "../../auth/Component/SignUpForm";
-import SectionFiveForm from "./SectionFiveForm";
+  faBullhorn,
+  faRupeeSign,
+  faSignInAlt,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
 
 export const SectionFive = () => {
   return (
-    <div>
-      <CRow>
-        <CCol
-          style={{ marginTop: "100px" }}
-          lg={6}
-          md={6}
-          sm={12}
-          className="text-center"
-        >
-          <div
-            style={{
-              fontWeight: "bolder",
-              fontSize: "30px",
-              fontFamily: "Metropolis",
-            }}
-          >
-            Join us now and get all new <br />
-            offers with fast services.
-          </div>
-          <div className="vLine pt-5 d-flex justify-content-center">
-            <div className="vLine1"></div>
-            <div className="vBox">Trusted by</div>
-          </div>
-          <div className="m-auto" style={{ width: "60%" }}>
-            <CRow className="pt-5">
-              <CCol>
-                <div className="py-5 ">
-                  <CImage src={Trusted1} />
-                </div>
-                <div className=" py-5">
-                  <CImage src={Trusted3} />
-                </div>
-              </CCol>
-              <CCol>
-                <div className=" py-5">
-                  <CImage src={Trusted2} />
-                </div>
-                <div className=" py-4">
-                  <CImage src={Trusted4} />
-                </div>
-              </CCol>
-            </CRow>
-          </div>
-        </CCol>
+    <CContainer>
+      <h1 className="mt-5 mb-5 fw-bold">
+        Refer<span className="underline">& </span> Earn
+      </h1>
 
-        <CCol
-          md={6}
-          sm={12}
-          lg={6}
-          className=" parent d-flex justify-content-center"
-        >
-          <div class="back"></div>
-          <div className=" text-center d-flex justify-content-center">
-            <SectionFiveForm />
+      <CRow className="my-5 py-5">
+        <CCol md={4} sm={12} className="my-5">
+          <div className="offerCard m-2">
+            <FontAwesomeIcon icon={faBullhorn} color="#BA457B" size="2x" />
+            <h5 className="fw-bold my-4">You Refer Friend</h5>
+            <p>
+              You Refer Friends Share your referral link with friends. They get
+              ₹10.
+            </p>
           </div>
         </CCol>
+        <CCol md={4} sm={12} className="my-5">
+          <div className="offerCard m-2">
+            <FontAwesomeIcon icon={faSignInAlt} color="#BA457B" size="2x" />
+            <h5 className="fw-bold my-4">Your Friends Register</h5>
+            <p>Your friends Register with using your referral link.</p>
+          </div>
+        </CCol>
+        <CCol md={4} sm={12} className="my-5">
+          <div className="offerCard m-2">
+            <FontAwesomeIcon icon={faRupeeSign} color="#BA457B" size="2x" />
+            <h5 className="fw-bold my-4">Earn You</h5>
+            <p>You get ₹20. You can use these credits to take recharge.</p>
+          </div>
+        </CCol>{" "}
       </CRow>
-    </div>
+    </CContainer>
   );
 };

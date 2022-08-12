@@ -6,10 +6,10 @@ import { getValue, store } from "src/utils/CMLocalStorage";
 import { ShowWelcomeDialog } from "src/views/cm_views/custom/cm_modals";
 import logo_png from "src/assets/images/logo.png";
 import {
-AppContent,
-AppFooter,
-AppHeader,
-AppSidebar,
+  AppContent,
+  AppFooter,
+  AppHeader,
+  AppSidebar,
 } from "../components/index";
 import { postJsonData } from "src/networks/ApiController";
 import ApiEndpoints from "src/networks/ApiEndpoints";
@@ -20,91 +20,96 @@ import CircleGradRed from "src/commons/components/CircleGradRed";
 
 var isLoginMsgVisible = false;
 const DefaultLayout = () => {
-const [user, setUser] = useState();
-const location = useLocation();
-const history = useHistory();
-const [isWelcomeShown, setIsWelcomeShown] = useState(
-  location && location.state && location.state.isNewLogin
-);
-if (!user) {
-  if (location && location.state && location.state.user) {
-    setUser(location.state.user);
-  } else {
-    getValue(
-      StoreKey.USER,
-      (user) => {
-        setUser(user);
-        console.log(JSON.stringify(user));
-        postJsonData(
-          ApiEndpoints.Val_Tk,
-          {
-            api_token: user ? user.api_token : "",
-          },
-          null,
-          () => {},
-          (error) => {
+  const [user, setUser] = useState();
+  const location = useLocation();
+  const history = useHistory();
+  const [isWelcomeShown, setIsWelcomeShown] = useState(
+    location && location.state && location.state.isNewLogin
+  );
+  if (!user) {
+    if (location && location.state && location.state.user) {
+      setUser(location.state.user);
+    } else {
+      getValue(
+        StoreKey.USER,
+        (user) => {
+          setUser(user);
+          console.log(JSON.stringify(user));
+          postJsonData(
+            ApiEndpoints.Val_Tk,
+            {
+              api_token: user ? user.api_token : "",
+            },
+            null,
+            () => {},
+            (error) => {
+              if (!isLoginMsgVisible) {
+                isLoginMsgVisible = true;
+                history.push("/login");
+              }
+            }
+          );
+        },
+        (err) => {
+          localStorage.clear();
+          store.clear().then((v) => {
             if (!isLoginMsgVisible) {
               isLoginMsgVisible = true;
               history.push("/login");
             }
-          }
-        );
-      },
-      (err) => {
-        localStorage.clear();
-        store.clear().then((v) => {
-          if (!isLoginMsgVisible) {
-            isLoginMsgVisible = true;
-            history.push("/login");
-          }
-        });
-      }
-    );
+          });
+        }
+      );
+    }
   }
-}
 
-return user ? (
-  <div className="">
-    <div style={{position : "fixed", zIndex: -2, left: "850px"}}>
-      <CircleGrad  width="600px" height="600px" radius="300px" />
-    </div>
-    <div style={{position : "fixed", zIndex: -1, left: "900px", top: "200px"}}>
-      <CircleGradGreen  width="200px" height="200px" radius="100px" />
-    </div>
+  return user ? (
+    <div className="">
+      <div
+        style={{ position: "fixed", zIndex: -2, left: "1100px", top: "270px" }}
+      >
+        <CircleGrad width="600px" height="600px" radius="300px" />
+      </div>
+      <div
+        style={{ position: "fixed", zIndex: -1, left: "900px", top: "300px" }}
+      >
+        {/* <CircleGradPurple width="200px" height="200px" radius="100px" /> */}
+      </div>
 
-    <div style={{position : "fixed", zIndex: -1, left: "500px", top: "500px"}}>
-      <CircleGradPurple  width="140px" height="140px" radius="70px" />
-    </div>
+      <div
+        style={{ position: "fixed", zIndex: -1, left: "250px", top: "200px" }}
+      >
+        {/* <CircleGradGreen width="200px" height="200px" radius="100px" /> */}
+      </div>
 
-    {/* <div style={{position : "fixed", zIndex: -1, left: "350px", top: "250px"}}>
+      {/* <div style={{position : "fixed", zIndex: -1, left: "350px", top: "250px"}}>
       <CircleGradRed  width="100px" height="100px" radius="50px" />
     </div> */}
 
-    <AppSidebar user={user} />
-    <div className="wrapper d-flex flex-column min-vh-100 bg-transparent">
-      <div className="body site-bg flex-grow-1 mt-4 ms-2 me-2"
-        >
-        <AppHeader user={user} />
-        <AppContent user={user} />
+      <AppSidebar user={user} />
+      <div className="wrapper d-flex flex-column min-vh-100 bg-transparent">
+        <div className="body site-bg flex-grow-1 mt-4 ms-2 me-2">
+          {/* <AppHeader user={user} /> */}
+          <AppContent user={user} />
+        </div>
+        {/* <AppFooter user={user} /> */}
       </div>
-      {/* <AppFooter user={user} /> */}
+      {/* {isWelcomeShown ? <ShowWelcomeDialog user={user} /> : ""} */}
     </div>
-    {/* {isWelcomeShown ? <ShowWelcomeDialog user={user} /> : ""} */}
-  </div>
-) : (
-  <div className="min-vh-100 text-center">
-    <CImage
-      rounded
-      src={logo_png}
-      width={120}
-      height={40}
-      onClick={(e) => {
-        dispatch({ type: "set", sidebarShow: !sidebarShow });
-      }}
-    />
-    <h6 className="m-2">&emsp;Loading...</h6>
-  </div>
-);
+  ) : (
+    <div className="min-vh-100 text-center">
+      <CImage
+        rounded
+        src={logo_png}
+        width={120}
+        height={40}
+        onClick={(e) => {
+          dispatch({ type: "set", sidebarShow: !sidebarShow });
+        }}
+      />
+      <h6 className="m-2">&emsp;Loading...</h6>
+    </div>
+  );
 };
 
 export default DefaultLayout;

@@ -32,8 +32,8 @@ $enable-rtl: true;
 
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px #4093f7;
-  box-shadow: inset 0 0 6px #4093f7;
+  -webkit-box-shadow: inset 0 0 6px #cb6796;
+  box-shadow: inset 0 0 6px #cb6796;
 }
 
 .vh {
@@ -69,8 +69,8 @@ $enable-rtl: true;
 .modal_wid {
   flex: 1;
   justify-content: "center";
-  align-items: 'center';
-  background-color: 'rgba(0,0,0,0.5)'
+  align-items: "center";
+  background-color: "rgba(0,0,0,0.5)";
   // border-color: $primary-bg;
   // border-width: 20px;
   // border: solid;
@@ -79,14 +79,13 @@ $enable-rtl: true;
   //background-color: rgba(0,0,0,0.75);
   // opacity: -1;
   // background-color: red;
-  
 }
 .modalInner {
   height: 200;
   padding: 35;
-  justify-content: 'space-around';
-  align-items: 'center';
-  background-color:red;
+  justify-content: "space-around";
+  align-items: "center";
+  background-color: red;
 }
 @font-face {
   font-family: "Lato";
@@ -131,7 +130,7 @@ body {
 // }
 
 .cm_active {
-  border-left-color: 4px solid #4093f7;
+  border-left-color: 4px solid #cb6796;
 }
 
 .input-inside {
@@ -151,8 +150,8 @@ body {
   border-style: solid;
   border-color: #ffffff;
   border-width: 2px;
-  border-bottom-color: #4093f7;
-  color: #4093f7;
+  border-bottom-color: #cb6796;
+  color: #cb6796;
   background-color: #ffffff;
 }
 
@@ -163,7 +162,7 @@ body {
   border-width: 0px;
   border-bottom-color: transparent;
   border-bottom-width: 2px;
-  background-color: #4093f7;
+  background-color: #cb6796;
 }
 
 .my_btn:hover {
@@ -173,7 +172,7 @@ body {
   border-width: 0px;
   border-bottom-color: #ffffff;
   border-bottom-width: 2px;
-  background-color: #4093f7;
+  background-color: #cb6796;
 }
 
 .my_btn_unchecked {
@@ -188,9 +187,9 @@ body {
 .my_btn_checked {
   display: block;
   border-style: solid;
-  border-color: #4093f7;
+  border-color: #cb6796;
   border-width: 0px;
-  border-bottom-color: #4093f7;
+  border-bottom-color: #cb6796;
   border-bottom-width: 3px;
 }
 
@@ -210,7 +209,7 @@ body {
   padding: 4px;
   border-color: transparent;
   border-width: 0px;
-  border-bottom-color: #4093f7;
+  border-bottom-color: #ec7fb2;
   border-bottom-width: 2px;
   background-color: transparent;
   width: 32px;
@@ -258,11 +257,11 @@ body {
 .side_item :hover {
   display: block;
   border-style: solid;
-  background: #a3e6ff77;
+  background: #f996c4;
   padding: 8px;
   border-color: transparent;
   border-width: 0px;
-  border-left-color: #4093f7;
+  border-left-color: #cb6796;
   border-left-width: 2px;
 }
 
@@ -276,10 +275,10 @@ body {
 
 #menu li:hover {
   opacity: 0.7;
-  background-color: #a3e6ff;
+  background-color: #fa9fc9;
 }
 .sideNav-logo-bg {
-  background-color: #1692ff7c;
+  background-color: #cb6796;
   backdrop-filter: blur(40px);
   border-radius: 16px;
 }
@@ -297,13 +296,13 @@ body {
   // rgba(0, 0, 0, 0.3) 0px 3px 5px -3px;
 }
 .borderBottom-blue {
-  border-color: #a2caec;
-  color: #1692ff;
-  background-image: linear-gradient(45deg, #1692ff 50%, transparent 50%);
+  border-color: #fa9fc9;
+  color: #cb6796;
+  background-image: linear-gradient(45deg, #e9d022 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
   transition: background 500ms ease-in-out;
-  border-bottom: 2px solid #1692ff;
+  border-bottom: 2px solid #cb6796;
   border-radius: 4px;
   padding: 16px;
 }
@@ -317,7 +316,7 @@ body {
 .inactiveDefault-border {
   border-color: #a2caec;
   color: #000;
-  background-image: linear-gradient(45deg, #1692ff 50%, transparent 50%);
+  background-image: linear-gradient(45deg, #cb6796 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
   transition: background 500ms ease-in-out;
@@ -329,20 +328,32 @@ body {
   color: #fff;
 }
 .transaction-style {
-  color: #1692ff;
+  color: #cb6796;
   letter-spacing: 1px;
 }
 .status-card-bg {
-  background-image: linear-gradient(120deg, #538ffb, #1692ff);
+  background-image: linear-gradient(120deg, #cb6796, #e3bcce);
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 6px -3px,
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 .transparent-card {
-  background-color: #ffffffc0;
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.3px);
+  -webkit-backdrop-filter: blur(2.3px);
+  border: 1px solid rgba(255, 255, 255, 1);
   border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.5) 3px 8px 8px -3px,
-    rgba(0, 0, 0, 0.05) 5px 6px 7px -2px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-top: 30px;
+  // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.transparent-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  transition: all 0.4s ease-out;
 }
 .sidebar-apex {
   font-weight: 600;
@@ -355,11 +366,8 @@ body {
   // text-decoration: underline wavy #8000ff;
 }
 
-
 .inputCss {
   border-radius: 20px;
-  
-
 }
 
 .bordernew {
@@ -372,7 +380,7 @@ body {
 
 .button_css {
   border-radius: 20px;
-  background-color: #1692ff;
+  background-color: #cb6796;
   text-decoration-color: #000;
   text-align: center;
   text-decoration-color: #fff;
@@ -392,7 +400,7 @@ body {
 }
 
 .btns:hover {
-  border-bottom: 2px solid rgb(9, 12, 143);
+  border-bottom: 2px solid #97466c;
 }
 .Dthform {
   border: 2px solid rgb(116, 115, 115);
@@ -406,16 +414,16 @@ body {
   padding: 15px;
   background-color: #fff;
   border-bottom: 2px solid transparent;
-
 }
 
 .parent-div-active {
-  background-color: $theme_blue;
+  background-color: #cb6796;
 }
 .btn-container:hover > .parent-div-hover {
-  background-color: $theme_blue;
+  background-color: #cb6796;
   cursor: pointer;
-  
+  transition: all 0.51s ease;
+  font-weight: bolder;
 }
 .btn-container {
   cursor: pointer;
@@ -423,11 +431,12 @@ body {
 }
 .btn-container:hover {
   cursor: pointer;
-  border-bottom: 2px solid #0079b6;
+  border-bottom: 2px solid #cb6796;
+  transition: all 0.51s ease;
 }
 
 .DetailCard {
-  outline: 2px solid blue;
+  outline: 2px solid #cb6796;
 }
 
 .progressData {
@@ -435,7 +444,7 @@ body {
   left: 1471px;
   width: 80px;
   height: 80px;
-  background: #374eee 0% 0% no-repeat padding-box;
+  background: #cb6796 0% 0% no-repeat padding-box;
   opacity: 1;
   // border-radius: 100%;
 }
@@ -476,7 +485,7 @@ body {
   opacity: 1;
 }
 .buttonCss {
-  background-color: #0079b6;
+  background-color: #cb6796;
   color: white;
   margin: 10px;
   border-radius: 16px;
@@ -487,14 +496,24 @@ body {
   margin-left: 35px;
 }
 .formbtnCss {
-  background-color: #0079b6;
+  background-color: #cb6796;
   color: white;
   border-radius: 8px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 20px;
+}
+.formbtnCss:hover {
+  background-color: #fff;
+  outline: 1px solid #cb6796;
+  color: #cb6796;
+  transition: all 200ms ease-in-out;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 //radio btn css in aeps page
 .input:checked {
-  background-color: #1692ff;
+  background-color: #cb6796;
 }
 
 .pin-input > .form-control {
@@ -507,6 +526,37 @@ body {
   border: 0px solid #fff;
   border-bottom: 2px solid gray;
 }
-.showModal{
+.showModal {
   opacity: 1;
+}
+
+.contactCard {
+  text-align: center;
+  padding: 25px;
+  width: 300px;
+  height: 300px;
+}
+.contactCard:hover {
+  color: #fff;
+  background-color: #cb6796;
+  transition: background 500ms ease-in-out;
+  border-radius: 20px;
+}
+.offerCard {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border: 4px solid #831e4d;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.offerCard:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+  transition: all 0.6s ease-in;
+}
+.underline {
+  padding: 15px;
+  border-bottom: 4px solid #831e4d;
 }

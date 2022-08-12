@@ -84,10 +84,10 @@ const CustomInput = ({
 
   return (
     <div style={{ textAlign: "left" }}>
-      <CFormLabel className="text-left fw-bold" htmlFor={id}>
+      <CFormLabel className="text-left " htmlFor={id}>
         {label}
       </CFormLabel>
-      <CInputGroup className="mb-3">
+      <CInputGroup className="mb-3" size="">
         <CInputGroupText
           style={{
             background: "transparent",
@@ -98,17 +98,22 @@ const CustomInput = ({
           <FontAwesomeIcon size="sm" icon={icon} />
         </CInputGroupText>
         <CFormInput
+          className="p-2"
+          size="sm"
           id={id}
           name={name}
           value={data}
           style={
             !rightItem
               ? {
+                  fontSize: "16px",
                   borderLeft: "none",
                   borderTopRightRadius: "4px",
                   borderBottomRightRadius: "4px",
                 }
               : {
+                  fontSize: "16px",
+
                   borderLeft: "none",
                   borderRight: "none",
                 }

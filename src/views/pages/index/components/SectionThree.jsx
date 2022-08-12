@@ -49,7 +49,7 @@ const SectionThree = () => {
               borderRadius: "22px",
               fontSize: "15px",
               fontWeight: "bold",
-              color: "#1B76FF",
+              color: "#831e4d",
             }}
           >
             <CImage

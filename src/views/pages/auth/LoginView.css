@@ -8,7 +8,7 @@ body {
 
 .container {
   height: 100%;
-  background-color: gray;
+  /* background-color: gray; */
   margin: auto;
 }
 
@@ -28,7 +28,7 @@ body {
   height: 100%;
   max-width: 80%;
   min-width: 350px;
-  background-color: #1692ff;
+  background-color: #c9e160;
   /* background: #ffffff 0% 0% no-repeat padding-box; */
   opacity: 1;
 }
@@ -57,8 +57,9 @@ body {
 
 .form {
   margin: 0px auto;
-  width: 90%;
-  max-width: 400px;
+  width: 80%;
+  max-width: 500px;
+  padding: 5px;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -92,35 +93,37 @@ input[type="number"]::-webkit-outer-spin-button {
   color: #d93737;
   font-size: 12px;
 }
-
-.login-bg {
-  /* background-image: url("src/assets/images/svg/SignUpBg.svg"); */
-  background: radial-gradient(
-      circle at center,
-      #1C76FE30 15%,
-      transparent 22%
-    ),
-    #F9FBFF;
+/* dotted background */
+/* .login-bg {
+  background: radial-gradient(circle at center, #f9abcf 15%, transparent 22%),
+    #f9fbff;
   background-size: 50px 50px;
   background-repeat: round;
-}
+} */
 
-.form-transparent {
-  background-color: #ffffff;
-  backdrop-filter: blur(30px);
-  box-shadow: 0 0 4px 0px #d3d3d3d3;
-  padding: 48px;
-  border-radius: 16px;
+.login_bg {
+  /* padding: 2rem; */
+  width: 60%;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.7px);
+  -webkit-backdrop-filter: blur(1.7px);
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .input-style {
   background-color: #ffffff5e;
   backdrop-filter: blur(10px);
-  padding: 8px 18px;
-  color: #1692ff;
+  padding: 10px 20px;
+  color: #e1609c;
   font-weight: bold;
   border-radius: 16px;
-  border: 1px solid #1692ff;
+  border: 1px solid #e1609c;
   box-shadow: rgba(255, 254, 254, 0.7) 0px -23px 25px 0px inset,
     rgba(255, 255, 255, 0.7) 0px -36px 30px 0px inset,
     rgba(255, 255, 255, 0.5) 0px 79px 40px 0px inset,
@@ -137,24 +140,24 @@ input[type="number"]::-webkit-outer-spin-button {
 .input-style-placeholder {
   position: absolute;
   top: 4px;
-  left: 16px;
-  padding: 7px 0px 2px 0px;
+  left: 17px;
+  padding: 9px 1px 4px 1px;
   transition: all 200ms;
-  color: #455A64;
+  color: #455a64;
   font-weight: 500;
   letter-spacing: 0.1em;
   z-index: 1;
   font-size: 12px;
 }
-.input-style:focus + .input-style-placeholder,
+/* .input-style:focus + .input-style-placeholder,
 .input-style:valid + .input-style-placeholder {
-  /* font-size: 75%; */
+  
   transform: translate3d(-5px, -120%, 0);
-  color: #1692ff;
+  color: #e1609c;
   font-size: 15px;
-}
+} */
 
- .login-rt-png {
+.login-rt-png {
   /* animation: move 8s infinite; */
 
   margin-left: 60px;
@@ -176,29 +179,29 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .login-form-btn {
   backdrop-filter: blur("10px");
-  border: 2px solid #a2caec;
-  
+  border: 2px solid #f1aacb;
+
   border-radius: 16px;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1;
-  padding: 8px;
+  padding: 12px;
   text-decoration: none;
   text-align: center;
   text-transform: capitalize;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  width: 80%;
+  width: 100%;
 }
 
 .login-btn {
-  background-color: #1692ffdc;
+  background-color: #e25396;
 }
 
 .login {
-  border-color: #a2caec;
+  border-color: #e1609c;
   color: #fff;
-  background-image: linear-gradient(45deg, #1692ff 50%, transparent 50%);
+  background-image: linear-gradient(45deg, #e1609c 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
   transition: background 300ms ease-in-out;
@@ -214,9 +217,9 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .signup {
-  border-color: #a2caec;
-  color: #1692ff;
-  background-image: linear-gradient(45deg, #1692ff 50%, transparent 50%);
+  border-color: #e1609c;
+  color: #e1609c;
+  background-image: linear-gradient(45deg, #e1609c 50%, transparent 50%);
   background-position: 100%;
   background-size: 400%;
   transition: background 300ms ease-in-out;
@@ -245,12 +248,11 @@ input[type="number"]::-webkit-outer-spin-button {
 .terms-btn {
   transition: transform 0.5s ease;
   font-weight: bold;
-  border-bottom: 2px solid #FFFFFF;
-
+  border-bottom: 2px solid #ffffff;
 }
 
 .terms-btn:hover {
   font-weight: bold;
   transform: scale(1);
-  border-bottom: 2px solid #1692ff;
+  border-bottom: 2px solid #e1609c;
 }

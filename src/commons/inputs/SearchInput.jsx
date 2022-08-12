@@ -29,9 +29,9 @@ const SearchInput = ({ list, setList, filterFunc }) => {
           }}
         />
         <CButton
-          style={{ backgroundColor: "white" }}
-          color="info"
-          variant="outline"
+          style={{ backgroundColor: "#af3b71", color: "#fff" }}
+          // color="info"
+          // variant="outline"
           onClick={(e) => {
             setSearchInput("");
             setList(list);

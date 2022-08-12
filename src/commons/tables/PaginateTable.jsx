@@ -66,7 +66,7 @@ const PaginateTable = ({
           <div
             className="text-primary fw-bold pt-3 px-3 pb-3"
             style={{
-              backgroundColor: "#ECF2F7",
+              backgroundColor: "#E1609C",
             }}
           >
             <div className="d-flex justify-content-between">

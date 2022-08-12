@@ -36,7 +36,7 @@ const SectionOne = () => {
                   </span>
                 </div>
                 <div style={{ fontSize: "40px" }}>Welcome to </div>
-                <div style={{ fontSize: "40px", color: "#1B76FF" }}>
+                <div style={{ fontSize: "40px", color: "#e1609c" }}>
                   PortPay
                 </div>
               </div>
@@ -46,10 +46,9 @@ const SectionOne = () => {
               </div>
               <div className="d-md-flex justify-content-center">
                 <CButton
-                  style={{ color: "white" }}
+                  style={{ color: "white", backgroundColor: "#e1609c" }}
                   className="Ibtn"
                   type="submit"
-                  color="primary"
                   onClick={() => {
                     history.push(CM_Nav.SIGNUP_VIEW);
                   }}

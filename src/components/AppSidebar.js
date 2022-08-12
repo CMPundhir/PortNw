@@ -33,7 +33,9 @@ import {
   faBars,
   faChevronCircleLeft,
   faChevronLeft,
+  faSignOutAlt,
 } from "@fortawesome/free-solid-svg-icons";
+import { Button } from "@material-ui/core";
 
 const AppSidebar = ({ user }) => {
   const dispatch = useDispatch();
@@ -91,7 +93,7 @@ const AppSidebar = ({ user }) => {
       <span
         className="text-center"
         onClick={() => dispatch({ type: "set", sidebarShow: !sidebarShow })}
-      >     
+      >
         <CImage
           className="m-3"
           src={logo_png}
@@ -106,6 +108,20 @@ const AppSidebar = ({ user }) => {
           <AppSidebarNav items={sideMenus} />
         </SimpleBar>
       </CSidebarNav>
+      <CButton
+        className="hover-zoom p-3 m-2"
+        color="light"
+        onClick={(e) => {
+          history.push(CM_Nav.LOG_IN);
+        }}
+      >
+        Log Out
+        <FontAwesomeIcon
+          icon={faSignOutAlt}
+          //size="lg"
+          className="ms-1"
+        />
+      </CButton>
     </CSidebar>
   );
 };
