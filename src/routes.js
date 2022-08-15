@@ -23,12 +23,12 @@ const MyQrCodeView = React.lazy(() =>
 const ContactUs = React.lazy(() =>
   import("src/views/cm_views/footerContent/ContactUs")
 );
-const Support = React.lazy(() =>
-  import("src/views/cm_views/footerContent/Support")
-);
-const TermsView = React.lazy(() =>
-  import("src/views/cm_views/footerContent/Terms")
-);
+// const Support = React.lazy(() =>
+//   import("src/views/cm_views/footerContent/Support")
+// );
+// const TermsView = React.lazy(() =>
+//   import("src/views/cm_views/footerContent/Terms")
+// );
 const CouponsView = React.lazy(() =>
   import("src/views/cm_views/coupons/CouponsView")
 );
@@ -423,11 +423,11 @@ const routes = [
     name: "My QR Code",
     component: MyQrCodeView,
   },
-  {
-    path: CM_Nav.TERMS_CON,
-    name: "Terms & Condition",
-    component: TermsView,
-  },
+  // {
+  //   path: CM_Nav.TERMS_CON,
+  //   name: "Terms & Condition",
+  //   component: TermsView,
+  // },
   {
     path: CM_Nav.CONTACT_US,
     name: "Contact Us",
