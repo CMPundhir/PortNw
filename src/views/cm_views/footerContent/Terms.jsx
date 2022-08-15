@@ -1,11 +1,20 @@
-import { CCol, CRow } from "@coreui/react";
+import { CButton, CCol, CContainer, CImage, CRow } from "@coreui/react";
+import {
+  faArrowCircleLeft,
+  faArrowLeft,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { useHistory } from "react-router-dom";
 import TransparentCard from "src/commons/cards/TransparentCard";
+import { logo_png } from "src/iconsimport";
 import FaqView from "./FaqView";
 
 const Terms = () => {
+  const history = useHistory();
+
   return (
-    <div>
+    <CContainer>
       <CRow>
         <CCol lg={7} md={12} className="p-3">
           <TransparentCard className="p-3" title="Terms & Condition">
@@ -140,7 +149,17 @@ const Terms = () => {
           <FaqView />
         </CCol>
       </CRow>
-    </div>
+      <CButton
+        className="btn mb-5 p-3"
+        style={{ width: 200, height: "auto" }}
+        onClick={() => {
+          history.push("/");
+        }}
+      >
+        <FontAwesomeIcon className="me-3" icon={faArrowLeft}></FontAwesomeIcon>
+        Back To Home
+      </CButton>
+    </CContainer>
   );
 };
 

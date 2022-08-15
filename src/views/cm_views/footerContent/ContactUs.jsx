@@ -1,5 +1,6 @@
-import { CContainer } from "@coreui/react";
+import { CButton, CContainer, CImage } from "@coreui/react";
 import {
+  faArrowLeft,
   faFileAlt,
   faMailBulk,
   faMapMarked,
@@ -10,9 +11,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { useHistory } from "react-router-dom";
 import TransparentCard from "src/commons/cards/TransparentCard";
+import { logo_png } from "src/iconsimport";
 
 const ContactUs = () => {
+  const history = useHistory();
+
   return (
     <CContainer>
       <TransparentCard title="Get In Touch">
@@ -84,6 +89,16 @@ const ContactUs = () => {
           </div>
         </div>
       </TransparentCard>
+      <CButton
+        className="btn mb-5 mt-3 p-3"
+        style={{ width: 200, height: "auto" }}
+        onClick={() => {
+          history.push("/");
+        }}
+      >
+        <FontAwesomeIcon className="me-3" icon={faArrowLeft}></FontAwesomeIcon>
+        Back To Home
+      </CButton>
     </CContainer>
   );
 };

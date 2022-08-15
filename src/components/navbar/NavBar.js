@@ -11,7 +11,7 @@ const Navbar = ({ user }) => {
 
   return (
     <div className="Navbar">
-      <span className="nav-logo">PortPay</span>
+      <span className="nav-logo">RoseCharge</span>
       <div className={`nav-items ${isOpen && "open"}`}>
         {/* first item start */}
         <CTooltip content="My Profile" placement="bottom">

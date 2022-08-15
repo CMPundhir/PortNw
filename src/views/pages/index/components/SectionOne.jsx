@@ -43,7 +43,7 @@ const SectionOne = () => {
                   Welcome to{" "}
                 </div>
                 <div style={{ fontSize: "40px", color: "#e1609c" }}>
-                  PortPay
+                  RoseCharge
                 </div>
               </div>
               <div
@@ -55,7 +55,7 @@ const SectionOne = () => {
                   wordSpacing: "2px",
                 }}
               >
-                PortPay is India’s Neo Banking platform delivering full stack
+                RoseCharge is India’s Neo Banking platform delivering full stack
                 banking services to individuals and businesses of all sizes.
               </div>
               <div className="d-md-flex ">

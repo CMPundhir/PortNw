@@ -356,7 +356,7 @@ export const SubmitButton = ({ txt = "Submit", request }) => {
   );
 };
 
-export const PortPayLogo = () => {
+export const RoseChargeLogo = () => {
   return <CImage src={logo_png} width={114} height={40} onClick={(e) => {}} />;
 };
 

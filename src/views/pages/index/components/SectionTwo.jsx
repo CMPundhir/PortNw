@@ -26,7 +26,7 @@ const SectionTwo = () => {
               }}
               icon={faEye}
             />
-            Why Portpay
+            Why RoseCharge
           </span>
         </CCol>
         <h1 className="mt-5 mb-3 fw-bold">

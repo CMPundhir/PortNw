@@ -152,7 +152,7 @@ const UsersView = ({ user, title, userType }) => {
                 xs={7}
                 className="d-flex flex-wrap align-items-center justify-content-between"
               >
-                <small className="fw-bold">PortPay A/c No.</small>
+                <small className="fw-bold">RoseCharge A/c No.</small>
                 <span>:</span>
               </CCol>
               <CCol xs={5} className="d-flex">

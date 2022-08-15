@@ -44,7 +44,7 @@ import { getGhost24FAIconBtn } from "../custom/cm_views";
 import { ActionOnRequest } from "../custom/cm_modals";
 import { GhostFABtn } from "../custom/cm_views";
 import { showDatePicker } from "../custom/cm_modals";
-import { PortPayLogo } from "../custom/cm_views";
+import { RoseChargeLogo } from "../custom/cm_views";
 import CommonPage from "src/commons/components/CommonPage";
 import PaginateTable from "src/commons/components/PaginateTable";
 import { addBenDialogBtn } from "../custom/cm_modals";
@@ -325,7 +325,7 @@ export const AdminCreditFilter = ({ user }) => {
             className="d-flex justify-content-between"
             style={{ width: "100%" }}
           >
-            <PortPayLogo />
+            <RoseChargeLogo />
             <div>
               <CButton
                 variant="ghost"

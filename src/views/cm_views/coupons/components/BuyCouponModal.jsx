@@ -9,12 +9,12 @@ import React, { useState } from "react";
 import IconTextButton from "src/commons/buttons/IconTextButton";
 import CustomInput from "src/commons/inputs/CustomInput";
 import ColourModal from "src/commons/modals/ColourModal";
-import { coupon_bg, coupon_img, logo_png, portPay } from "src/iconsimport";
+import { coupon_bg, coupon_img, logo_png, RoseCharge } from "src/iconsimport";
 import { postJsonData } from "src/networks/ApiController";
 import ApiEndpoints from "src/networks/ApiEndpoints";
 import { makeid } from "src/utils/RandomString";
 import { apiErrorToast, okSuccessToast } from "../../custom/cm_toast";
-import { PortPayLogo } from "../../custom/cm_views";
+import { RoseChargeLogo } from "../../custom/cm_views";
 
 Array.prototype.insert = function (index, item) {
   this.splice(index, 0, item);

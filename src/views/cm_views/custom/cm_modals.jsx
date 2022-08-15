@@ -74,7 +74,7 @@ import { confirmationDialog } from "./cm_toast";
 import { UserType } from "src/commons/Constants";
 import { SubmitFormBtn } from "./cm_views";
 import { CloseFormBtn } from "./cm_views";
-import { PortPayLogo } from "./cm_views";
+import { RoseChargeLogo } from "./cm_views";
 import forgot_png from "src/assets/images/icons/forgot.png";
 
 export const showDialog = (title, msg) => {
@@ -1808,7 +1808,7 @@ export const showTxnFiltersDialog = (
                     name="txn_id"
                     type="text"
                     id="txn_id"
-                    placeholder="PortPay ID"
+                    placeholder="RoseCharge ID"
                     disabled={request}
                   />
                 </div>
@@ -1944,7 +1944,7 @@ export const showTxnFiltersDialog = (
             className="d-flex justify-content-between"
             style={{ width: "100%" }}
           >
-            <PortPayLogo />
+            <RoseChargeLogo />
             <div>
               <CButton
                 variant="ghost"

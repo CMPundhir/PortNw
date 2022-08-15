@@ -11,7 +11,7 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 import { CM_Nav, UserType } from "src/commons/Constants";
-import { logo_png, portPay } from "src/iconsimport";
+import { logo_png, RoseCharge } from "src/iconsimport";
 import SectionOne from "./SectionOne";
 import CircleLightPurple from "src/commons/components/CircleLightPurple";
 import CircleSmallPurple from "src/commons/components/CircleSmallPurple";

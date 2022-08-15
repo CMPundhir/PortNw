@@ -1,4 +1,4 @@
-export const BASE_URL = "https://api.portpay.co/api/";
+export const BASE_URL = "https://api.RoseCharge.co/api/";
 // export const BASE_URL = "https://api.github.com/";
 //export const BASE_URL = "https://apigateway.impsguru.com/";
 
@@ -9,7 +9,6 @@ const ApiEndpoints = {
   CREATE_COUPON: "user/createCoupon",
   LIST_COUPON: "user/getCouponList",
   SHOW_COUPON: "user/showCoupon",
-
 
   //SIGN_IN: "auth/signIn",
   GET_TOKEN: "auth/getToken",
@@ -69,7 +68,7 @@ const ApiEndpoints = {
   Val_Tk: "vT", // userId
   FORGOT_PASSWORD: "forgetPassword",
 
-  // github api endpoints . . . . 
+  // github api endpoints . . . .
   GET_USER_GITHUB: "users/",
 };
 

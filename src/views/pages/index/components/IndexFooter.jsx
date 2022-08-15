@@ -2,7 +2,7 @@ import { CCol, CContainer, CImage, CRow } from "@coreui/react";
 import React from "react";
 import { useHistory } from "react-router-dom";
 import SearchBox from "src/commons/components/SearchBox";
-import { FBook, Insta, portPay, Twitter } from "src/iconsimport";
+import { FBook, Insta, RoseCharge, Twitter } from "src/iconsimport";
 
 const IndexFooter = () => {
   const history = useHistory();
@@ -15,7 +15,7 @@ const IndexFooter = () => {
           <span
             className="mx-3 fw-bold footerLinks"
             onClick={() => {
-              history.push("/support");
+              history.push("/faq");
             }}
           >
             Faq

@@ -23,9 +23,9 @@ const MyQrCodeView = React.lazy(() =>
 const ContactUs = React.lazy(() =>
   import("src/views/cm_views/footerContent/ContactUs")
 );
-// const Support = React.lazy(() =>
-//   import("src/views/cm_views/footerContent/Support")
-// );
+const Support = React.lazy(() =>
+  import("src/views/cm_views/footerContent/Support")
+);
 // const TermsView = React.lazy(() =>
 //   import("src/views/cm_views/footerContent/Terms")
 // );

@@ -32,6 +32,9 @@ const TermsView = React.lazy(() =>
 const Support = React.lazy(() =>
   import("src/views/cm_views/footerContent/Support")
 );
+const Faq = React.lazy(() =>
+  import("src/views/cm_views/footerContent/FaqViewLg")
+);
 
 class App extends Component {
   render() {
@@ -62,6 +65,12 @@ class App extends Component {
               path="/support"
               name="support"
               render={(props) => <Support {...props} />}
+            />
+            <Route
+              exact
+              path="/faq"
+              name="faq"
+              render={(props) => <Faq {...props} />}
             />
 
             <Route
