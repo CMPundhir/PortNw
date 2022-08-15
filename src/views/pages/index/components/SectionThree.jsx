@@ -61,7 +61,7 @@ const SectionThree = () => {
             <span>For Product Theme</span>
           </span>
 
-          <CRow className="text-left">
+          <CRow className="text-left ">
             <span
               style={{
                 fontSize: "35px",

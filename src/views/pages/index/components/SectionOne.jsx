@@ -10,7 +10,11 @@ const SectionOne = () => {
   return (
     <div>
       <CRow>
-        <CCol className="rightSide d-flex text-right justify-content-right align-item-right px-5">
+        <CCol
+          className="rightSide d-flex text-right justify-content-right align-item-right px-5"
+          lg={6}
+          md={12}
+        >
           <div className="rightSide2 d-flex justify-content-left my-5 column1-margin">
             <div>
               <div
@@ -30,21 +34,31 @@ const SectionOne = () => {
                     }}
                   >
                     <CImage src={star_svg} />
-                    <small className="ms-2 mt-2 mb-2 fw-bold text-primary">
+                    <small className="ms-2 mt-2 mb-5 fw-bold text-primary">
                       All in one payment Solutions
                     </small>
                   </span>
                 </div>
-                <div style={{ fontSize: "40px" }}>Welcome to </div>
+                <div className="mt-5" style={{ fontSize: "40px" }}>
+                  Welcome to{" "}
+                </div>
                 <div style={{ fontSize: "40px", color: "#e1609c" }}>
                   PortPay
                 </div>
               </div>
-              <div>
+              <div
+                className=""
+                style={{
+                  fontSize: "18px",
+                  lineHeight: "30px",
+                  letterSpacing: "0.6px",
+                  wordSpacing: "2px",
+                }}
+              >
                 PortPay is India’s Neo Banking platform delivering full stack
                 banking services to individuals and businesses of all sizes.
               </div>
-              <div className="d-md-flex justify-content-center">
+              <div className="d-md-flex ">
                 <CButton
                   style={{ color: "white", backgroundColor: "#e1609c" }}
                   className="Ibtn"
@@ -55,17 +69,17 @@ const SectionOne = () => {
                 >
                   Join now
                 </CButton>
-                <CButton className="Ibtn" type="submit" color="light">
+                {/* <CButton className="Ibtn" type="submit" color="light">
                   Learn more
-                </CButton>
+                </CButton> */}
               </div>
             </div>
           </div>
         </CCol>
 
-        <CCol className=" mt-3 d-flex" lg={6} md={0}>
+        <CCol className=" mt-3 d-flex " lg={6} md={0}>
           <CImage
-            className="column2-margin"
+            className="hidden_md column2-margin"
             src={lapTop_png}
             style={{ width: "90%" }}
           />

@@ -27,7 +27,7 @@ import {
 import { useHistory } from "react-router";
 import { CM_Nav, UserType } from "src/commons/Constants";
 import { getGhostBtn } from "src/views/cm_views/custom/cm_views";
-import logo_png from "src/assets/images/logo_2.png";
+import logo_png from "src/assets/images/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -91,13 +91,14 @@ const AppSidebar = ({ user }) => {
       }}
     >
       <span
-        className="text-center"
+        style={{ borderRadius: "20px" }}
+        className="text-center mb-5 mt-3"
         onClick={() => dispatch({ type: "set", sidebarShow: !sidebarShow })}
       >
         <CImage
-          className="m-3"
+          className="m-3 hover-zoom"
           src={logo_png}
-          style={{ width: 100, height: "auto" }}
+          style={{ width: 150, height: "auto" }}
         />
       </span>
       <CSidebarNav

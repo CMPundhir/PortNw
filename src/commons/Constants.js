@@ -77,8 +77,6 @@ export const CM_Nav = {
   INDEX_PAGE: "/index_page",
   SIGNUP_VIEW: "/signup",
   ANJALI: "/anjaliForm",
-  //before login View
-  // INDEX_CONTACT_VIEW: "/ContactView",
 };
 
 export const StoreKey = {

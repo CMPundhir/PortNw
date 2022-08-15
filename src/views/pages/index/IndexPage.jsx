@@ -21,7 +21,7 @@ const IndexPage = () => {
           overflowX: "hidden",
         }}
       >
-        <div
+        {/* <div
           style={{
             zIndex: -10,
             width: "100%",
@@ -34,19 +34,7 @@ const IndexPage = () => {
           <div className="position-absolute margin-top-70">
             <SectionOne />
           </div>
-          {/* circle 1 */}
-          <div
-            style={{
-              position: "relative",
-              zIndex: -2,
-              left: "60%",
-              marginTop: "3%",
-              marginLeft: "5%",
-            }}
-          >
-            <CircleLightPurple width="25rem" height="25rem" radius="19rem" />
-          </div>
-          {/* circle 2 */}
+
           <div
             style={{
               position: "relative",
@@ -56,7 +44,7 @@ const IndexPage = () => {
           >
             <CircleSmallPurple width="8rem" height="8rem" radius="19rem" />
           </div>
-        </div>
+        </div> */}
         <SectionTwo />
         <SectionThree />
         <SectionFour />

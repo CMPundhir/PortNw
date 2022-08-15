@@ -7,8 +7,8 @@ export const SectionFour = () => {
     <div
       className="text-center d-flex justify-content-center"
       style={{
-        marginBotton: "50px",
-        marginTop: "80px",
+        marginBotton: "80px",
+        marginTop: "150px",
         clipPath: "polygon(50% 0%, 100% 0, 100% 75%, 0 91%, 0 0)",
         background:
           "transparent linear-gradient(180deg, #FFFFFF70 0%, #ff8989 100%) 0% 0% no-repeat padding-box  ",
@@ -39,9 +39,7 @@ export const SectionFour = () => {
               marginBottom: "150px",
             }}
           >
-            Narender Modi
-            <br />
-            @BiggBrains
+            <span className="underline">Ashish Pathak</span>
           </p>
         </CCol>
       </CRow>

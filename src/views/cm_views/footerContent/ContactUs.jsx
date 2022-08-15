@@ -1,3 +1,4 @@
+import { CContainer } from "@coreui/react";
 import {
   faFileAlt,
   faMailBulk,
@@ -13,9 +14,9 @@ import TransparentCard from "src/commons/cards/TransparentCard";
 
 const ContactUs = () => {
   return (
-    <div>
+    <CContainer>
       <TransparentCard title="Get In Touch">
-        <p style={{ fontSize: "20px" }} className="mb-3">
+        <p style={{ fontSize: "20px" }} className="mb-3 p-3">
           For Customer Support and Query, Get in touch with us:
           <a href="#" className="mx-1">
             Help
@@ -83,7 +84,7 @@ const ContactUs = () => {
           </div>
         </div>
       </TransparentCard>
-    </div>
+    </CContainer>
   );
 };
 

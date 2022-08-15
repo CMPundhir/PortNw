@@ -32,6 +32,7 @@ import ApiEndpoints from "src/networks/ApiEndpoints";
 import { Container } from "react-bootstrap";
 import CircleGrad from "src/commons/components/CircleGrad";
 import CircleGradGreen from "src/commons/components/CircleGradGreen";
+import { IndexNav } from "src/scss/Untitled-2";
 
 const myUser = {
   id: 9,
@@ -141,7 +142,13 @@ const LoginView = () => {
           onSubmit={handleSubmit}
         >
           <div className="text-center">
-            <CImage src={logo_png} style={{ width: 200, height: "auto" }} />
+            <CImage
+              src={logo_png}
+              style={{ width: 200, height: "auto" }}
+              onClick={() => {
+                history.push("/");
+              }}
+            />
           </div>
           <div className="text-center mt-3 mb-4">
             <div style={{ letterSpacing: "1px", fontSize: "16.5px" }}>

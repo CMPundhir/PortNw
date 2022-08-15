@@ -56,7 +56,9 @@ $enable-rtl: true;
   border-radius: 25%;
   display: inline-block;
 }
-
+.nav-content {
+  overflow-x: hidden;
+}
 .round-corner {
   font-size: 10px;
   padding: 12px 4px 12px 4px;
@@ -287,6 +289,12 @@ body {
     height: 80vh !important;
   }
 }
+@media screen and (max-width: 1000px) {
+  .hidden_md {
+    display: none;
+  }
+}
+
 .daysbtnCard-bg {
   background-color: #fff;
   border-radius: 8px;
@@ -539,7 +547,7 @@ body {
 .contactCard:hover {
   color: #fff;
   background-color: #cb6796;
-  transition: background 500ms ease-in-out;
+  transition: background 0.8s ease-in-out;
   border-radius: 20px;
 }
 .offerCard {
@@ -559,4 +567,8 @@ body {
 .underline {
   padding: 15px;
   border-bottom: 4px solid #831e4d;
+}
+.footerLinks {
+  cursor: pointer;
+  font-size: 18px;
 }
