@@ -81,7 +81,7 @@ const SectionOne = () => {
           <CImage
             className="hidden_md column2-margin"
             src={lapTop_png}
-            style={{ width: "90%" }}
+            style={{ width: "90%", height: "80%" }}
           />
         </CCol>
       </CRow>

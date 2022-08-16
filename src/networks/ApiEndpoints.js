@@ -1,4 +1,4 @@
-export const BASE_URL = "https://api.RoseCharge.co/api/";
+export const BASE_URL = "https://api.PortPay.co/api/";
 // export const BASE_URL = "https://api.github.com/";
 //export const BASE_URL = "https://apigateway.impsguru.com/";
 
