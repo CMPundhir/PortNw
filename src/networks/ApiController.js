@@ -69,7 +69,7 @@ export const loginApi = (uname, paswd, setIsProgress, onSuccess, onError) => {
   setIsProgress(true);
   axios
     .post(ApiEndpoints.SIGN_IN, {
-      username: uname,
+      mobile: uname,
       password: paswd,
     })
     .then((response) => {

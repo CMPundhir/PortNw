@@ -1,10 +1,10 @@
-export const BASE_URL = "https://api.PortPay.co/api/";
+export const BASE_URL = "https://rosecharge.com/api/";
 // export const BASE_URL = "https://api.github.com/";
 //export const BASE_URL = "https://apigateway.impsguru.com/";
 
 const ApiEndpoints = {
-  SIGN_IN: "user/login",
-  REGISTER: "user/register",
+  SIGN_IN: "login",
+  REGISTER: "register",
   VERIFY_USER: "user/verifyOtpCode",
   CREATE_COUPON: "user/createCoupon",
   LIST_COUPON: "user/getCouponList",
@@ -12,7 +12,7 @@ const ApiEndpoints = {
 
   //SIGN_IN: "auth/signIn",
   GET_TOKEN: "auth/getToken",
-  GET_ME_USER: "user/getUser",
+  GET_ME_USER: "getUser",
   GET_TRANSACTIONS: "getTransactions",
   GET_BENEFICIERIES: "getBeneficieries",
   GET_CREDITREQ: "getCreditReq",

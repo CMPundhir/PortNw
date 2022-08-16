@@ -16,7 +16,7 @@ const CustomInput = ({
   placeholder,
   type,
   label,
-  input,
+  input = "",
   setInput,
   pattern,
   error,
@@ -24,10 +24,23 @@ const CustomInput = ({
   readOnly = false,
   onClick,
   handleEnter,
+  bottomMargin = "mb-3",
+  flip,
+  iconText = "",
+  maxLength,
+  onKeyUp,
+  isShowCheck = true,
+  fontSize,
+  paddingRightItem,
+  paddingRightItemBottom,
+  min,
+  max,
+  required = false,
+  hidden = false,
 }) => {
-  const [data, setData] = useState(input ? input : undefined);
-  const [start, setStart] = useState(undefined);
-  const [valid, setValid] = useState(undefined);
+  const [data, setData] = useState(input ? input : "");
+  const [start, setStart] = useState();
+  const [valid, setValid] = useState();
 
   useEffect(() => {
     setData(input);
@@ -35,7 +48,13 @@ const CustomInput = ({
   }, [input]);
 
   useEffect(() => {
+    console.log(data);
+    return () => {};
+  }, [data]);
+
+  useEffect(() => {
     if (pattern) {
+      // console.log("pattern input =>>>", pattern);
       const isValid = data != undefined && pattern.test(data);
       if (start) {
         setValid(isValid);
@@ -59,9 +78,8 @@ const CustomInput = ({
   }, [data]);
 
   useEffect(() => {
-    console.log(`Valid => ${valid}`);
     if (valid) {
-      if (setInput) setInput(data);
+      //if (setInput) setInput(data);
     } else {
       if (setInput) setInput(undefined);
     }
@@ -81,51 +99,76 @@ const CustomInput = ({
   //     if (onBackspace) onBackspace();
   //   }
   // };
-
+  const elementScrollData = () => {
+    console.log("elementScrollData ");
+  };
   return (
-    <div style={{ textAlign: "left" }}>
-      <CFormLabel className="text-left " htmlFor={id}>
-        {label}
-      </CFormLabel>
-      <CInputGroup className="mb-3" size="">
-        <CInputGroupText
-          style={{
-            background: "transparent",
-            borderRight: "none",
-            borderColor: start ? (valid ? "#5CB466" : "#d55d58") : "#B2B7C0",
-          }}
+    <div hidden={hidden} style={{ textAlign: "left" }}>
+      {label ? (
+        <CFormLabel
+          htmlFor={id}
+          className="d-flex justify-content-start"
+          style={{ fontSize: "12px", marginBottom: "4px" }}
         >
-          <FontAwesomeIcon size="sm" icon={icon} />
-        </CInputGroupText>
+          {label}
+        </CFormLabel>
+      ) : (
+        ""
+      )}
+
+      <CInputGroup className={bottomMargin}>
+        {icon || iconText ? (
+          <CInputGroupText
+            style={{
+              background: "white",
+              borderRight: "none",
+              borderColor: start ? (valid ? "#5CB466" : "#d55d58") : "#B2B7C0",
+            }}
+          >
+            {icon ? (
+              <FontAwesomeIcon size="sm" icon={icon} flip={flip} />
+            ) : (
+              iconText
+            )}
+          </CInputGroupText>
+        ) : (
+          ""
+        )}
+
         <CFormInput
-          className="p-2"
-          size="sm"
           id={id}
           name={name}
           value={data}
+          min={min ? min : ""}
+          max={max ? max : ""}
           style={
             !rightItem
               ? {
-                  fontSize: "16px",
-                  borderLeft: "none",
+                  // borderLeft: "none",
                   borderTopRightRadius: "4px",
                   borderBottomRightRadius: "4px",
+                  fontSize: fontSize,
                 }
               : {
-                  fontSize: "16px",
-
                   borderLeft: "none",
                   borderRight: "none",
+                  fontSize: fontSize,
                 }
           }
           placeholder={placeholder}
           type={type}
           aria-label="Username"
           aria-describedby="basic-addon1"
-          valid={start ? valid : undefined}
-          invalid={start ? !valid : undefined}
+          aria-autocomplete="none"
+          valid={isShowCheck && start ? valid : undefined}
+          invalid={isShowCheck && start ? !valid : undefined}
           onChange={(e) => {
-            setData(e.target.value);
+            const s = e.target.value;
+            if (maxLength) {
+              if (s.length <= maxLength) setData(s);
+            } else {
+              setData(s);
+            }
             if (!start) setStart(true);
           }}
           onSelect={(e) => {
@@ -134,13 +177,19 @@ const CustomInput = ({
           onClick={() => {
             if (onClick) onClick();
           }}
-          onKeyDown={valid ? handleEnter : ""}
-          autoComplete="off"
+          onKeyDown={valid ? handleEnter : () => {}}
+          autoComplete="new-password"
           autoCorrect="false"
           list={"data_" + name}
           readOnly={readOnly}
+          onWheel={(e) => {
+            e.currentTarget.blur();
+          }}
+          onKeyUp={onKeyUp}
+          required={required}
         />
         <CInputGroupText
+          className="d-flex align-items-center"
           hidden={!rightItem}
           style={{
             background: "transparent",
@@ -148,13 +197,15 @@ const CustomInput = ({
             borderTopRightRadius: "4px",
             borderBottomRightRadius: "4px",
             borderColor: start ? (valid ? "#5CB466" : "#d55d58") : "#B2B7C0",
+            padding: paddingRightItem,
+            paddingBottom: paddingRightItemBottom,
           }}
         >
           {rightItem}
         </CInputGroupText>
 
-        <CFormFeedback hidden={!error} invalid>
-          {error ? error : ""}
+        <CFormFeedback invalid>
+          <small>{error ? error : " "}</small>
         </CFormFeedback>
       </CInputGroup>
     </div>

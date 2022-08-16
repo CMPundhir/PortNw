@@ -171,7 +171,6 @@ const LoginView = () => {
               onChange={(e) => {
                 var m = e.target.value;
                 setValidMob(isValidMobile(m));
-                //console.log("mob: " + m + ", " + validMob);
               }}
               valid={validated && validMob}
               invalid={validated && !validMob}
@@ -196,8 +195,8 @@ const LoginView = () => {
                 disabled={request}
                 onChange={(e) => {
                   var p = e.target.value;
-                  //console.log(p);
-                  setValidPass(isValidPass(p));
+                  // setValidPass(isValidPass(p));
+                  setValidPass(true);
                 }}
                 invalid={validated && !validPass}
                 valid={validated && validPass}
@@ -270,7 +269,13 @@ const LoginView = () => {
           </div>
 
           <div className="mb-3 mt-3 d-flex text-black justify-content-center mt-1">
-            <small className="px-0 py-0  terms-btn mt-2" disabled={request}>
+            <small
+              className="px-0 py-0  terms-btn mt-2"
+              disabled={request}
+              onClick={() => {
+                history.push("/term");
+              }}
+            >
               Terms and Conditions
             </small>
           </div>
